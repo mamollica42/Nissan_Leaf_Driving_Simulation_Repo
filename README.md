@@ -27,9 +27,13 @@ Below the video link show some well-taken, appropriately sized images of the pro
 ### Team
 
 Michael Mollica - CmpE
+
 Chase Colotta - EE
+
 Brett Harden - EE
+
 Ethan Powers - EE
+
 Gerardo Mateo - CmpE
 
 ### Faculty Supervisor
