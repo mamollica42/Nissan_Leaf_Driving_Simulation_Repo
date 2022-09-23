@@ -48,17 +48,17 @@ Dr. B. Andy Pardue - ME Department
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
+---
 
 
 ### Reports
 
-In the reports section of this repository information about the individual expectations for the reports and how they should be housed is provided.
+---
 
 ### Documentation
 
-In the documentaion section information regarding the documentation that is required and how it should be organized is given.
+---
 
 ### Software
 
-In the software directory of the repo information regarding how each team is expected to document software can be found.
+---
