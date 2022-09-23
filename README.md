@@ -1,15 +1,13 @@
 # Nissan Leaf Driving Simulation
 
-The descriptions and information in all readme files in the starter repo (including this one) must be edited. All section descriptions must be deleted. Any failure to remove the description information (like the statement that you are currently reading) will be heavily penalized!
-
 ## Executive Summary
 
-Give the elevator pitch and abstract for the project. It should allow interested visitors to broadly understand the motivation for the project and what the project has accomplished.
+The Nissan Leaf Driving Simulation is a long-term goal for the ECE and ME Departments at TNTECH. This project consists of data acquistion and initial hardware setup for the future simulation to be built off of. The hopes of the final product are to accurately replicate the look and feel of driving a Nissan Leaf without the actual motion of the vehicle.
 
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
+This repo currently contains the proposal for the project, but future work will be done and uploaded once complete. The proposal contains the specifications and solutions to complete this project over the course of the next several months.
 
 
 ## Salient Outcomes
@@ -28,15 +26,19 @@ Below the video link show some well-taken, appropriately sized images of the pro
 
 ### Team
 
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+Michael Mollica - CmpE
+Chase Colotta - EE
+Brett Harden - EE
+Ethan Powers - EE
+Gerardo Mateo - CmpE
 
 ### Faculty Supervisor
 
-Tell who the faculty supervisor was for the project
+Dr. Nan Chen - ECE Department
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+Dr. B. Andy Pardue - ME Department
 
 
 
