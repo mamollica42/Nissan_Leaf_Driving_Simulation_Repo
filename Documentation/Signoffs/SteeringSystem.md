@@ -9,12 +9,12 @@ the data into a local microcontroller which will interpret the data and relay it
 - Must measure angle of rotation of the steering wheel
 - Must use the Nissan Leaf OEM steering wheel as the input
 - Angle Shall be no more than 960 degrees to the left and right (2 and 2/3 rotations)
-- Error of the angle must be within 2% of the true steering angle
+- Error of the angle must be within 1% of the true steering angle
 
 The simulation requires an input for the steering angle of the vehicle. In the Nissan Leaf, the steering
 is limited to 2 and 2/3 rotations from the center point to each clockwise and counter-clockwise direction.
 Therefore, the angle measured must be limited to 960 degrees in each direction. Due to the broader impact 
-accuracy constraint, the error of the angle sensed must be within 2% of the true angle to prevent false
+accuracy constraint, the error of the angle sensed must be within 1% of the true angle to prevent false
 representation of the steering.
 
 ### Schematic
