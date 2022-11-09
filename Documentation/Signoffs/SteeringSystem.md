@@ -24,28 +24,31 @@ representation of the steering.
 2. Wiring Schematic
 
 
-![image](https://user-images.githubusercontent.com/100802413/200068429-52157dad-0227-41ef-b2f6-d8c828e3f391.png)
+![image](https://user-images.githubusercontent.com/100802413/200903742-825de5d3-3bc1-40d5-83c7-1e14c02fa940.png)
 
+_Rotary Encoder Pinout_
 
-![image](https://user-images.githubusercontent.com/100802413/200068789-5da2dbed-f9f1-4354-88d4-3102560d388f.png)
+![image](https://user-images.githubusercontent.com/100802413/200881810-5902fe09-6d5b-472e-89ba-e14607246b68.png)
+
+_Arduino UNO Pinout_
 
 
 ### Analysis
-1. Objective
+##### 1. Objective
 
 The objective of this design is to measure the degree of the steering wheel. To achieve the objective is by install a Rotary encode near the steering column.
 
-2. Rotary Encoder
+##### 2. Rotary Encoder
 
 Position sensors such as rotary encoders will determine the rotating shafts. In response to rotational movement, it generates an electrical signal, either analog or digital.
 
-2.1 Rotary Encoder Functionality
+###### 2.1 Rotary Encoder Functionality
 
 The rotary encoder features a disk with evenly spaced contact zones that link to the common pin C and two separate contact pins, A and B. When the disk rotates, A and B contact the common pin and produce two square wave output signals shown below.
 
 ![image](https://user-images.githubusercontent.com/100802413/200368531-224a7058-f5ef-4dff-aec7-045677b9f0cd.png)
 
-2.2 Feasibility
+###### 2.2 Feasibility
 
 The two output signals of the encoder, A and B, have a certain behavior that is useful for determining the rotational angle. That is, output A always leads output B from the perspective of motion to the right, and output A always trails output B from the perspective of motion to the left. The phase difference of each signal is 90 degrees in the positive or negative direction. This allows clockwise and counter-clockwise motion to be detected simply by examining the leading signal. Addtionally, the rotary encoder has 360 degrees of rotation, so there is no limit to the number of rotations in either direction that can be measured.
 
@@ -57,18 +60,34 @@ _Clockwise Motion_
 
 _Counter-clockwise Motion_
 
-Encoders differ by their PPR (Pulses per Revolution) as well as their ability to maintain their current state when powered off. There are two main types of encoders: Incremental and Absolute. Incremental encoders output changes in the position instantly but does not keep track of the current position. Absolute encoders maintain the position regardless of power being supplied. For the purpose of measuring the angle of steering, an incremental encoder is all that is necessary because the previous position is of no use to the simulation.
+Encoders differ by their PPR (Pulses per Revolution) as well as their ability to maintain their current state when powered off. There are two main types of encoders: Incremental and Absolute. Incremental encoders output changes in the position instantly but does not keep track of the current position. Absolute encoders maintain the position regardless of power being supplied. For the purpose of measuring the angle of steering, an absolute encoder is necessary because the previous position is important to the realitic use of a steering wheel. This way, no matter what position the wheel is left off, the measured angle will be accurate and not reset to zero degrees.
 
-3. Angular Rotation
+##### 3. Angular Rotation
 
-To select the appropriate rotary encoder, the PPR value must be enough to measure each steering position accurately. The equation below is used to capture the angle in degrees based on the PPR and the pulses:
+To select the appropriate rotary encoder, the CPR value must be enough to measure each steering position accurately. The equation below is used to capture the angle in degrees based on the CPR and the counts:
       
-      A = (P/PPR) * 360
+      A = (C/CPR) * 360       (1)
 
-where P is the number of pulses, PPR is the Pulses per Revolution, and A is the angle in degrees.
+where C is the number of counts, CPR is the Counts per Revolution, and A is the angle in degrees.
 
-4. Encoder Selection
+Similarly, the accuracy of the angle is highly important to the selection of an encoder. To find the output sensitivy of the encoder, the following equation is used:
+     
+     D = 360/(Resolution * 2)       (2)
 
-This steering wheel design will use an E6B2-CWZ1X increment rotary encoder or an increment rotary encoder around 1000 PPR. The E6B2-CWZ1X increment rotary encoder has a max frequency of 100 kHz. Since the team knows that max frequency, we can reverse engineer and find the Nyquist. The max Nyquist rev is 100 rev/s, and to satisfy the max, Nyquist is 50 rev/s. Also, fulfilling the max Nyquist will eliminate the sampling aliasing.
+where D is the degrees of accuracy and Resolution is the how many data bits. 
+
+##### 4. Encoder Selection
+
+This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder has a max frequency of 20 kHz, a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. Given the maximum frequency of 20 kHz, the sampling rate must be at least 40 kHz to satify the Nyquist Theorem. Using equation 2 above, the degrees of accuracy for this encoder is 0.176 degrees which means it is capable of measuring the angle of the steering wheel up to 20% of a degree. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can supply the current of up to 70 mA to the rotary encoder.
+
+##### 5. Microcontroller Selection
+
+The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Each GPIO pin can supply up to 40 mA, but normally operates at 20 mA per pin. Given that the encoder requires 10 digital pins, the Arduino UNO can support that requirement and still have leftover pins for communication. Addtionally, the power supplied to the encoder will be supplied by the power system to avoid any possible damage to the microcontroller.
 
 ### BOM
+
+| Part        | Price    |
+|:-----------:|:--------:|
+| Encoder     | $141.10  |
+| Arduino     | $27.60   |
+| TOTAL       | $168.70  |
