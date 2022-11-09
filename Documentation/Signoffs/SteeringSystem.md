@@ -84,6 +84,12 @@ This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with 
 
 The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Each GPIO pin can supply up to 40 mA, but normally operates at 20 mA per pin. Given that the encoder requires 10 digital pins, the Arduino UNO can support that requirement and still have leftover pins for communication. Addtionally, the power supplied to the encoder will be supplied by the power system to avoid any possible damage to the microcontroller.
 
+##### 6. Connectivity
+
+The rotary encoder must be connected to the steering column such that the rotation of the wheel can be properly mapped to the encoder. This will be done using a gear system with an 8:3 gear ratio. This value is based on the 960 degree rotation of the Nissan Steering Wheel having to be mapped to the 360 degree rotation of the encoder. The below equation helps analytically verify this calculation:
+
+      Driven/Driving = 960/360 = 8/3 ==> 8:3    (3)
+
 ### BOM
 
 | Part        | Price    |
