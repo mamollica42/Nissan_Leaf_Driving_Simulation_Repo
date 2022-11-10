@@ -18,10 +18,18 @@ accuracy constraint, the error of the angle sensed must be within 1% of the true
 representation of the steering.
 
 ### Schematic
-1. Model
+##### 1. Model
 
 
-2. Wiring Schematic
+![image](https://user-images.githubusercontent.com/100802413/200971670-3beca395-ed8c-400a-b166-59c4ad6b9142.png)
+
+_2D-Model of Gear and Encoder Connection_
+
+![image](https://user-images.githubusercontent.com/100802413/200971713-41b91541-980b-4e55-9a2c-9e852589094b.png)
+
+_3D-Model of Gear and Encoder Connection_
+
+##### 2. Wiring Schematic
 
 
 ![image](https://user-images.githubusercontent.com/100802413/200903742-825de5d3-3bc1-40d5-83c7-1e14c02fa940.png)
@@ -94,6 +102,6 @@ The rotary encoder must be connected to the steering column such that the rotati
 
 | Part        | Price    |
 |:-----------:|:--------:|
-| Encoder     | $141.10  |
+| Encoder     | $352.00  |
 | Arduino     | $27.60   |
-| TOTAL       | $168.70  |
+| TOTAL       | $379.60  |
