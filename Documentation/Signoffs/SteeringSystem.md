@@ -8,8 +8,10 @@ the data into a local microcontroller which will interpret the data and relay it
 ### Specifications & Constraints
 - Must measure angle of rotation of the steering wheel
 - Must use the Nissan Leaf OEM steering wheel as the input
-- Angle Shall be no more than 960 degrees to the left and right (2 and 2/3 rotations)
+- Angle shall be no more than 960 degrees from the left boundary to the right boundary (2 and 2/3 rotations)
 - Error of the angle must be within 1% of the true steering angle
+- Must not lose steering position when power is cycled
+- System must be small enough to fit in the area of the vehicle without interfering with the driver or other subsytems
 
 The simulation requires an input for the steering angle of the vehicle. In the Nissan Leaf, the steering
 is limited to 2 and 2/3 rotations from the center point to each clockwise and counter-clockwise direction.
@@ -44,7 +46,7 @@ _Arduino UNO Pinout_
 ### Analysis
 ##### 1. Objective
 
-The objective of this design is to measure the degree of the steering wheel. To achieve the objective is by install a Rotary encode near the steering column.
+The objective of this design is to measure the angle of the steering wheel in degrees. To achieve the objective is by install a Rotary encode near the steering column.
 
 ##### 2. Rotary Encoder
 
@@ -97,6 +99,8 @@ The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog
 The rotary encoder must be connected to the steering column such that the rotation of the wheel can be properly mapped to the encoder. This will be done using a gear system with an 8:3 gear ratio. This value is based on the 960 degree rotation of the Nissan Steering Wheel having to be mapped to the 360 degree rotation of the encoder. The below equation helps analytically verify this calculation:
 
       Driven/Driving = 960/360 = 8/3 ==> 8:3    (3)
+      
+The steering wheel is already limited to the 960 degree range by Nissan. This means that the steering wheel physically is unable to exceed 960 degrees of rotation from the left boundary to the right boundary. Therefore, mapping its rotation using the 8:3 gear ratio will also make it physically impossible for the rotation of the encoder to exceed 360 degrees as desired. The TRD-NA1024NW is a 1024 resolution encoder, meaning it displays 1024 unique outputs per revolution. For each turn of the encoder, 0.35 degrees will be measured allowing the angle to be extremely precise. Additionally, by attaching the gear system to the steering column, the OEM steering wheel can be used as the input to the encoder.  
 
 ### BOM
 
