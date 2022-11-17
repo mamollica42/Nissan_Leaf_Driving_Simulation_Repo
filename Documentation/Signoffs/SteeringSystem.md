@@ -42,6 +42,10 @@ _Rotary Encoder Pinout_
 
 _Arduino UNO Pinout_
 
+![image](https://user-images.githubusercontent.com/100802413/202334812-ddca2adf-fbd7-4da2-900d-f3958cb5c812.png)
+
+_Encoder Connection to MCU_
+
 
 ### Analysis
 ##### 1. Objective
