@@ -42,7 +42,7 @@ The MMCU will use the following forms of communication with the local microcontr
 
 ![image](https://user-images.githubusercontent.com/100802413/202495250-64d6a476-42a8-42a9-a2e7-64ba8a31c7c3.png)
 
-###### _Figure 4: UART Packet Structure
+###### _Figure 4: UART Packet Structure_
 
 UART stands for Universal Asynchronous Receiver-Transmitter. The UART packet begins with a start bit which denotes the beginning of a data message. Following the start bit is the data being sent to the receiver from the transmitter followed by the parity bit. The parity bit is used for error checking and can be either even or odd. Finally, the stop bit denotes the end of the data packet and allows the receiver to correctly parse the data message. This protocol is simple and the baud rate is configurable so that data can be transmitted and received at a desired speed. For the purposes of this project, the baud rate will be configured to the highest supported rate of 115200 for the fastest data transmission time possible as to meet the real-time constraint. The baud rate of 115200 translates to 14400 bytes per second which is equivalent of sending a data packet of 8 bits every 79 microseconds. Real-time is considered anything 20 milliseconds and lower.
 
