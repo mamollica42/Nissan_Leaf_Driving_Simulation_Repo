@@ -33,41 +33,13 @@ _3D-Model of Gear and Encoder Connection_
 
 ##### 2. Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/100802413/200881810-5902fe09-6d5b-472e-89ba-e14607246b68.png)
-
-_Arduino UNO Pinout_
-
 ![image](https://user-images.githubusercontent.com/100802413/202778335-03551d16-b805-4bf0-b12f-0724f2eec5a0.png)
 
 _Encoder Connection to MCU_
 
 
 ### Analysis
-##### 1. Rotary Encoder
-
-Position sensors such as rotary encoders will determine the rotating shafts. In response to rotational movement, it generates an electrical signal, either analog or digital.
-
-###### 1.1 Rotary Encoder Functionality
-
-The rotary encoder features a disk with evenly spaced contact zones that link to the common pin C and two separate contact pins, A and B. When the disk rotates, A and B contact the common pin and produce two square wave output signals shown below.
-
-![image](https://user-images.githubusercontent.com/100802413/200368531-224a7058-f5ef-4dff-aec7-045677b9f0cd.png)
-
-###### 1.2 Feasibility
-
-The two output signals of the encoder, A and B, have a certain behavior that is useful for determining the rotational angle. That is, output A always leads output B from the perspective of motion to the right, and output A always trails output B from the perspective of motion to the left. The phase difference of each signal is 90 degrees in the positive or negative direction. This allows clockwise and counter-clockwise motion to be detected simply by examining the leading signal. Addtionally, the rotary encoder has 360 degrees of rotation, so there is no limit to the number of rotations in either direction that can be measured.
-
-![image](https://user-images.githubusercontent.com/100802413/200377873-b847810c-9c7c-4f60-a6b4-c8aa6b95f3ac.png)
-
-_Clockwise Motion_
-
-![image](https://user-images.githubusercontent.com/100802413/200378017-c3d1d804-847d-441c-83e7-9236c77a80c6.png)
-
-_Counter-clockwise Motion_
-
-Encoders differ by their PPR (Pulses per Revolution) as well as their ability to maintain their current state when powered off. There are two main types of encoders: Incremental and Absolute. Incremental encoders output changes in the position instantly but does not keep track of the current position. Absolute encoders maintain the position regardless of power being supplied. For the purpose of measuring the angle of steering, an absolute encoder is necessary because the previous position is important to the realitic use of a steering wheel. This way, no matter what position the wheel is left off, the measured angle will be accurate and not reset to zero degrees.
-
-##### 2. Angular Rotation
+##### 1. Angular Rotation
 
 To select the appropriate rotary encoder, the CPR value must be enough to measure each steering position accurately. The equation below is used to capture the angle in degrees based on the CPR and the counts:
       
@@ -81,15 +53,17 @@ Similarly, the accuracy of the angle is highly important to the selection of an 
 
 where D is the degrees of accuracy and Resolution is the how many data bits. 
 
-##### 3. Encoder Selection
+##### 2. Encoder Selection
 
-This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder has a max frequency of 20 kHz, a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. Given the maximum frequency of 20 kHz, the sampling rate must be at least 40 kHz to satify the Nyquist Theorem. Using equation 2 above, the degrees of accuracy for this encoder is 0.176 degrees which means it is capable of measuring the angle of the steering wheel up to 20% of a degree. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can supply the current of up to 70 mA to the rotary encoder.
+This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. Using equation 2 above, the degrees of accuracy for this encoder is 0.176 degrees which means it is capable of measuring the angle of the steering wheel up to 20% of a degree. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can supply the current of up to 70 mA to the rotary encoder.
 
-##### 4. Microcontroller Selection
+The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The output of the encoder changes on rotation of the knob. The knob of the encoder will be connected to a gear system that is mounted to the steering column of the vehicle so that the steering wheel rotation will rotate the knob. Each 10-bit output will increment or decrement a count variable in the MCU code depending on the driection of rotation. That count will be used to calculate the angle of the wheel using equation 1 above.
+
+##### 3. Microcontroller Selection
 
 The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Each GPIO pin can supply up to 40 mA, but normally operates at 20 mA per pin. Given that the encoder requires 10 digital pins, the Arduino UNO can support that requirement and still have leftover pins for communication. Addtionally, the power supplied to the encoder will be supplied by the power system to avoid any possible damage to the microcontroller.
 
-##### 5. Connectivity
+##### 4. Connectivity
 
 The rotary encoder must be connected to the steering column such that the rotation of the wheel can be properly mapped to the encoder. This will be done using a gear system with an 8:3 gear ratio. This value is based on the 960 degree rotation of the Nissan Steering Wheel having to be mapped to the 360 degree rotation of the encoder. The below equation helps analytically verify this calculation:
 
