@@ -25,17 +25,17 @@ representation of the steering.
 
 ![image](https://user-images.githubusercontent.com/100802413/200971670-3beca395-ed8c-400a-b166-59c4ad6b9142.png)
 
-_2D-Model of Gear and Encoder Connection_
+_Figure 1: 2D-Model of Gear and Encoder Connection_
 
 ![image](https://user-images.githubusercontent.com/100802413/200971713-41b91541-980b-4e55-9a2c-9e852589094b.png)
 
-_3D-Model of Gear and Encoder Connection_
+_Figure 2: 3D-Model of Gear and Encoder Connection_
 
 ##### 2. Wiring Schematic
 
 ![image](https://user-images.githubusercontent.com/100802413/202778335-03551d16-b805-4bf0-b12f-0724f2eec5a0.png)
 
-_Encoder Connection to MCU_
+_Figure 3: Encoder Connection to MCU_
 
 
 ### Analysis
@@ -75,7 +75,7 @@ The steering wheel is already limited to the 960 degree range by Nissan. This me
 
 ![image](https://user-images.githubusercontent.com/100802413/202805894-4c042fc8-f71d-490f-8039-ac412f45bafb.png)
 
-_Gear Ratio and Angle calculation Analysis_
+_Figure 4: Gear Ratio and Angle calculation Analysis_
 
 ### BOM
 
