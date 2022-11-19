@@ -49,13 +49,13 @@ where C is the number of counts, CPR is the Counts per Revolution, and A is the 
 
 Similarly, the accuracy of the angle is highly important to the selection of an encoder. To find the output sensitivy of the encoder, the following equation is used:
      
-     D = 360/(Resolution * 2)       (2)
+     D = 360/(Resolution)       (2)
 
 where D is the degrees of accuracy and Resolution is the how many data bits. 
 
 ##### 2. Encoder Selection
 
-This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. Using equation 2 above, the degrees of accuracy for this encoder is 0.176 degrees which means it is capable of measuring the angle of the steering wheel up to 20% of a degree. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can supply the current of up to 70 mA to the rotary encoder.
+This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. Using equation 2 above, the degrees of accuracy for this encoder is 0.356 degrees which means it is capable of measuring the angle of the steering wheel up to 20% of a degree. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can supply the current of up to 70 mA to the rotary encoder.
 
 The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The output of the encoder changes on rotation of the knob. The knob of the encoder will be connected to a gear system that is mounted to the steering column of the vehicle so that the steering wheel rotation will rotate the knob. Each 10-bit output will increment or decrement a count variable in the MCU code depending on the driection of rotation. That count will be used to calculate the angle of the wheel using equation 1 above.
 
@@ -69,7 +69,7 @@ The rotary encoder must be connected to the steering column such that the rotati
 
       Driven/Driving = 960/360 = 8/3 ==> 8:3    (3)
       
-The steering wheel is already limited to the 960 degree range by Nissan. This means that the steering wheel physically is unable to exceed 960 degrees of rotation from the left boundary to the right boundary. Therefore, mapping its rotation using the 8:3 gear ratio will also make it physically impossible for the rotation of the encoder to exceed 360 degrees as desired. The TRD-NA1024NW is a 1024 resolution encoder, meaning it displays 1024 unique outputs per revolution. For each turn of the encoder, 0.176 degrees will be measured allowing the angle to be extremely precise. Additionally, by attaching the gear system to the steering column, the OEM steering wheel can be used as the input to the encoder. 
+The steering wheel is already limited to the 960 degree range by Nissan. This means that the steering wheel physically is unable to exceed 960 degrees of rotation from the left boundary to the right boundary. Therefore, mapping its rotation using the 8:3 gear ratio will also make it physically impossible for the rotation of the encoder to exceed 360 degrees as desired. The TRD-NA1024NW is a 1024 resolution encoder, meaning it displays 1024 unique outputs per revolution. For each turn of the encoder, 0.356 degrees will be measured allowing the angle to be extremely precise. Additionally, by attaching the gear system to the steering column, the OEM steering wheel can be used as the input to the encoder. 
 
 ##### 5. Calculations
 
