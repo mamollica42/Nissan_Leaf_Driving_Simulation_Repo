@@ -72,10 +72,13 @@ The rotary encoder must be connected to the steering column such that the rotati
 The steering wheel is already limited to the 960 degree range by Nissan. This means that the steering wheel physically is unable to exceed 960 degrees of rotation from the left boundary to the right boundary. Therefore, mapping its rotation using the 8:3 gear ratio will also make it physically impossible for the rotation of the encoder to exceed 360 degrees as desired. The TRD-NA1024NW is a 1024 resolution encoder, meaning it displays 1024 unique outputs per revolution. For each turn of the encoder, 0.356 degrees will be measured allowing the angle to be extremely precise. Additionally, by attaching the gear system to the steering column, the OEM steering wheel can be used as the input to the encoder. 
 
 ##### 5. Calculations
+To find the diameters of the gears that will be used to create the 8:3 gear ratio, we will follow the Law of Gearing:
+      
+      D2/D1 = T2/T1                             (4)
+      
+where D1 and D2 are the diameters of the gears, and T1 and T2 are the number of teeth for each gear. To acheive an 8:3 ratio, the driving gear will have 18 teeth and the driven gear will have 48 teeth. This translates to 6 cm and 16 cm respectively for D1 and D2 to maintain the 8:3 ratio while meeting the spacing constraint of the vehicle.
 
-![image](https://user-images.githubusercontent.com/100802413/202805894-4c042fc8-f71d-490f-8039-ac412f45bafb.png)
-
-_Figure 4: Gear Ratio and Angle calculation Analysis_
+To verify that this ratio would provide accurate mapping of 960 to 360 degrees, we created a MATLAB script to iterate through all possible positions of the encoder as seen in the figure below.
 
 ![image](https://user-images.githubusercontent.com/100802413/202862273-5f44f45a-ed0a-4e65-bb63-7dd475245d4e.png)
 
