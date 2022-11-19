@@ -82,5 +82,6 @@ _Figure 4: Gear Ratio and Angle calculation Analysis_
 | Part        | Price    |
 |:-----------:|:--------:|
 | Encoder     | $352.00  |
+| JT-035D     | $13.00   | (Mounting Bracket)
 | Arduino     | $27.60   |
-| TOTAL       | $379.60  |
+| TOTAL       | $392.60  |
