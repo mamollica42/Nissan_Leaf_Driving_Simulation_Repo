@@ -14,8 +14,8 @@ the data into a local microcontroller which will interpret the data and relay it
 - System must be small enough to fit in the area of the vehicle without interfering with the driver or other subsytems
 
 The simulation requires an input for the steering angle of the vehicle. In the Nissan Leaf, the steering
-is limited to 2 and 2/3 rotations from the center point to each clockwise and counter-clockwise direction.
-Therefore, the angle measured must be limited to 960 degrees in each direction. Due to the broader impact 
+is limited to 2 and 2/3 total rotations from the clockwise boundary to the counter-clockwise boundary.
+Therefore, the angle measured must be limited to 960 degrees total. Due to the broader impact 
 accuracy constraint, the error of the angle sensed must be within 1% of the true angle to prevent false
 representation of the steering.
 
