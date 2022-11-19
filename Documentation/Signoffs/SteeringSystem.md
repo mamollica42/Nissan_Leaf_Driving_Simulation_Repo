@@ -82,7 +82,7 @@ To verify that this ratio would provide accurate mapping of 960 to 360 degrees, 
 
 ![image](https://user-images.githubusercontent.com/100802413/202862273-5f44f45a-ed0a-4e65-bb63-7dd475245d4e.png)
 
-_Figure 5: MATLAB Verfication for all possible Angles_
+_Figure 4: MATLAB Verfication for all possible Angles_
 
 ### BOM
 
