@@ -77,6 +77,10 @@ The steering wheel is already limited to the 960 degree range by Nissan. This me
 
 _Figure 4: Gear Ratio and Angle calculation Analysis_
 
+![image](https://user-images.githubusercontent.com/100802413/202862273-5f44f45a-ed0a-4e65-bb63-7dd475245d4e.png)
+
+_Figure 5: MATLAB Verfication for all possible Angles_
+
 ### BOM
 
 | Part        | Price    |
