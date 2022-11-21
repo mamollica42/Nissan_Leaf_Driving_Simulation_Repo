@@ -27,7 +27,7 @@ representation of the steering.
 
 _Figure 1: 2D-Model of Gear and Encoder Connection_
 
-![image](https://user-images.githubusercontent.com/100802413/200971713-41b91541-980b-4e55-9a2c-9e852589094b.png)
+![image](https://user-images.githubusercontent.com/100802413/203094793-8e89066d-e622-4f77-b923-f02e60bc9ed6.png)
 
 _Figure 2: 3D-Model of Gear and Encoder Connection_
 
