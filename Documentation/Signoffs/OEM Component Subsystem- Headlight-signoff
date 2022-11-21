@@ -1,2 +1,7 @@
 #OEM Component Subsystem- Headlight
 ##The function of the small part Subsystem
+###Specification & constraints
+   -The headlight shall connect to the Master Microcontroller.
+   *The headlight shall produce an output that matches the voltage to the microcontroller and keep the voltage at the same level for the headlight.
+   +The headlight shall be powered by the vehicle
+   
