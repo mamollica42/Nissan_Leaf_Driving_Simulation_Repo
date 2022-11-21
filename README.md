@@ -26,13 +26,14 @@ This repository currently contains finalized documents for the project, but futu
 
 Michael Mollica - CmpE
 
+Gerardo Mateo - CmpE
+
 Chase Colotta - EE
 
 Brett Harden - EE
 
 Ethan Powers - EE
 
-Gerardo Mateo - CmpE
 
 ### Faculty Supervisor
 
