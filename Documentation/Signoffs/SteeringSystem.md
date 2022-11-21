@@ -22,20 +22,15 @@ representation of the steering.
 ### Schematic
 ##### 1. Model
 
-
-![image](https://user-images.githubusercontent.com/100802413/200971670-3beca395-ed8c-400a-b166-59c4ad6b9142.png)
-
-_Figure 1: 2D-Model of Gear and Encoder Connection_
-
 ![image](https://user-images.githubusercontent.com/100802413/203094793-8e89066d-e622-4f77-b923-f02e60bc9ed6.png)
 
-_Figure 2: 3D-Model of Gear and Encoder Connection_
+_Figure 1: 3D-Model of Gear and Encoder Connection_
 
 ##### 2. Wiring Schematic
 
 ![image](https://user-images.githubusercontent.com/100802413/202778335-03551d16-b805-4bf0-b12f-0724f2eec5a0.png)
 
-_Figure 3: Encoder Connection to MCU_
+_Figure 2: Encoder Connection to MCU_
 
 
 ### Analysis
@@ -82,7 +77,7 @@ To verify that this ratio would provide accurate mapping of 960 to 360 degrees, 
 
 ![image](https://user-images.githubusercontent.com/100802413/202862273-5f44f45a-ed0a-4e65-bb63-7dd475245d4e.png)
 
-_Figure 4: MATLAB Verfication for all possible Angles_
+_Figure 3: MATLAB Verfication for all possible Angles_
 
 ### BOM
 
