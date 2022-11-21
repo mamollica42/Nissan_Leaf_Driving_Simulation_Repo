@@ -54,7 +54,7 @@ This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with 
 
 The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The output of the encoder changes on rotation of the knob. The knob of the encoder will be connected to a gear system that is mounted to the steering column of the vehicle so that the steering wheel rotation will rotate the knob. Each 10-bit output will increment or decrement a count variable in the MCU code depending on the direction of rotation. That count will be used to calculate the angle of the wheel using equation 1 above.
 
-Our contraint of 1% accuracy means that the encoder must have a resolution high enough to measure values within 1% of the true angle. In this case, 1% of 960 degrees is 9.6 degrees. With a 1024 resolution, we are able to cut down the accuracy to 0.9375 degrees, which is nearly 0.01% accurate. This resolution is lowest possible thaat allows the team to measure less than a degree of change in the steering angle.
+Our contraint of 1% accuracy means that the encoder must have a resolution high enough to measure values within 1% of the true angle. In this case, 1% of 960 degrees is 9.6 degrees. With a 1024 resolution, we are able to cut down the accuracy to 0.9375 degrees, which is nearly 0.1% accurate. This resolution is the lowest possible that allows the team to measure less than a degree of change in the steering angle.
 
 ##### 3. Microcontroller Selection
 
