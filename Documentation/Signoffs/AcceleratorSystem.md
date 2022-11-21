@@ -32,8 +32,9 @@ The spliced wires which are connected to sensor 1 and sensor 2 will be giving va
 
 | Part                         | Price    |
 |:----------------------------:|:--------:|
-| Dorman 22-18 splicers 7 pact:|: $4.49  :|
-| 22 gauge wire               :|: $14.99 :|
+| Dorman 22-18 splicers 7 pact | $4.49    |
+| 22 gauge wire                | $14.99   |
+
 note: tax not included
 
 
