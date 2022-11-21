@@ -50,13 +50,15 @@ where D is the degrees of accuracy and Resolution is the how many data bits.
 
 ##### 2. Encoder Selection
 
-This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can supply the current of up to 70 mA to the rotary encoder.
+This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can receive current of up to 32 mA from the rotary encoder.
 
-The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The output of the encoder changes on rotation of the knob. The knob of the encoder will be connected to a gear system that is mounted to the steering column of the vehicle so that the steering wheel rotation will rotate the knob. Each 10-bit output will increment or decrement a count variable in the MCU code depending on the driection of rotation. That count will be used to calculate the angle of the wheel using equation 1 above.
+The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The output of the encoder changes on rotation of the knob. The knob of the encoder will be connected to a gear system that is mounted to the steering column of the vehicle so that the steering wheel rotation will rotate the knob. Each 10-bit output will increment or decrement a count variable in the MCU code depending on the direction of rotation. That count will be used to calculate the angle of the wheel using equation 1 above.
+
+Our contraint of 1% accuracy means that the encoder must have a resolution high enough to measure values within 1% of the true angle. In this case, 1% of 960 degrees is 9.6 degrees. With a 1024 resolution, we are able to cut down the accuracy to 0.9375 degrees, which is nearly 0.01% accurate. This resolution is lowest possible thaat allows the team to measure less than a degree of change in the steering angle.
 
 ##### 3. Microcontroller Selection
 
-The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Each GPIO pin can supply up to 40 mA, but normally operates at 20 mA per pin. Given that the encoder requires 10 digital pins, the Arduino UNO can support that requirement and still have leftover pins for communication. Addtionally, the power supplied to the encoder will be supplied by the power system to avoid any possible damage to the microcontroller.
+The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Each GPIO pin can receive up to 40 mA and operates at 5 V. The maximum current consumption Given that the encoder requires 10 digital pins, the Arduino UNO can support that requirement and still have leftover pins for communication. Addtionally, the power supplied to the encoder will be supplied by the power system to avoid any possible damage to the microcontroller.
 
 ##### 4. Connectivity
 
