@@ -43,20 +43,16 @@ Dr. Nan Chen - ECE Department
 Dr. B. Andy Pardue - ME Department
 
 
-
 ## Repo Organization
-
----
-
-
 ### Reports
-
----
+- Project Proposal
+- Conceptual Design
 
 ### Documentation
-
----
+- 3D Models
+- Electrical Diagrams
+- Images
+- Signoffs
 
 ### Software
 
----
