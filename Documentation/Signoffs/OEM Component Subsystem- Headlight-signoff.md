@@ -12,6 +12,8 @@ The digital signal will represent the off, on, high, and low beams to indicate t
    - To much current going to the device
    
 Wiring schematic
+
+
 ![image](https://user-images.githubusercontent.com/101354063/203189061-6c70cbb5-0b52-4060-af47-caf9a5024755.png)
 ### Figure 1: Connect the Nissan leaf with Optocoupler 
 
