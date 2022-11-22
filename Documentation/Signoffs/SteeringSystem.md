@@ -34,6 +34,26 @@ LEGEND:
 
 _Figure 1: 3D-Model of Gear and Encoder Connection_
 
+![image](https://user-images.githubusercontent.com/100802413/203189084-4ff750e8-f932-4b92-87c6-e0bdec4e0706.png)
+
+_Figure 2: 2D Model of the Large Gear to be 3D printed_
+
+![image](https://user-images.githubusercontent.com/100802413/203189280-dcae68cb-8ae4-47ec-b419-241335dcf2db.png)
+
+_Figure 3: 2D Model of the Small Gear to be 3D printed_
+
+![image](https://user-images.githubusercontent.com/100802413/203189609-5dd03eb4-6410-4281-a13b-cac1aa31316c.png)
+
+_Figure 4: 2D Model of the Adapter Plate to be 3D printed_
+
+![image](https://user-images.githubusercontent.com/100802413/203190285-c6b2cc0e-e184-4ab3-b42d-a73d2c848b8a.png)
+
+_Figure 5: 2D Model of the Mounting Plate in the Nissan Leaf_
+
+![IMG_7204](https://user-images.githubusercontent.com/100802413/203190383-4d88893a-d795-43c9-b0dd-f7bd2a8ef0a3.jpg)
+
+_Figure 6: Highlighted the Mounting Plate from Figure 5 in the Nissan Leaf_
+
 ##### 2. Wiring Schematic
 
 ![image](https://user-images.githubusercontent.com/100802413/202778335-03551d16-b805-4bf0-b12f-0724f2eec5a0.png)
