@@ -58,7 +58,7 @@ _Figure 6: Highlighted the Mounting Plate from Figure 5 in the Nissan Leaf_
 
 ![image](https://user-images.githubusercontent.com/100802413/202778335-03551d16-b805-4bf0-b12f-0724f2eec5a0.png)
 
-_Figure 2: Encoder Connection to MCU_
+_Figure 7: Encoder Connection to MCU_
 
 
 ### Analysis
@@ -107,7 +107,7 @@ To verify that this ratio would provide accurate mapping of 960 to 360 degrees, 
 
 ![image](https://user-images.githubusercontent.com/100802413/202862273-5f44f45a-ed0a-4e65-bb63-7dd475245d4e.png)
 
-_Figure 3: MATLAB Verfication for all possible Angles_
+_Figure 8: MATLAB Verfication for all possible Angles_
 
 ##### 6. Gear and Mounting Design
 The steering column has an inch diameter, so the small gear must have a center bore of exactly 1 inch (2.54 cm). To maintain a small size, the small gear was chosen to have a 6 cm pitch diameter to fit around the steering column and comply with size restrictions around the column. When chosing 6 cm for the small gear, 16 cm must be the pitch diameter of the large gear based on the Law of Gearing. The center bore of the large gear must fit the knob of the encoder such that the rotation of the gear is the same rotation for the encoder. In this case, the center bore of the large gear must be 8 mm in diameter and a 0.5 mm notch to secure the knob of the encoder. 
