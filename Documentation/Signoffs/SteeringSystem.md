@@ -92,7 +92,7 @@ _Figure 3: MATLAB Verfication for all possible Angles_
 ##### 6. Gear and Mounting Design
 The steering column has an inch diameter, so the small gear must have a center bore of exactly 1 inch (2.54 cm). To maintain a small size, the small gear was chosen to have a 6 cm pitch diameter to fit around the steering column and comply with size restrictions around the column. When chosing 6 cm for the small gear, 16 cm must be the pitch diameter of the large gear based on the Law of Gearing. The center bore of the large gear must fit the knob of the encoder such that the rotation of the gear is the same rotation for the encoder. In this case, the center bore of the large gear must be 8 mm in diameter and a 0.5 mm notch to secure the knob of the encoder. 
 
-The mounting bracket of the encoder will be connect to the frame of the Leaf via an adapter plate. The gear connected to the encoder needs to be on the same plane as the gear from the steering column to allow the gears to mesh properly. This was done by creating the adapter plate to allow the mounting bracket to be rotated 45 degrees from the frame and be parallel to the steering column. Then the depth of the adapter was determined to be 12.7063 mm based off of the space needed to have the gears far enough to mesh, but also have the gears as close as possible to reduce the backlash between the teeth.
+The mounting bracket of the encoder will be connect to the frame of the Leaf via an adapter plate. The gear connected to the encoder needs to be on the same plane as the gear from the steering column to allow the gears to mesh properly. This was done by creating the adapter plate to allow the mounting bracket to be rotated 45 degrees from the frame and be parallel to the steering column. Then the depth of the adapter was determined to be 12.7063 mm based off of the space needed to have the gears far enough to mesh, but also have the gears as close as possible to reduce the backlash between the teeth. These gears will be 3D printed in the Maker's Space in the Angelo & Jennette Volpe Library.
 
 ### BOM
 
@@ -102,3 +102,5 @@ The mounting bracket of the encoder will be connect to the frame of the Leaf via
 | JT-035D      | $13.00   | (Mounting Bracket)
 | Arduino      | $27.60   |
 | TOTAL        | $392.60  |
+
+_*Note: The filament and the printer will be provided by the university because this is a school project_
