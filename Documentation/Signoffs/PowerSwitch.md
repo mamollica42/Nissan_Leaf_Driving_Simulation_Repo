@@ -37,4 +37,5 @@ The diode for the circuit shown in Figure 1 will be a 19TQ015CJ from SMC Diode S
 
 ### References
 [1] https://www.digikey.com/en/products/detail/switch-components/TD1-1A-DC-3-R/11492919
+
 [2] https://www.digikey.com/en/products/detail/smc-diode-solutions/19TQ015CJ/6022095
