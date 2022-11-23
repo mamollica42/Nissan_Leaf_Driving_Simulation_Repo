@@ -9,7 +9,7 @@ the data into a local microcontroller which will interpret the data and relay it
 - Must measure angle of rotation of the steering wheel
 - Must use the Nissan Leaf OEM steering wheel as the input
 - Angle shall be no more than 960 degrees from the left boundary to the right boundary (2 and 2/3 rotations)
-- Error of the angle must be within 1% of the true steering angle
+- Error of the angle must be within 1 degree of the true steering angle
 - Must not lose steering position when power is cycled
 - System must be small enough to fit in the area of the vehicle without interfering with the driver or other subsytems
 
@@ -56,7 +56,7 @@ _Figure 6: Highlighted the Mounting Plate from Figure 5 in the Nissan Leaf_
 
 ##### 2. Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/100802413/202778335-03551d16-b805-4bf0-b12f-0724f2eec5a0.png)
+![image](https://user-images.githubusercontent.com/100802413/203655408-eaf541b6-9036-4ff9-b6dc-a94fa89a0a0f.png)
 
 _Figure 7: Encoder Connection to MCU_
 
@@ -80,9 +80,20 @@ where D is the degrees of accuracy and Resolution is the how many data bits.
 
 This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can receive current of up to 32 mA from the rotary encoder.
 
-The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The output of the encoder changes on rotation of the knob. The knob of the encoder will be connected to a gear system that is mounted to the steering column of the vehicle so that the steering wheel rotation will rotate the knob. Each 10-bit output will increment or decrement a count variable in the MCU code depending on the direction of rotation. That count will be used to calculate the angle of the wheel using equation 1 above.
+The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The outputs of each pin are 10 V signals which are too high for the MCU to read becuase the Arduino digital input pins operate at 5 V. To overcome this issue, a simple two resistor voltage divider will be connected to each output of the encoder. To solve for the resitance needed, the below equation is used:
 
-Our contraint of 1% accuracy means that the encoder must have a resolution high enough to measure values within 1% of the true angle. In this case, 1% of 960 degrees is 9.6 degrees. With a 1024 resolution, we are able to cut down the accuracy to 0.9375 degrees, which is nearly 0.1% accurate. This resolution is the lowest possible that allows the team to measure less than a degree of change in the steering angle.
+      Vin = Vout*(R2/R1 + R2)   (3)
+      
+In this case, Vin is 10 V and Vout must be 5 V. Therefore, selecting R1 such that it equals R2 will give a Vout of 5 V because 10 V / 2 = 5 V. For the purposes of this project, R1 and R2 will be 2 W, 100k Ohm resistors to ensure the current of 32 mA will not damage the resistors in the voltage divider circuit. This can be proved by the equation below:
+
+      P = IV                    (4)
+      
+where P is power dissipated in the resistor, I is current through the resistor, and V is the voltage across the resistor. The resistors are each rated for 2 W of power. If each resistor is placed in the circuit and are equivalent, the current though each resistor will be equal. Additionally, the voltage across each resistor will be 5 V based on Ohm's Law where V = IR. Therefore, the power consumed in each resistor is (5 V)(32 mA / 2) = 0.16 W which is much less than the maximum rating of 2 W.
+
+The output of the encoder changes on rotation of the knob. The knob of the encoder will be connected to a gear system that is mounted to the steering column of the vehicle so that the steering wheel rotation will rotate the knob. Each 10-bit output will increment or decrement a count variable in the MCU code depending on the direction of rotation. That count will be used to calculate the angle of the wheel using equation 1 above.
+
+Our contraint of 1% accuracy means that the encoder must have a resolution high enough to measure values within 1 degree of the true angle. With a 1024 resolution, we are able to cut down the accuracy to 0.9375 degrees, which is highly accurate. This resolution is the lowest possible that allows the team to measure less than a degree of change in the steering angle.
+
 
 ##### 3. Microcontroller Selection
 
@@ -92,14 +103,14 @@ The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog
 
 The rotary encoder must be connected to the steering column such that the rotation of the wheel can be properly mapped to the encoder. This will be done using a gear system with an 8:3 gear ratio. This value is based on the 960 degree rotation of the Nissan Steering Wheel having to be mapped to the 360 degree rotation of the encoder. The below equation helps analytically verify this calculation:
 
-      Driven/Driving = 960/360 = 8/3 ==> 8:3    (3)
+      Driven/Driving = 960/360 = 8/3 ==> 8:3    (4)
       
 The steering wheel is already limited to the 960 degree range by Nissan. This means that the steering wheel physically is unable to exceed 960 degrees of rotation from the left boundary to the right boundary. Therefore, mapping its rotation using the 8:3 gear ratio will also make it physically impossible for the rotation of the encoder to exceed 360 degrees as desired. The TRD-NA1024NW is a 1024 resolution encoder, meaning it displays 1024 unique outputs per revolution. For each turn of the encoder, 0.356 degrees will be measured allowing the angle to be extremely precise. Additionally, by attaching the gear system to the steering column, the OEM steering wheel can be used as the input to the encoder.  
 
 ##### 5. Calculations
 To find the diameters of the gears that will be used to create the 8:3 gear ratio, we will follow the Law of Gearing:
       
-      D2/D1 = T2/T1                             (4)
+      D2/D1 = T2/T1                             (5)
       
 where D1 and D2 are the diameters of the gears, and T1 and T2 are the number of teeth for each gear. To acheive an 8:3 ratio, the driving gear will have 18 teeth and the driven gear will have 48 teeth. This translates to 6 cm and 16 cm respectively for D1 and D2 to maintain the 8:3 ratio while meeting the spacing constraint of the vehicle.
 
@@ -121,6 +132,7 @@ The mounting bracket of the encoder will be connect to the frame of the Leaf via
 | TRD-NA1024NWD| $352.00  |
 | JT-035D      | $13.00   | (Mounting Bracket)
 | Arduino      | $27.60   |
-| TOTAL        | $392.60  |
+| Resistors    | $7.60    |
+| TOTAL        | $400.20  |
 
 _*Note: The filament and the printer will be provided by the university because this is a school project_
