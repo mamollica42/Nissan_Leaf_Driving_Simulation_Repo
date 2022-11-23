@@ -8,7 +8,7 @@ the data into a local microcontroller which will interpret the data and relay it
 ### Specifications & Constraints
 - Must measure angle of rotation of the steering wheel
 - Must use the Nissan Leaf OEM steering wheel as the input
-- Angle shall be no more than 960 degrees from the left boundary to the right boundary (2 and 2/3 rotations)
+- Angle shall be no more than 960 degrees from the left boundary to the right boundary (2 and 2/3 rotations) and no less than 0 degrees
 - Error of the angle must be within 1 degree of the true steering angle
 - Must not lose steering position when power is cycled
 - System must be small enough to fit in the area of the vehicle without interfering with the driver or other subsytems
@@ -16,7 +16,7 @@ the data into a local microcontroller which will interpret the data and relay it
 The simulation requires an input for the steering angle of the vehicle. In the Nissan Leaf, the steering
 is limited to 2 and 2/3 total rotations from the clockwise boundary to the counter-clockwise boundary.
 Therefore, the angle measured must be limited to 960 degrees total. Due to the broader impact 
-accuracy constraint, the error of the angle sensed must be within 1% of the true angle to prevent false
+accuracy constraint, the error of the angle sensed must be within 1 degree of the true angle to prevent false
 representation of the steering.
 
 ### Schematic
@@ -78,7 +78,7 @@ where D is the degrees of accuracy and Resolution is the how many data bits.
 
 ##### 2. Encoder Selection
 
-This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can receive current of up to 32 mA from the rotary encoder.
+This steering wheel design will use a TRD-NA1024NW absolute rotary encoder with a resolution of 1024. The unique property of the absolute encoder is that the output will remain constant even if the encoder is not powered which allows the system to not lose the steering position when power is cycled. The Encoder a voltage rating of 12 to 24 VDC, and a maximum current consumption of 70 mA. The TRD-NA1024NW has 10 data bits, a VDD pin, and a GND pin. This requires a microcontroller with at least 10 digital GPIO pins and that can receive current of up to 32 mA from the rotary encoder.
 
 The encoder has 1024 unique 10-bit outputs than will be read into the MCU. The outputs of each pin are 10 V signals which are too high for the MCU to read becuase the Arduino digital input pins operate at 5 V. To overcome this issue, a simple two resistor voltage divider will be connected to each output of the encoder. To solve for the resitance needed, the below equation is used:
 
@@ -103,14 +103,14 @@ The Arduino UNO REV3 is clocked at 16 MHz, has 14 digital I/O pins, and 6 analog
 
 The rotary encoder must be connected to the steering column such that the rotation of the wheel can be properly mapped to the encoder. This will be done using a gear system with an 8:3 gear ratio. This value is based on the 960 degree rotation of the Nissan Steering Wheel having to be mapped to the 360 degree rotation of the encoder. The below equation helps analytically verify this calculation:
 
-      Driven/Driving = 960/360 = 8/3 ==> 8:3    (4)
+      Driven/Driving = 960/360 = 8/3 ==> 8:3    (5)
       
 The steering wheel is already limited to the 960 degree range by Nissan. This means that the steering wheel physically is unable to exceed 960 degrees of rotation from the left boundary to the right boundary. Therefore, mapping its rotation using the 8:3 gear ratio will also make it physically impossible for the rotation of the encoder to exceed 360 degrees as desired. The TRD-NA1024NW is a 1024 resolution encoder, meaning it displays 1024 unique outputs per revolution. For each turn of the encoder, 0.356 degrees will be measured allowing the angle to be extremely precise. Additionally, by attaching the gear system to the steering column, the OEM steering wheel can be used as the input to the encoder.  
 
 ##### 5. Calculations
 To find the diameters of the gears that will be used to create the 8:3 gear ratio, we will follow the Law of Gearing:
       
-      D2/D1 = T2/T1                             (5)
+      D2/D1 = T2/T1                             (6)
       
 where D1 and D2 are the diameters of the gears, and T1 and T2 are the number of teeth for each gear. To acheive an 8:3 ratio, the driving gear will have 18 teeth and the driven gear will have 48 teeth. This translates to 6 cm and 16 cm respectively for D1 and D2 to maintain the 8:3 ratio while meeting the spacing constraint of the vehicle.
 
