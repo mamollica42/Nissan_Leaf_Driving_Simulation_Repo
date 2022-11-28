@@ -17,7 +17,9 @@ The simulation requires an input for the steering angle of the vehicle. In the N
 is limited to 2 and 2/3 total rotations from the clockwise boundary to the counter-clockwise boundary.
 Therefore, the angle measured must be at least 960 degrees total. Due to the broader impact 
 accuracy constraint, the error of the angle sensed must be within 1 degree of the true angle to prevent false
-representation of the steering.
+representation of the steering. Based on a study conducted on front wheel drive vehicles, the range of error in steering angles
+is between -0.56 and 1.64 degrees for a total error range of 2.2 degrees [1]. Therefore, the 1 degree target error is within the
+normal range of a standard front wheel drive vehicle such as the Nissan Leaf.
 
 ### Schematic
 ##### 1. Model
@@ -145,3 +147,6 @@ The furthest point that the design extends to the right is the small gear on the
 | TOTAL        | $400.20  |
 
 _*Note: The filament and the printer will be provided by the university because this is a school project_
+
+### REFERENCES
+[1] https://www.researchgate.net/publication/327832862_Analytical_Evaluation_of_Steering_Errors_in_a_Front_Wheel_Steered_Vehicle
