@@ -38,7 +38,7 @@ Ethan Powers - EE
 
 Dr. Nan Chen - ECE Department
 
-Mr. Roberts -  ECE Department
+Mr. Jesse Roberts -  ECE Department
 
 ### Stakeholders
 
