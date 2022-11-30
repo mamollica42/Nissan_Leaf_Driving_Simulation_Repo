@@ -12,13 +12,12 @@ This repository currently contains finalized documents for the project, but futu
 
 ## Salient Outcomes
 
----
+Coming Soon...
 
 
 ## Project Demonstration & Images
 
----
-
+Coming Soon...
 
 ## About Us
 
@@ -59,3 +58,4 @@ Dr. B. Andy Pardue - ME Department
 
 ### Software
 
+Coming Soon...
