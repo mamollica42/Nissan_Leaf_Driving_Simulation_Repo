@@ -1,6 +1,6 @@
 ## Signoffs
 
-Signoffs are the detailed designs for different components. Signoffs include the analysis for each design specification, images of the schematics for the implementation, and the build of materials for the components. These documents are the details for each subsystem in the total project. 
+Signoffs are the detailed designs for different components. Signoffs include the analysis for each design specification, images of the schematics for the implementation, and the bill of materials for the components. These documents are the details for each subsystem in the total project. 
 
 ## 3D Models
 
