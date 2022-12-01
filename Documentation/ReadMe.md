@@ -15,16 +15,16 @@ Schematics posted here were drawn in KiCAD from the signoffs, and they represent
 
 ### PCB files
 
-Coming Soon.
+Coming Soon...
 
 ## Datasheet 
 
-Coming Soon.
+Coming Soon...
 
 
 ## Detailed photos of the project
 
-Coming Soon.
+Coming Soon...
 
 
 
