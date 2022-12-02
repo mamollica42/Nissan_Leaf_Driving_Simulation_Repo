@@ -1,14 +1,12 @@
 Accelerator Pedal Position System
 --------------------------------------
 ### Function of the Subsystem
-The accelerator pedal position system will take the OEM signal from the pedal by splicing into the signal wires and input it to the local microcontroller. The local microcontroller will then calculate the position based the change of the voltage from the OEM hall effect sensor.
+The accelerator pedal position system will take the OEM signal from the pedal by splicing into the signal wires and input them to the local microcontroller. The local microcontroller will then calculate the position based the change of the voltage from the OEM hall effect sensor.
 
 ### Specifications & Constraints
-- Must get pedal position
-- Must feel like OEM system 
-- Must not have any exposed or loose wires
-- Shall send position to local MCU
-- Shall use OEM sensor for best accuracy of position to real driving
+- Must ues OEM accelerator pedal 
+- Must not have any exposed or loose wires according to NESC standard
+- Shall send position signal to local MCU
 
 ### Wiring Schematic
 
