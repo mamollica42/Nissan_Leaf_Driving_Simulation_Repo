@@ -6,7 +6,7 @@ The accelerator pedal position system will take the OEM signal from the pedal by
 ### Specifications & Constraints
 - Must use OEM accelerator pedal 
 - Must not have any exposed or loose wires according to NESC standard
-- Shall have the same accuracy of a stock nissan leaf accelerator
+- Shall have the same accuracy of a stock nissan leaf accelerator pedal
 - Shall send analog position signal to local MCU
 
 ### Wiring Schematic
