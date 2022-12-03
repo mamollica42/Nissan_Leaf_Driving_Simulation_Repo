@@ -3,7 +3,11 @@ MASTER MICROCONTROLLER
 ### Function of the Subsystem
 The master microcontroller (MMCU) must receive data from four seperate local microcontrollers that interface with the
 sensors in other subsystems. This MMCU will read serial data from each local MCU and then send that data to the PC to
-be processed in the simulation.
+be processed in the simulation. This system in necessary to relieve the PC that is running the graphical simulation from
+having to also read four different data streams from the local microcontrollers. The SpeedGoat system is connected to the
+PC so it can handle the physics engine because the PC can not handle running the graphics and physics simultaneously. So, 
+without the MMCU to handle the addtional data processing to the PC could overload the system and greatly impact the performance 
+of the simulation.
 
 ### Specifications & Constraints
 - Must connect to no less than four local microcontrollers
