@@ -28,7 +28,7 @@ The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital
 
 #### LCD Display Selection
 
-The The 3.5 Inch TFT Color LCD Screen has 24 GPIO pins and can directly snap onto an Arduino UNO REV3. The 3.5" LCD screen can be programmed to display whatever the user wants and is plenty big enough to display the speed data from the simulation. With a module display area that contains 320x480 pixels, the team can add extra embellishments onto the screen to make the speed data that is displayed feel more appropriate to the car. With only one wire coming out of the display and Arduino, the LCD will not stand out and will feel appropriate to the interior of the car.
+The The 3.5 Inch TFT Color LCD Screen has 28 pins and can directly snap onto an Arduino UNO REV3. The 3.5" LCD screen can be programmed to display whatever the user wants and is plenty big enough to display the speed data from the simulation. With a module display area that contains 320x480 pixels, the team can add extra embellishments onto the screen to make the speed data that is displayed feel more appropriate to the car. With only one wire coming out of the display and Arduino, the LCD will not stand out and will feel appropriate to the interior of the car.
 
 #### Mounting
 
