@@ -9,13 +9,13 @@ be processed in the simulation.
 - Must connect to no less than four local microcontrollers
 - Must provide real-time data transfer of under 100 milliseconds
 - Shall connect to the PC running the simulation
-- Shall have sufficient GPIO pins for communication protocols
+- Shall have 4 Tx and 4 Rx pins for communication protocols
 - Shall be powered by the PC
-- Code must not cause deadlock or inhibit any device(s) from sending/receiving data
 
 The definition of real-time is subjective and therefore can not be directly defined. In the case of this system, real-time was
 based on the average human reaction time of 250 milliseconds [1]. Given that delay being considerably high for a real-time system, 
-the team has decided to cut that number to over 1/2 of its value and target less than 100 milliseconds.
+the team has decided to cut that number to over 1/2 of its value and target less than 100 milliseconds. This target is based on the 
+acceptable latency for gaming which lies between 20 and 100 milliseconds [2].
 
 ### Wiring Schematic
 
@@ -32,7 +32,7 @@ Some useful Arduino functions include :
 - Serial.read() : Reads the data into the serial buffer
 - Serial.write(x) : Sends the data 'x' to through the Tx line
 
-By using these functions, we can use the following code that is from the Official Arduino Forum to connect to four other devices [2]:
+By using these functions, we can use the following code that is from the Official Arduino Forum to connect to four other devices [3]:
 
 ![image](https://user-images.githubusercontent.com/100802413/204861114-216f67db-b71b-4e05-a706-6426941dfd11.png)
 
@@ -78,4 +78,6 @@ Based on the calculations above, the Arduino Mega can read each of the Arduino U
 
 [1] https://reactiontest.org/#:~:text=The%20average%20human%20response%20time%20is%20about%200.25,traffic%20and%20had%20to%20slam%20on%20their%20brakes.
 
-[2] https://forum.arduino.cc/t/mega-2560-multiple-serial-connections/100542/2
+[2] https://www.bandwidthplace.com/the-importance-of-latency-in-online-gaming/
+
+[3] https://forum.arduino.cc/t/mega-2560-multiple-serial-connections/100542/2
