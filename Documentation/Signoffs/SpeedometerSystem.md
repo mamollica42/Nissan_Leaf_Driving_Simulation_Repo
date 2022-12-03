@@ -7,13 +7,13 @@ The speedometer subsystem must receive output from the current driving simulatio
 -	Shall connect to the PC running the simulation to obtain simulator data
 -	Shall display the speed at a refresh rate no slower than 100 ms	
 
-The refresh rate of less than 100 ms was chosen based off the acceptable latency of modern video games being between 20 ms and 100 ms [1]. Since human reaction is around 200 ms, this refresh rate would be undetectable by the user of the simulation.
+The refresh rate of less than 100 ms was chosen based off the acceptable latency of modern video games being between 20 ms and 100 ms [1]. Since human reaction time is around 200 ms, this refresh rate would be undetectable by the user of the simulation.
 ### Schematic
 ##### 1. Wiring Schematic
 
 ![image](https://user-images.githubusercontent.com/117474540/205458447-3d4bf94d-3a07-4027-b8cf-cc1fce28f2ab.png)
 
-_Figure 1. Wiring shematic for the Arduino Uno and the 3.5 Inch TFT Color LCD Screen 
+_Figure 1. Wiring schematic for the Arduino Uno and the 3.5 Inch TFT Color LCD Screen 
 
 ### Analysis
 -The 3.5 Inch TFT Color LCD Screen is designed to fit on an Arduino Uno. The UNO has proper connectivity via GPIO to the point where the user snaps the LCD screen on top of the UNO.
@@ -28,7 +28,7 @@ The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital
 
 #### LCD Display Selection
 
-The The 3.5 Inch TFT Color LCD Screen has 24 GPIO pins and can directly snap onto an Arduino UNO REV3. The 3.5" LCD screen can be programmed to display whatever the user wants and is plenty big enough to display the speed data from the simulation. With a module display area that contains 320x480 pixels, the team can add extra embelshments onto the screen to make the speed data that is displayed feel more appropriate to the car. With only one wire coming out of the display and Arduino, the LCD will not stand out and will feel appropriate to the interiror of the car.
+The The 3.5 Inch TFT Color LCD Screen has 24 GPIO pins and can directly snap onto an Arduino UNO REV3. The 3.5" LCD screen can be programmed to display whatever the user wants and is plenty big enough to display the speed data from the simulation. With a module display area that contains 320x480 pixels, the team can add extra embellishments onto the screen to make the speed data that is displayed feel more appropriate to the car. With only one wire coming out of the display and Arduino, the LCD will not stand out and will feel appropriate to the interior of the car.
 
 #### Mounting
 
