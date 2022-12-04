@@ -1,45 +1,55 @@
-OEM Component Subsystem- Headlight
+OEM Component Subsystem- Auto Light
 ------
 
 ## The function of the small part Subsystem
-The headlight must send data to the Master microcontroller, and data received by the microcontroller will be a digital signal. 
-The digital signal will represent the off, on, high, and low beams to indicate to the microcontroller. Also, The headlight will send data to the microcontroller if it blinks left, right, or both.
+The Master microcontroller will receive the output of the Nissan Leaf AutoLight in this part of the subsystem. Furthermore, the Master microcontroller will detect if the headlight is off, on, blinking, and high and low beams.
 
 ### Specification & constraints
-   - The headlight shall connect to the Master Microcontroller.
-   - The headlight shall produce an output that matches the voltage to the microcontroller and keep the voltage at the same level for the headlight.
-   - The headlight shall be powered by the vehicle
-   - To much current going to the device
+   - The high and low wiring from the auto light shall be connect to the Master Microcontroller.
+   - The High and low wiring shall be keep in the minimum 5V
+   - Voltage divider will keep it from having to much current going to the device
    
-Wiring schematic
+# Auto Light Wiring schematic
+![opel2437](https://user-images.githubusercontent.com/101354063/205468261-7fca3396-009b-4eb8-9960-962065d22ac8.png)
+### Figure 1: Headlamp(High and low Relay)
+
+# Design: A Voltage divider from Auto Light to the Microcontroller
+![Capture](https://user-images.githubusercontent.com/101354063/205472902-57cf6121-181d-4fe0-904c-63295cc9c374.PNG)
 
 
-![image](https://user-images.githubusercontent.com/101354063/203189061-6c70cbb5-0b52-4060-af47-caf9a5024755.png)
-### Figure 1: Connect the Nissan leaf with Optocoupler 
+### Figure 2: Voltage divider
 
 Analysis
 -------
-###### 1. The selection of optocoupler for the subsystem
-The objective of the optocoupler for this subsystem is to get feedback out of the headlight without putting strong voltage to the microcontroller or isolating the high voltage from the low voltage. An optocoupler operates by producing infrared light from the input, which a photosensor detects to allow the output to go through. Furthermore, The headlight voltage will allow the Mircocontraoller voltage to be on or off by the optocoupler, as shown in figure 1. Also, The device used for the subsystem will be an optocoupler named LTV-817. 
-Overall, the optocoupler will help to detect whether the headlights are on, off, high, low, and beam.
+### Auto Light Wiring Diagram
+The auto light wiring Diagram shows the whole wiring for each component in the headlight of the Nissan Vehicle. However, the main focus are the Headlamp relays shown in Figure 1 and they link to the headlamps. This displays how the low beam and high beam functions operate and make the headlight indicate. The wiring diagram reveals that the battery is attached to the CPU through the relay showing that the relay receives power from the battery, but the current is operated by the CPU. The input from the battery is also connected to one side of the relay switch. This means that the input to the lamp and headlight should be 12 V. Also, Figure 1 shows that their fuse connects to the output of the relay, and the fuse can take up to 10 amps. Overall, the key point is to see the headlamp relay, what is connected, and how it works. 
+
+### Design Voltage 
+From the information in Auto Light Wiring diagram, a method to detect the output of the relay can be created. The design shown in Figure 2 is to splice and add a voltage divider to connect to the microcontroller. This process uses the 12 V potential that is sent to the lamp to illuminate the light to trigger a reaction on the microcontroller. 
 
 
-###### 2. precaution for LTV-817
-The protection of the device is to prevent the voltage from burning the LTV-817 or too much current by adding a 2.2k resistor to the input of the headlight voltage, which is 12 V.  The reason behind the 2.2 k ohms resistor is because  LVT-817 can handle 20 mA [1]. Furthermore, the reason behind the pull-down resistor is values of input is always in a known state.
+Current through divider, total current through relay,  
+--- still add more information(NOT done yet)
 
-###### 3. Side Note
-Based on research on the Nissan leaf headlight, depending on the type of headlight used on the vehicle total current drawn by a pair of LED headlights can take around 4.16 amps, or a pair of halogen that can take around 9.16 amps[2]. 
+
+
+
+### Summary
+Based on Research, the Auto light from Figure 1, and the Sylvania H13 XtraVision Halogen Headlight Bulb[1], the voltage going through the headlight is 12 volts, and the current is in the range of 4.0 to 4.7 amp. Furthermore, based on the information, I gather that the current won't affect the device, but the voltage will.
+
+
+ 
 
 
 | Part   | Cost   | Qty|
 |-------:|:------:|:--:|
-| 2.2kohms| $0.10 |  4 |
-|10K ohms| $0.10  | 4  |
-|LTV-817 | $0.39  | 4  |
+| 1.8kohms| $0.10 |  4 |
+|1.3K ohms| $0.10  | 4  |
 
 reference
 ---------
-[1]https://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series%20201610%20.pdf
+[1]https://www.oreillyauto.com/detail/c/xtravision/sylvania-h13-xtravision-halogen-headlight-bulb-pack-of-2/syl5/h13xv2bp/v/a/128040/automotive-car-2014-nissan-leaf?q=headlight&pos=0
+
 [2]https://ledlightinginfo.com/led-headlights-amps#:~:text=So%20the%20total%20amps%20drawn,pair%20would%20be%209.16%20amps.
 
 
