@@ -9,11 +9,17 @@ The speedometer subsystem must receive output from the current driving simulatio
 
 The refresh rate of less than 100 ms was chosen based off the acceptable latency of modern video games being between 20 ms and 100 ms [1]. Since human reaction time is around 200 ms, this refresh rate would be undetectable by the user of the simulation.
 ### Schematic
-##### 1. Wiring Schematic
+##### 1. Assembly
+
+![image](https://user-images.githubusercontent.com/117474540/205758564-ffde40c5-9775-4cfe-a78d-28c376bdf988.png)
+
+_Figure 1. A photograph of the LCD snapping onto the Arduino Uno [2]
+
+##### 2. Wiring Schematic
 
 ![image](https://user-images.githubusercontent.com/117474540/205458447-3d4bf94d-3a07-4027-b8cf-cc1fce28f2ab.png)
 
-_Figure 1. Wiring schematic for the Arduino Uno and the 3.5 Inch TFT Color LCD Screen 
+_Figure 2. Wiring schematic for the Arduino Uno and the 3.5 Inch TFT Color LCD Screen 
 
 ### Analysis
 -The 3.5 Inch TFT Color LCD Screen is designed to fit on an Arduino Uno. The UNO has proper connectivity via GPIO to the point where the user snaps the LCD screen on top of the UNO.
@@ -46,4 +52,6 @@ The recommended max distance of a USB 2.0 cable is 16 feet. The PC running the s
 ### REFERENCES
 
 [1] https://www.bandwidthplace.com/the-importance-of-latency-in-online-gaming/
+
+[2] https://www.amazon.com/Treedix-Display-Screen-Arduino-Mega2560/dp/B0872S57HG
 
