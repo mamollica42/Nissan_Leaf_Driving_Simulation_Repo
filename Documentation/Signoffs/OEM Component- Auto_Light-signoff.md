@@ -49,26 +49,28 @@ The Voltage divider will need to produce an output 5 V and keep the range 5 mA
 
 Voltage divider
 
-Vout = Vin $ { R2 \over R1+R2}$
+Vout = Vin ${ R2 \over R1+R2}$
 
-5V = 12V $ { 1.3 \ k \over 1.8 \ k + 1.3 \ k}$
+5V = 12V ${ 1.3 \ k \over 1.8 \ k + 1.3 \ k}$
 
-$ Total \ Resistance: 3.2 \ k= {1.8 \ k+1.3 \ k}$ 
+$Total \ Resistance: 3.2 \ k= {1.8 \ k+1.3 \ k}$ 
 
-$ Max \ current:4.84 \ mA= {15V \over3.1k}$
+$Max \ current:4.84 \ mA= {15V \over3.1k}$
 
-$ Min \ current: 3.23\ mA = {10V\over3.1k}$
+$Min \ current: 3.23\ mA = {10V\over3.1k}$
 
 Test different voltages going through Voltage Divider(10 to 15)
+
 ![image](https://user-images.githubusercontent.com/101354063/206590619-2b761535-507f-4b48-9c93-6e61ed42e707.png)
 
 
 
 Test different voltages going through Voltage Divider(0 to 20 )
+
 ![image](https://user-images.githubusercontent.com/101354063/206590730-664b1617-73a3-42e7-9693-27cbb4650f5e.png)
 
 
-To Prevent OverCurrent: The design need a fuse of 3mA. As shown in figure2.
+To Prevent OverCurrent: The design need a fuse of 5mA. As shown in figure2.
 
 
 
