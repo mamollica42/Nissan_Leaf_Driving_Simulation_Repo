@@ -66,8 +66,10 @@ Test different voltages going through Voltage Divider(0 to 15)
 Test different voltages going through Voltage Divider(10 to 15)
 
 ![image](https://user-images.githubusercontent.com/101354063/206637463-7d53790e-b779-426a-9310-c4f548f22864.png)
+ 
+## Master microcontrollers communication
 
-
+A wire will be connected directly to the optoisolator to the digital pin of the master microcontroller. The microcontrollers receive voltage from themselves into digital pins, and the optoisolator controls whether the voltage passes through or not based on whether the auto light is on or off. Also, the master microcontroller has plenty of unused GPIO pins. On the other hand, the microcontroller will read the voltage of either 5 V or 0 V, which means that the digital GPIO pins will read the voltage.
 
 
 ### Summary
