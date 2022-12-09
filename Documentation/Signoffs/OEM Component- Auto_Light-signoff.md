@@ -8,7 +8,7 @@ The Master microcontroller will receive the output of the Nissan Leaf AutoLight 
    - Must detect high beam,low beam, left indicator, and right indicator
    - Must use OEM componets as the inputs
    - The signal input must not exceed 5 V 
-   - Implement a way to protect the signal from voltage varying from 10 V to 15 V
+   - Implement a way to protect the signal from the input voltage varying from 10 V to 15 V
    - Current to the signal must be less than 1 percent of the current to the light
    - Prevent interference among signals through isolation methods
    
@@ -27,13 +27,13 @@ The Master microcontroller will receive the output of the Nissan Leaf AutoLight 
 Description
 -------
 ### Auto Light Wiring Diagram
-The auto light wiring diagram shows the whole wiring for each component in the headlight of the Nissan Vehicle. However, the main focus are the Headlamp relays shown in Figure 1 and they link to the headlamps. This displays how the low beam and high beam functions operate and make the headlight indicate. The wiring diagram reveals that the battery is attached to the CPU through the relay showing that the relay receives power from the battery, but the current is operated by the CPU. The input from the battery is also connected to one side of the relay switch. This means that the input to the lamp and headlight should be 12 V. Also, figure 1 shows that their fuse connects to the output of the relay, and the fuse can take up to 10 amps. Overall, the key point is to see the headlamp relay, what is connected, and how it works. 
+The auto light wiring diagram shows the whole wiring for each component in the headlight of the Nissan vehicle. However, the main focus are the headlamp relays shown in Figure 1 and they link to the headlamps. This displays how the low beam and high beam functions operate and make the headlight indicate. The wiring diagram reveals that the battery is attached to the CPU through the relay showing that the relay receives power from the battery, but the current is operated by the CPU. The input from the battery is also connected to one side of the relay switch. This means that the input to the lamp and headlight should be 12 V. Also, Figure 1 shows that their fuse connects to the output of the relay, and the fuse can take up to 10 amps. Overall, the key point is to see the headlamp relay, what is connected, and how it works. 
 
 
 ### Design Voltage 
-From the information in Auto Light Wiring diagram, a method to detect the output of the relay can be created. The design shown in figure 2 is to splice and add a voltage divider to connect to the microcontroller. This process uses the 12 V potential that is sent to the lamp to illuminate the light to trigger a reaction on the microcontroller. 
+From the information in Auto Light Wiring diagram, a method to detect the output of the relay can be created. The design shown in Figure 2 is to splice and add a voltage divider to connect to the microcontroller. This process uses the 12 V potential that is sent to the lamp to illuminate the light to trigger a reaction on the microcontroller. 
 
-The design behind the Voltage Divider is to reduce the auto light voltage to no more than 5 V and have a current of less than 1% of the current to the light. The current through the light is 4.79 A which makes the limit to the voltage divider 47.9 mA. 40 mA is decided to be a limit for the safety of the devices added and not exceed the constraint. Through Ohm's law, the total resistance is found to be approximately 375 Ohms assuming that the input voltage could vary from 10 to 15 V. This achieves a maximum of 5 V between two series resistors of 250 Ohms and 125 Ohms respectively. The average active voltage applied should be approximately 12 V. Thus, the limit should not be exceeded. A 40 mA fuse will be installed to protect against any extreme voltage spikes outside of the 10 to 15 V range.
+The design behind the voltage divider is to reduce the auto light voltage to no more than 5 V and have a current of less than 1% of the current to the light. The current through the light is 4.79 A which makes the limit to the voltage divider 47.9 mA. 40 mA is decided to be a limit for the safety of the devices added and not exceed the constraint. Through Ohm's law, the total resistance is found to be approximately 375 Ohms assuming that the input voltage could vary from 10 to 15 V. This achieves a maximum of 5 V from a 15 V input between the two series resistors of 250 Ohms and 125 Ohms respectively. The average active voltage applied should be approximately 12 V. Thus, the limit should not be exceeded. A 40 mA fuse will be installed to protect against any extreme voltage spikes outside of the 10 to 15 V range.
 
 However, the design with only a voltage divider has a potential risk due to the chance of a voltage spike reaching the microcontroller and interference from other signals. This design shows the vulnerability to signal interferece through the shared ground terminal and the ability for the current to backfeed onto another divider. The voltage divider also allows the chance of the signal voltage to exceed the limit of 5 V due to a spike in the input voltage on the lamp node. The design was modified to include optoisolators to remidy the hazards of both constraints as shown in Figure 2. The optoisolator will take reduced voltage from the Nissan Vehicle and convert it into a light signal. Then a photosensor will detect the light signal and allow the 5 V to pass through the pin of the microcontroller. The LED that is used to trigger the photosensor also prevents any backfeed current from false triggering a signal. This isolates both systems so that the voltage to the lights does not have a direct path to the signal input. With the microcontroller being used for the 5 V supply in the signal, there should not be a voltage spike to the controller since it would have to be generated by the controller. 
 
@@ -43,11 +43,11 @@ From the Datasheet
 
 ![LVT 817](https://user-images.githubusercontent.com/101354063/206586290-37ae6b0b-b3ca-41a7-96c7-75b4382fc6b4.PNG)
 
-Forward Current = 40 mA  for opto-isolation[3]
+Forward Current = 40 mA  for opto-isolation [3]
 
-The Voltage divider will need to produce an output 5 V and keep the range 40 mA
+The Voltage divider will need to produce a maximum output 5 V and 40 mA.
 
-Voltage divider
+### Voltage divider
 
 Vout = Vin ${ R2 \over R1+R2}$
 
@@ -67,12 +67,11 @@ Test different voltages going through Voltage Divider(10 to 15)
 
 ![image](https://user-images.githubusercontent.com/101354063/206637463-7d53790e-b779-426a-9310-c4f548f22864.png)
 
-To Prevent OverCurrent: The design need a fuse of 40mA. As shown in figure2.
 
 
 
 ### Summary
-Based on Research, the Auto light from Figure 1, and the Sylvania H13 XtraVision Halogen Headlight Bulb[1], the voltage going through the headlight is 12 volts, and the current is in the range of 4.0 to 4.7 amp. Furthermore, based on the information, I gather that the current won't affect the device, but the voltage will.
+The voltage going through the headlight is 12 volts and the current is in the range of 4.0 to 4.7 amp based on research using the auto light diagram from Figure 1 and the Sylvania H13 XtraVision Halogen Headlight Bulb [1]. Furthermore, based on the information, I gather that the current won't affect the device, but the voltage will.
  
 
 | Part   | Cost   | Qty| total|
