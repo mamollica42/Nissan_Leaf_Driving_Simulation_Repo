@@ -80,7 +80,7 @@ The voltage going through the headlight is 12 volts and the current is in the ra
 |125 ohms| $0.70  |  5 |$3.50|
 |LTV-817*| $0.24  | 10 | $2.40|
 |Fuseholders|$0.86| 5  | $4.30|
-|40mA fuse| $2.67 | 8  | $21.36|
+|40mA fuse| $2.67 | 6  | $16.02|
 
 *4 are required. It is the same cost for 10 as it is 6. This provides extras in the event of multiple isolators failing.
 
