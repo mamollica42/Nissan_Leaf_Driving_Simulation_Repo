@@ -49,4 +49,10 @@ professional and readable storage.
 | TOTAL       | $32.36   |
 
 ### References
-[1] https://www.mynissanleaf.com/viewtopic.php?t=4131#:~:text=The%20messages%20on%20the%20LEAF%20EV%20CAN%20bus,the%20Identifiers%20could%20range%20from%200%20to%200x7FF.
+[1] https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP2515-Family-Data-Sheet-DS20001801K.pdf
+
+[2] https://leaf-obd.readthedocs.io/en/latest/tutorial/elm327.html
+
+[3] https://carphrases.com/obd2-vs-can/
+
+[4] https://www.mynissanleaf.com/viewtopic.php?t=4131#:~:text=The%20messages%20on%20the%20LEAF%20EV%20CAN%20bus,the%20Identifiers%20could%20range%20from%200%20to%200x7FF.
