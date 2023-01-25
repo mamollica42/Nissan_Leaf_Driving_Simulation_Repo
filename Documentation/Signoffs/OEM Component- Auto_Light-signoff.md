@@ -20,7 +20,8 @@ The Master microcontroller will receive the output of the Nissan Leaf AutoLight 
 ## Design: A Voltage divider from Auto Light to the Microcontroller
 <br/>
 
-![image](https://user-images.githubusercontent.com/101354063/206637205-1bb47b94-0cef-4220-b707-90ca1036a34e.png)
+![image](https://user-images.githubusercontent.com/101354063/214715548-eb057549-4f71-4921-a6de-6b80e348de19.png)
+
 
 ### Figure 2: Voltage Divder with Opto-isolation
 
