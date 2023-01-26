@@ -47,4 +47,5 @@ note: tax not included
 
 Sources:
 [1] https://portal-diagnostov.com/en/2020/04/20/cruise-control-nissan-leaf-sv-2013-system-wiring-diagrams/
+
 [2] https://erwinsalarda.com/nissan-accelerator-pedal-position-app-sensor/
