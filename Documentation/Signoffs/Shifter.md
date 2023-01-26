@@ -11,7 +11,7 @@ The gear shifter subsystem will capture the OEM signal from the gear shifter sen
 
 ### Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/117474540/214115430-fef84ac0-757d-4dbc-8ce5-b38dcb3c5fe4.png)
+![image](https://user-images.githubusercontent.com/117474540/214940419-ab1ae883-7997-4695-af02-b0b6908a175d.png)
 
 ###### _Figure 1: Splicing OEM wiring to a local microcontroller
 
