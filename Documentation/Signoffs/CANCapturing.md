@@ -13,19 +13,21 @@ that is captured.
 
 ### Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/100802413/214090672-fc79ca31-7226-4c01-a043-3b9339ff5467.png)
+![image](https://user-images.githubusercontent.com/100802413/215526784-682a9f8f-5de8-495e-bd05-458638799d19.png)
 
 ###### _Figure 1: Arduino Leonardo CAN BUS Board Connection to OBD II Port via DB9 connector_
 
 ### Analysis
 ##### 1. Microcontroller Selection
 The Arduino Leonardo CAN BUS Board is designed for the very purpose of 
-reading CAN bus messages through the OBD (On-Board Diagnostics) port of a vehicle. The OBDII port is a 16-pin port commonly used to detect issues or malfunctions within a vehicle. However, the OBDII port in the Nissan Leaf also allows access to each of the three CAN bus systems in the vehicle through some of the pins on the port [1].
+reading CAN bus messages through the OBD (On-Board Diagnostics) port of a vehicle. The OBDII port is a 16-pin port commonly used to detect issues or malfunctions within a vehicle. However, the OBDII port in the Nissan Leaf also allows access to each of the three CAN bus systems in the vehicle through some of the pins on the port [1]. 
 
 - Car-CAN --> Pins 6 & 14
 - EV-CAN  --> Pins 12 & 13
 - AV-CAN  --> Pins 3 & 11
   
+The OBDII pins 6 and 14, which represent the CAN High signal and CAN Low signal respectively, are connected to pins 7 and 2 of the DB9 port through the OBDII to DB9 cable. The DB9 male end that is soldered to the board is connected to the MCP2515 CAN transceiver on the Arduino via CANH (CAN High signal), CANL (CAN Low signal, and GND (Ground). In this case, GND on the OBDII port is pin 5 and is wired to pins 3 and 5 of the DB9.
+
 The board contains the MCP2515 CAN transceiver to read the CAN bus at a rate of up to 1 Mbps and is connected through a DB9 to OBDII cable to the Nissan Leaf. The MCP2515 utilizes its three receive buffers to capture messages from the CAN bus [2]. The most important of these buffers is the Message Assembly Buffer (MAB) which assembles the messages from the CAN bus and always receives the next message [2]. These messages are then transferred into the RXB0 or RXB1 buffers to be read by the MCU once complete [2]. The MAB buffer ensures the messages are valid before sending them to the other two receive buffers so that the data is correctly interpreted [2]. The MCP2515 is built into the Arduino Leonardo CAN BUS Board and communicates via SPI (Serial Periphial Interface) to the on-board MCU. The Arduino will then be powered by and communicating with the PC via USB (Universal Serial Bus).
 
 Arudino IDE can include the MCP2515 CAN-BUS Library in order to write the proper code to capture the data being read
