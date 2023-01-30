@@ -1,1 +1,34 @@
-Function
+Brake Pedal Position System
+--------------------------------------
+### Function of the Subsystem
+The brake pedal position system will take the OEM signal from the brake pedal by splicing into the signal wires and input them to the local microcontroller. 
+The local microcontroller will then calculate the position based the change of the voltage from the OEM Anti-Brake System (ABS) Decelerator sensor.
+
+### Specifications & Constraints
+- Must use OEM brake pedal 
+- Must not have any exposed or loose wires according to NESC standard
+- Must send voltage in the range that changes with pedal position 
+- Must have wires able to handle 6 V and 1 A 
+- Must have microcontroller able to recieve signal from brake system and accelerator system
+- Shall have an accurate measure if the position
+- Shall send position signal to local microcontroller
+
+### Wiring Schematic
+
+### Analysis
+  
+
+### Testing 
+
+
+| Part                         | Price    |
+|:----------------------------:|:--------:|
+
+
+
+
+
+Sources:
+[1] https://portal-diagnostov.com/en/2020/04/20/cruise-control-nissan-leaf-sv-2013-system-wiring-diagrams/
+
+[2] https://erwinsalarda.com/nissan-accelerator-pedal-position-app-sensor/
