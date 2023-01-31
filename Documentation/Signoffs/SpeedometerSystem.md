@@ -34,11 +34,21 @@ The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital
 
 #### LCD Display Selection
 
-The The 3.5 Inch TFT Color LCD Screen has 28 pins and can directly snap onto an Arduino UNO REV3. The 3.5" LCD screen can be programmed to display whatever the user wants and is plenty big enough to display the speed data from the simulation. With a module display area that contains 320x480 pixels, the team can add extra embellishments onto the screen to make the speed data that is displayed feel more appropriate to the car. With only one wire coming out of the display and Arduino, the LCD will not stand out and will feel appropriate to the interior of the car.
+The The 3.5 Inch TFT Color LCD Screen has 28 pins and can directly snap onto an Arduino UNO REV3. The 3.5" LCD screen can be programmed to display whatever the user wants and is plenty big enough to display the speed data from the simulation. With a module display area that contains 320x480 pixels, the team can add extra embellishments onto the screen to make the speed data that is displayed feel more appropriate to the car.
 
 #### Mounting
 
-The recommended max distance of a USB 2.0 cable is 16 feet. The PC running the simulator will be within 16 feet of the car so mounting the LED display in the desired position shall have no effect on transmission speeds.
+The recommended max distance of a USB 2.0 cable is 16 feet. The PC running the simulator will be within 16 feet of the car so mounting the LED display in the desired position shall have no effect on transmission speeds. To keep the the immersive feel of the inside of the car, the LCD will be mounted exactly where the current speedometer display is located. The stock display will be removed and be replaced with a new mount that will mimic the current one. The new one will of be able to communicate with MATLAB and pull the speed data from the simulator.
+
+![image](https://user-images.githubusercontent.com/117474540/215832669-89579faa-cde7-400d-ae63-a6a877984600.png)
+
+_Figure 3. The mounting for the Uno in the Car 
+
+![image](https://user-images.githubusercontent.com/117474540/215867130-0e203977-f486-433f-9da6-c88cc64bec3f.png)
+
+_Figure 4. The face plate for the mount
+
+The back of the mount will be screwed in to replace the old speedometer display. The face plate will allow for only the LCD screen to be seen by the user of the simulator and will be screwed directly where the old speedometer display was located. All of this should allow for immersive experience for the simulator by not creating an eye sore that sticks out from the rest of the car
 
 ### BOM
 
