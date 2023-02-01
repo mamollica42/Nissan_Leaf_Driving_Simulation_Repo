@@ -13,7 +13,7 @@ The accelerator pedal position system will take the OEM signal from the pedal by
 
 ### Wiring Schematic
 
-![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/215950025-2510f3ee-1a50-47db-9ea1-2f4ff162a823.png)
+![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/216156133-f74ab4dd-4ad5-4f1a-8e37-253d4cdc433d.png)
 
 ###### _Figure 1: OEM Wiring With Splice On Output Signals_
 
