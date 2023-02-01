@@ -51,6 +51,7 @@ Since the wires will be only handling 5 V with little to no current, any sized w
 | 22 Gauge Wire                | $14.99   |
 | Arduino Uno                  | $25.00   |
 | Solderable Breadboard        | $6.00    |
+|Diodes                        | $3.00    |
 | Total                        | $50.48   |
 
 ### REFERENCES
