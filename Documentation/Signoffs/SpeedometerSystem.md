@@ -48,7 +48,7 @@ _Figure 3. The mounting for the Uno in the Car
 
 _Figure 4. The face plate for the mount
 
-The back of the mount will be screwed in to replace the old speedometer display. The face plate will allow for only the LCD screen to be seen by the user of the simulator and will be screwed directly where the old speedometer display was located. All of this should allow for immersive experience for the simulator by not creating an eye sore that sticks out from the rest of the car
+The back of the mount will be screwed in to replace the old speedometer display. The face plate will allow for only the LCD screen to be seen by the user of the simulator and will be screwed directly where the old speedometer display was located. All of this should allow for immersive experience for the simulator by not creating an eye sore that sticks out from the rest of the car. The green pieces from the above digrams will be 3D printed in black to blend in with the rest of the components in the car. The pink piece is the Arduino and the yellow piece is the display.
 
 ### BOM
 
