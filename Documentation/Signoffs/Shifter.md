@@ -30,7 +30,7 @@ After measuring the voltages and changing the gears in the car, it was determine
 ### Microcontroller Selection
 The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. 4 digital I/O pins will be used to capture the 4 different gears the car can be in. To do this, interrupts will be used to detect the fallen edge from the gear shifter sensor. The Arduino UNO is capable of interrupts every 16 µs which is more than capable of detecting the fallen edge from the sensor. Interrupt intervals can be adjusted to better sense the signal coming from the sensor. Since the max input from the wires will be 5 V, the Arduino will be able to handle the inputs coming from the car. The microcontroller will be powered by the power system that is still yet to be designed.
 
-![image](https://user-images.githubusercontent.com/117474540/215917978-b063e302-8889-4629-a07e-f17d4542abea.png)
+![image](https://user-images.githubusercontent.com/117474540/216136883-7d28a09f-101c-4502-a12e-633c129e9a33.png)
 
 ###### _Figure 3: Spice Diagram of Protection Circuit
 
