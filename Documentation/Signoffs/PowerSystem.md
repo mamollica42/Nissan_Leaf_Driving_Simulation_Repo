@@ -1,19 +1,19 @@
-Power Switch
+Power System
 -------
 ### Function of the Subsystem
-The Power Switch system allow power to be connected and disconnect without the need to remove wires from different components. The switch will operate as a stop function to quickly disconnect the power to the entire car and sensor system if the need arises.
+The power system is to provide power to the all components and subsystems within the design. This includes the original car components as well as the external subsystems that will be added. This will include replacing the battery with a power converter for continuous supply and implementing safety components to protect the sensors and controllers in the external subsystems. 
+
 ### Specs & Constraints
-- Shall not limit the current flow when the switch is closed.
-- Shall include components to ensure the load does not violate Kirchhoff’s current or voltage laws.
--	Shall be easily accessible from the operator’s seat.
--	Shall disconnect the OEM and third-party systems from the power supply when the switch is open.
+- Must provide power to all components
+- Must implement safety devices to protect components
+- 
 
 ### Schematics
 ###### Wiring Diagram
 
 ![image](https://user-images.githubusercontent.com/117474411/203227976-1c39a5a5-bcdf-47fb-9f0b-6ac4c078f299.png)
 
-_Figure 1: Switch Circuit & Connected Components_
+_Figure 1: Switch Circuit & Connected Components_---
 
 ### Analysis
 ###### 1. Power Supply
