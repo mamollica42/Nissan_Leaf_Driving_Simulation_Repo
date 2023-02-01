@@ -15,7 +15,7 @@ The local microcontroller will then calculate the position based the change of t
 
 ### Wiring Schematic
 
-![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/215949814-645c1465-3091-42a3-8553-81f7d98cd840.png)
+![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/216156312-18f6ac9b-e457-4395-8ff9-c2c603f8faf1.png)
 
 _Figure 1: The wiring schematic with the desired local MCU and OEM sensors for both pedals being sent to it. 
 
