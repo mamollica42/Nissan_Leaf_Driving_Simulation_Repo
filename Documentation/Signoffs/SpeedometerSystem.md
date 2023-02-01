@@ -3,11 +3,10 @@ SPEEDOMETER SUBSYSTEM
 ### Functions of the Subsystem
 The speedometer subsystem must receive output from the current driving simulation and display the speed the user is going. A microcontroller will be used to pull the speed data from the MATLAB code and display it on a LCD screen.
 ### Specifications & Constraints
--	Microcontroller must be able to read data from MATLAB
+- Data must exit the PC running the simulator
+-	Microcontroller must be able to communicate with the simulator while it is running
 -	Shall connect to the PC running the simulation to obtain simulator data
--	Shall display the speed at a refresh rate no slower than 100 ms	
 
-The refresh rate of less than 100 ms was chosen based off the acceptable latency of modern video games being between 20 ms and 100 ms [1]. Since human reaction time is around 200 ms, this refresh rate would be undetectable by the user of the simulation.
 ### Schematic
 ##### 1. Assembly
 
@@ -17,9 +16,9 @@ _Figure 1. A photograph of the LCD snapping onto the Arduino Uno [2]
 
 ##### 2. Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/117474540/205458447-3d4bf94d-3a07-4027-b8cf-cc1fce28f2ab.png)
+![image](https://user-images.githubusercontent.com/117474540/216127475-511a63b1-875b-450a-8510-a35084af7384.png)
 
-_Figure 2. Wiring schematic for the Arduino Uno and the 3.5 Inch TFT Color LCD Screen 
+_Figure 2. Schematic for the 3.5 Inch TFT Color LCD Screen Plugging into the Arduino Uno
 
 ### Analysis
 -The 3.5 Inch TFT Color LCD Screen is designed to fit on an Arduino Uno. The UNO has proper connectivity via GPIO to the point where the user snaps the LCD screen on top of the UNO.
