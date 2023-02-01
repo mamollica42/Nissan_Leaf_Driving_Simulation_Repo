@@ -46,6 +46,25 @@ which means the subsystem can read the CAN messages at a rate of up to nearly 91
 
 Data that is captured will print directly to the arduino terminal and can be directly copied into an excel sheet for professional and readable storage.
 
+###### 2.1 Connectivity
+
+![image](https://user-images.githubusercontent.com/100802413/216151029-aff715e4-ca1a-47b0-be1f-a7ce8affa70f.png)
+![image](https://user-images.githubusercontent.com/100802413/216151328-315d90bf-ea3d-4cc5-bd8f-ad999e69d378.png)
+
+###### _Figure 3: OBDII Pin Diagram w/ Table_
+
+As seen in the figure above, the OBDII port pins 6 & 14 are connected to the CAN High and CAN Low signals of the Car-CAN as stated in the Nissan Leaf OBDII manual [4]. The output pins of the OBDII port will be connected to a OBDII to DB9 cable.
+
+![image](https://user-images.githubusercontent.com/100802413/216152540-af9bf0cb-b73a-4366-83e3-27e6940f5b0a.png)
+
+###### _Figure 4: Pin Diagram for OBDII to DB9 cable_
+
+The diagram above shows that the CANH & CANL signals from pins 6 & 14 from the OBDII port are connected to pins 7 & 2 of the DB9 port through the cable [5]. The female end of the DB9 connector is soldered to the Arduino and the pins 7 & 2 are directly connected to the CANH & CANL input signals of the MCP2515 CAN transceiver.
+
+![image](https://user-images.githubusercontent.com/100802413/216154259-9e7d8f32-eb69-4c52-8bd4-608f9c1e5c79.png)
+
+###### _Figure 5: Arduino Leonardo CAN Bus Board PCB Underside_
+
 ### BOM
 | Part        | Price    |
 |:-----------:|:--------:|
@@ -59,3 +78,7 @@ Data that is captured will print directly to the arduino terminal and can be dir
 [2] https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP2515-Family-Data-Sheet-DS20001801K.pdf
 
 [3] https://www.mynissanleaf.com/viewtopic.php?t=4131#:~:text=The%20messages%20on%20the%20LEAF%20EV%20CAN%20bus,the%20Identifiers%20could%20range%20from%200%20to%200x7FF.
+
+[4] https://leaf-obd.readthedocs.io/en/latest/diagnostic-connector.html#leaf-diagnostic-connector-contact-designation-legend
+
+[5] https://components101.com/sites/default/files/component_datasheet/OBD2%20Adapter%20Cable%20Datasheet.pdf
