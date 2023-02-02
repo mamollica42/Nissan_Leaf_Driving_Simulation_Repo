@@ -15,7 +15,7 @@ The power system is to provide power to all of the components and subsystems wit
 ### Schematics
 ###### Wiring Diagram
 
-![image](https://user-images.githubusercontent.com/117474411/216243257-0affaccf-8fbd-4382-b7ad-6753cd88b2f7.png)
+![image](https://user-images.githubusercontent.com/117474411/216245628-1bed7f22-95d3-4894-a486-71cec359ede8.png)
 
 _Figure 1: Power Circuit & Connected Components_---
 
@@ -51,7 +51,10 @@ BOM
 |-----------------:|:--------|
 | TD1-1A-DC-3-R    | $5.08   |
 | 19TQ015CJ        | $1.30   |
-| TOTAL            | $6.38   |
+| 10-02493         | $30.04  |
+| 5ST 100-R        | $3.78   |
+| 4628 (fuse holder)| $2.92  |
+| TOTAL            | $43.12  |
 
 ### References
 [1] https://www.digikey.com/en/products/detail/switch-components/TD1-1A-DC-3-R/11492919
