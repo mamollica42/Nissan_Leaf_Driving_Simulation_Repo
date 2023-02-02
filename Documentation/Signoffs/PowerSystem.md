@@ -35,11 +35,11 @@ To prevent the switch from being a restriction, the master switch needs to have 
 The diode for the circuit shown in Figure 1 will be a 19TQ015CJ from SMC Diode Solutions [2]. It is designed to have a forward voltage of 360 mV at a maximum of 19 A. The maximum instantaneous power provided by the source is 600 Watts, but the power should dissipate quickly due to the source being disconnected. This assumption allows for the diode to be functional and provide the path for energy to flow and not violate KVL and KCL.
 
 ###### 5. Wiring
-The wiring to all of the external components will be 18-gauge wire. This is based around the pre-terminated wire that is sold to be used for the Arduino’s DC jack [7]. The maximum current that is allowed for 18-gauge wire is 2.3 Amps [8]. The internal resistance is approximately 6.385 Ohms per 1000 ft. For the 6 ft of wire, the resistance is 0.03831 Ohms. This means that the maximum voltage across the wire is 0.08811 V or 88.11 mV.  
+The wiring to all of the external components will be 18-gauge wire. This is based around the pre-terminated wire that is sold to be used for the Arduino’s DC jack [3]. The maximum current that is allowed for 18-gauge wire is 2.3 Amps [4]. The internal resistance is approximately 6.385 Ohms per 1000 ft. For the 6 ft of wire, the resistance is 0.03831 Ohms. This means that the maximum voltage across the wire is 0.08811 V or 88.11 mV.  
 
 ###### 6. Voltages and Fuses
-Per the datasheet for the Arduino Uno, the microcontroller draws no more than 70 mA and can receive voltages ranging from 6 to 20 volts on the DC jack [3]. This means that the microcontrollers can be connected directly to the 12 V system without needing to have the voltage being adjusted. The range of acceptable voltages for the Uno allows for the 12 V signal to have more fluctuation than the voltage variation that would be expected after the voltage drop of the wiring. The rotary encoder used for the steering system states that it can draw up to 70 mA per the data sheet at a range of 10.6 to 24 V. Likewise, the voltage will be within the requirements with the 12 V supply.
-Similar to the voltage, the current needs to be regulated to prevent the wiring from being jeopardized in the event of a short circuit. To prevent overcurrents, a fuse panel will be implemented to protect the wiring. The fuses for each system will be 100 mA glass fuses from Digi-Key [w]. These fuses will be used in series as the first point of failure instead of the wire. It is common practice for mechanics and electricians to install wiring for devices that would be around 60-85% of the maximum current rating for the expected load.  The 100 mA fuse was chosen to allow for approximately 70% of the maximum tolerance to allow for the event of a device drawing slightly more current than expected. 
+Per the datasheet for the Arduino Uno, the microcontroller draws no more than 70 mA and can receive voltages ranging from 6 to 20 volts on the DC jack [5]. This means that the microcontrollers can be connected directly to the 12 V system without needing to have the voltage being adjusted. The range of acceptable voltages for the Uno allows for the 12 V signal to have more fluctuation than the voltage variation that would be expected after the voltage drop of the wiring. The rotary encoder used for the steering system states that it can draw up to 70 mA per the data sheet at a range of 10.6 to 24 V. Likewise, the voltage will be within the requirements with the 12 V supply.
+Similar to the voltage, the current needs to be regulated to prevent the wiring from being jeopardized in the event of a short circuit. To prevent overcurrents, a fuse panel will be implemented to protect the wiring. The fuses for each system will be 100 mA glass fuses from Digi-Key [6]. These fuses will be used in series as the first point of failure instead of the wire. It is common practice for mechanics and electricians to install wiring for devices that would be around 60-85% of the maximum current rating for the expected load.  The 100 mA fuse was chosen to allow for approximately 70% of the maximum tolerance to allow for the event of a device drawing slightly more current than expected. 
 
 ###### 7. OEM Connection
 The OEM battery terminals will be connected to bolts that will act as posts to the switch. The OEM safety devices will be utilized since they were designed for the OEM components. 
@@ -57,3 +57,11 @@ BOM
 [1] https://www.digikey.com/en/products/detail/switch-components/TD1-1A-DC-3-R/11492919
 
 [2] https://www.digikey.com/en/products/detail/smc-diode-solutions/19TQ015CJ/6022095
+
+[3] https://www.digikey.com/en/products/detail/tensility-international-corp/10-02493/9134524
+
+[4] https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf
+
+[5] https://docs.arduino.cc/static/6c94080aaecc364dd9013ce042a27790/A000066-datasheet.pdf
+
+[6] https://www.digikey.com/en/products/detail/bel-fuse-inc/5ST-100-R/1009010
