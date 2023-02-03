@@ -4,12 +4,12 @@ Power System
 The power system is to provide power to all of the components and subsystems within the design. This includes the original car components as well as the external subsystems that will be added. This will include replacing the battery with a power converter for continuous supply and implementing safety components to protect the sensors and controllers in the external subsystems. . 
 
 ### Specs & Constraints
--Must regulate the supplied source voltage to be within 5% of the expected value
--Shall implement safety components to prevent overcurrent
--Must not exceed wire capabilities
--Must supply required input voltage to each component
--Must implement a method to disconnect the entire system from the source
--Must utilize the power supply provided 
+- Must regulate the supplied source voltage to be within 5% of the expected value
+- Shall implement safety components to prevent overcurrent
+- Must not exceed wire capabilities
+- Must supply required input voltage to each component
+- Must implement a method to disconnect the entire system from the source
+- Must utilize the power supply provided 
 
 
 ### Schematics
