@@ -7,7 +7,7 @@ The gear shifter subsystem will capture the OEM signal from the gear shifter sen
 -	Must not have any exposed or loose wires according to NESC standard
 -	Shall have the same accuracy as the OEM gear shifter sensor
 -	Shall receive the OEM gear shifter signal on a local microcontroller
--	Local microcontroller must sample above the Nyquist rate of the OEM sensor
+-	Local microcontroller must sample above or at the Nyquist rate of the OEM sensor
 
 ### Wiring Schematic
 
@@ -50,7 +50,7 @@ Since the the max input voltage into a digital I/O port is 5.5 V, four 100 Ω re
 ###### _Figure 5: Output Voltage of Circuit with an Input Voltage of 15 V
 
 ### Wire and Splicer Selection
-Since the wires will be only handling 5 V with little to no current, any sized wire could be used to carry the gear shifter's signal to the local microcontroller. 22 gauge wire will be used to splice into the OEM wires because that is the wire size of the actual wires. 22 gauge wire is capable of handling 7 A, so it is more than capable of handling a signal with a very small current [2]. The wires will be relatively close to the Arduino, so it will not play any noticeable part in slowing the sensing capabilities of the MCU. 
+Since the wires will be only handling 5 V, any sized wire could be used to carry the gear shifter's signal to the local microcontroller. 22 gauge wire will be used to splice into the OEM wires because that is the wire size of the actual wires. 22 gauge wire is capable of handling 7 A, so it is more than capable of handling a digital voltage signal [2]. The wires will be relatively close to the Arduino, so it will not play any noticeable part in slowing the sensing capabilities of the MCU. 
 
 ### BOM
 
