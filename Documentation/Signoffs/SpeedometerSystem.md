@@ -13,7 +13,7 @@ The speedometer subsystem must receive output from the driving simulation and di
 
 ![image](https://user-images.githubusercontent.com/117474540/205758564-ffde40c5-9775-4cfe-a78d-28c376bdf988.png)
 
-_Figure 1. A photograph of the LCD snapping onto the Arduino Uno [2]
+_Figure 1. A photograph of the LCD snapping onto the Arduino Uno [1]
 
 ##### 2. Wiring Schematic
 
@@ -55,8 +55,5 @@ The back of the mount will be screwed in to replace the old speedometer display.
 | TOTAL       | $54.20   |
 
 ### REFERENCES
-
-[1] https://www.bandwidthplace.com/the-importance-of-latency-in-online-gaming/
-
-[2] https://www.amazon.com/Treedix-Display-Screen-Arduino-Mega2560/dp/B0872S57HG
+[1] https://www.amazon.com/Treedix-Display-Screen-Arduino-Mega2560/dp/B0872S57HG
 
