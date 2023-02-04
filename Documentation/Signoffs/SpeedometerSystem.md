@@ -4,8 +4,9 @@ SPEEDOMETER SUBSYSTEM
 The speedometer subsystem must receive output from the current driving simulation and display the speed the user is going. A microcontroller will be used to pull the speed data from the MATLAB code and display it on a LCD screen.
 ### Specifications & Constraints
 - Data must exit the PC running the simulator
--	Microcontroller must be able to communicate with the simulator while it is running
--	Shall connect to the PC running the simulation to obtain simulator data
+-	Microcontroller must be able to read speed data from the simulator while it is running
+-	Shall display the speed data in an appropriate manner inside the car
+-	Shall be powered by the PC running the simulator
 
 ### Schematic
 ##### 1. Assembly
@@ -21,15 +22,12 @@ _Figure 1. A photograph of the LCD snapping onto the Arduino Uno [2]
 _Figure 2. Schematic for the 3.5 Inch TFT Color LCD Screen Plugging into the Arduino Uno
 
 ### Analysis
--The 3.5 Inch TFT Color LCD Screen is designed to fit on an Arduino Uno. The UNO has proper connectivity via GPIO to the point where the user snaps the LCD screen on top of the UNO.
 
--Arduino Boards can read outputs directly from MATLAB. With the Arduino UNO REV3 being clocked at 16 MHz, the constraint of a refresh rate no slower than 100 ms can easily be met.
-
--The board will directly connect to the PC via USB 2.0 for long distance power and data transfer.
+Arduino can communicate directly with MATLAB via serial communication with a USB 2.0. For the simulator to send data to the Arduino, serial.write() functions will be inserted into the code to continously send speed data to the Arduino. For the Arduino to receive and display the speed data, serial.read() functions will be used. Once the speed data is obtained, it will be appropriately displayed on the LCD.
 
 #### Microcontroller Selection
 
-The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Each GPIO pin can supply up to 40 mA. The board can directly communicate with the PC via serial communication and can read data directly from MATLAB. This would allow the speed data to be continuously sent to the board with a refresh rate lower than 100 ms.
+The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Arduino can directly communicate with MATLAB via serial communication with a USB 2.0. This would allow for the speed data to be on the Arduino Uno in a programming language other MATLAB which confirms the constraint of the data exiting the simulator. The Arduino will be powered by the PC running the simulator. 
 
 #### LCD Display Selection
 
