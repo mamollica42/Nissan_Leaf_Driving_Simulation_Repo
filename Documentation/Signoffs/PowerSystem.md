@@ -1,7 +1,7 @@
 Power System
 -------
 ### Function of the Subsystem
-The power system is to provide power to all of the components and subsystems within the design. This includes the original car components as well as the external subsystems that will be added. This will include replacing the battery with a power converter for continuous supply and implementing safety components to protect the sensors and controllers in the external subsystems. . 
+The power system is to provide power to all of the components and subsystems within the design. This includes the original car compenents in its entirety as well as the external subsystems that will be added. This will include replacing the battery with a power converter for continuous supply and implementing safety components to protect the sensors and controllers in the external subsystems. . 
 
 ### Specs & Constraints
 - Must regulate the supplied source voltage to be within 5% of the expected value
@@ -21,7 +21,7 @@ _Figure 1: Power Circuit & Connected Components_---
 
 ### Analysis
 ###### 1. Power Supply
-The power supply to be used was given by the Mechanical Engineering Department at Tennessee Tech. It is labeled to supply 12 Volts and 600 Watts of direct current. Using Ohm’s law, the maximum current and worst-case load that could be handled by the power supply is 50 Amps. The voltage output of the power supply was tested with an oscilloscope and the peak-to-peak voltage was approximately 800 mV. This output means that the voltage supplied is between 11.6 and 12.4 V. The variance of +/- 0.4 V means that the supplied voltage is approximately 3.33% of the expected value. This verifies that the power supply’s original output meets the 5% constraint.  
+The power supply to be used was given by the Mechanical Engineering Department at Tennessee Tech. It is labeled to supply 12 Volts and 600 Watts of direct current. Using Ohm’s law, the maximum current and worst-case load that could be handled by the power supply is 50 Amps. The voltage output of the power supply was tested with an oscilloscope and the peak-to-peak voltage was approximately 800 mV with a 12 V DC offest. This output means that the voltage supplied is between 11.6 and 12.4 V. The variance of +/- 0.4 V means that the supplied voltage is approximately 3.33% of the expected value. This verifies that the power supply’s original output meets the 5% constraint.  
 
 ###### 2. Kirchhoff's Law
 The switch by itself breaks the circuit and power flow through the load when it is opened. Kirchhoff developed two laws that need to be accounted for in the design of the switch. The principle in both laws is that energy must be able to flow through a circuit. Kirchhoff Current Law states that the net current value at a node needs to equal zero. This means that all current entering a certain point is equal to the current leaving the point. Kirchhoff’s Voltage Law states that the voltage around a closed loop must be net zero. This means that all voltage produced within a closed loop must be consumed by another element. The use of energy storage elements such as capacitors and inductors impose a problem to the circuit as they release energy after the source is disconnected. In inductive elements, a disruption in power supplied to the element can cause a sudden spike in the voltage. This is due to the flow of energy being disrupted and causing a “flyback” of charge, and potentially causing damage to the component.
