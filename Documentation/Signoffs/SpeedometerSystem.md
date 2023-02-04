@@ -1,15 +1,15 @@
 SPEEDOMETER SUBSYSTEM
 --------------------
 ### Functions of the Subsystem
-The speedometer subsystem must receive output from the current driving simulation and display the speed the user is going. A microcontroller will be used to pull the speed data from the MATLAB code and display it on a LCD screen.
+The speedometer subsystem must receive output from the driving simulation and display the speed the user is going. A microcontroller will be used to export the speed data from the simulator and display it on a screen inside the car.
 ### Specifications & Constraints
 - Data must exit the PC running the simulator
 -	Microcontroller must be able to read speed data from the simulator while it is running
--	Shall display the speed data in an appropriate manner inside the car
 -	Shall be powered by the PC running the simulator
+-	Shall display the speed data in an appropriate manner inside the car
 
 ### Schematic
-##### 1. Assembly
+##### 1. Screen to Microcontroller Connection
 
 ![image](https://user-images.githubusercontent.com/117474540/205758564-ffde40c5-9775-4cfe-a78d-28c376bdf988.png)
 
@@ -23,11 +23,9 @@ _Figure 2. Schematic for the 3.5 Inch TFT Color LCD Screen Plugging into the Ard
 
 ### Analysis
 
-Arduino can communicate directly with MATLAB via serial communication with a USB 2.0. For the simulator to send data to the Arduino, serial.write() functions will be inserted into the code to continously send speed data to the Arduino. For the Arduino to receive and display the speed data, serial.read() functions will be used. Once the speed data is obtained, it will be appropriately displayed on the LCD.
-
 #### Microcontroller Selection
 
-The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Arduino can directly communicate with MATLAB via serial communication with a USB 2.0. This would allow for the speed data to be on the Arduino Uno in a programming language other MATLAB which confirms the constraint of the data exiting the simulator. The Arduino will be powered by the PC running the simulator. 
+The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. Arduino can directly communicate with the simulator that runs on MATLAB via serial communication with a USB 2.0. For the simulator to send data to the Arduino, serial.write() functions will be inserted into the simulator code to continuously send speed data to the Arduino. For the Arduino to receive and display the speed data, serial.read() functions will be used. Once the speed data is obtained, it will be appropriately displayed on a screen inside the car. This would allow for the speed data to be on the Arduino Uno in a programming language other than MATLAB which confirms the constraint of the data exiting the simulator. The Arduino will be powered by the PC running the simulator. 
 
 #### LCD Display Selection
 
