@@ -12,20 +12,20 @@ This subsystem will obtain the gas pedals position and send this signal to a loc
 
 ### Wiring Schematic
 
-![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/216156133-f74ab4dd-4ad5-4f1a-8e37-253d4cdc433d.png)
+![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/217087668-75f8f196-f3cc-4efa-ba06-ad668866a8ed.png)
 
-###### _Figure 1: OEM Wiring With Splice On Output Signals_
+###### _Figure 1: OEM Wiring With Splice On Output Signals of Gas and Brake pedals_
 
 ### Analysis
-The reason for using the OEM wires and splicing them is because the pedal itself is pressed closed with no way to access the internals of the sensor. Another problem with installing an external sensor is that there is not a pivot point on the outside of the pedal to mount a sensor on. The only way to meassure the position with external would be a lidar sensor mounted to the wall measuring the distance of the pedal from the back. This would not be very accurate as well as could be hit or disrupted by the user. Therefore, the decision was to splice the existing output wires of the existing OEM sensors. There is a wiring diagram as well as the expected values of each wire one from Automotive Electricians Portal LLC [1] and one from Erwin Salarda [2]. The wiring diagram is shown in Figure 2 and the expected values are shown in Figure 3. The spliced wires which are connected to sensor 1 and sensor 2 will be giving vary voltages depending on how depressed the pedal is at that moment. We will then code the local MCU to observe this change in voltage and vary the cars acceleration as appropriate. When we are coding the local MCU we will get the min and max bounds and do a high number iterations between the two and bound them to an angle. The wires will be spliced with a Dorman 22-18 gauge quick splice terminal. This will splice the wires safe and keep the enclosed and not exposed or dangerous. We will also need some excess 22 gauge wire to put into the splicer. I am chosing 22 gauge wire since that is what the car already uses and it meets the specs by being able to handle 300 volts and 7 amps.    
+The customer wanted a simulator that feels as close to actually driving a vehicle. With this in mind he wanted all stock components as controllers in the simulation. I then needed a sensor to measure the position of the gas pedal with the output voltage in a range of 0-5V. The gas pedal has a stock accelerator pedal position sensor (APPS) that sends an analog signal with range 0-5V to the ECM(Engine Controller Module). I can splice the two sensors from the APPS and connect them to the analog input pins of the local microcontroller. These spliced wires will be 22 AWG which has a max rating of 300V and 7A which meet the constraint for the wire. Arduino microcontrollers have ten bit analog input pins which means that it reads a different value every 4.88mV. The math to get that number is that the max volts analog can read is 5V and ten bits is 1024 and 5V divided by 1024 is 4.88mV per step. The lowest voltage range of the APPS sensor was tested to be 1.883V which is 376.6 steps to the microcontroller. Therefor the APPS sensor has an accuracy of 0.27% which meets the constant. To meet the last constant I will be using Dorman wire splicers which conceal the wire connections.    
 
 ![Screenshot 2023-01-26 133456](https://user-images.githubusercontent.com/117474294/214932846-6c566b33-5910-436a-a5ec-db32af85b6cc.png)
 
-###### _Figure 2: The wiring diagram of the cruise control with the pedal position sensors at the bottom left_
+###### _Figure 2: The wiring diagram of the cruise control with the pedal position sensors at the bottom left[1]_
 
 ![image](https://user-images.githubusercontent.com/117474294/203162462-ea3d0025-a9c0-4b51-aa64-806d46f55e12.png)
 
-###### _Figure 3: The expected values of each wire for the accelerator_
+###### _Figure 3: The expected values of each wire for the accelerator[2]_
 
 ### Testing 
 The accelerator pedal has been tested by the Mechanical Engineering (ME) capstone team that has also been tasked to get data from the gas pedal to use in the simulation. They took out the pedal and took it to their lab and power the sensors with a power supply and measured the sensors output with a digital multimeter (DMM). Their results are shown in Figure 4. As shown in the picture there are two 5V supplied the pedal from the ECU to pins 3 and 2 and shown in the picture with red and wired in the car with white. The two grounds are shown shown in the picture as pins 5 and 6 with black and wired in the car with black. The two outputs from the senors are on pins 1 and 4 and are shown in the picture as green but are wired in the car with red. The correct pins and wire colors are also shown in Figure 2. The voltage range they got on the sensor at pin 1 is 0.367V - 2.250V from zero throttle to full throttle respectively. The voltage range from the sensor on pin 4 is 0.745V - 4.455V. With these ranges we will be able to set up a linear angle increase as the voltages increase in the coding of the local microcontroller. 
