@@ -4,11 +4,11 @@ Accelerator Pedal Position System
 This subsystem will obtain the gas pedals position and send this signal to a local microcontroller for processing. The local microcontroller will then send its position to the master microcontroller which tells the simulation the pedals position. 
 
 ### Specifications & Constraints
--Must use OEM gas pedal to meet customer expectations.
--Must send voltage at the range 0-5V that changes as the position changes to be read by the local microcontroller.
--Must have wires able to handle at least 5V and 20mA due to the expected voltage range 0-5V and expected current of 20mA.
--Shall have an accurate measure of the pedal postion of at least 1% accuracy to ensure the simulation is a accurate representation of real life. 
--Must not have any exposed or loose wire according to IEEE 3003.2  
+- Must use OEM gas pedal to meet customer expectations.
+- Must send voltage at the range 0-5V that changes as the position changes to be read by the local microcontroller.
+- Must have wires able to handle at least 5V and 20mA due to the expected voltage range 0-5V and expected current of 20mA.
+- Shall have an accurate measure of the pedal postion of at least 1% accuracy to ensure the simulation is a accurate representation of real life. 
+- Must not have any exposed or loose wire according to IEEE 3003.2  
 
 ### Wiring Schematic
 
