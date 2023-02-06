@@ -50,7 +50,7 @@ Since the the max input voltage into a digital I/O port is 5.5 V, four 100 Ω re
 ###### _Figure 5: Output Voltage of Circuit with an Input Voltage of 15 V
 
 ### Wire and Splicer Selection
-Since the wires will be only handling 5 V, any sized wire could be used to carry the gear shifter's signal to the local microcontroller. 22 gauge wire will be used to splice into the OEM wires because that is the wire size of the actual wires. 22 gauge wire is capable of handling 7 A, so it is more than capable of handling a digital voltage signal [2]. The wires will be relatively close to the Arduino, so it will not play any noticeable part in slowing the sensing capabilities of the MCU. 
+Since the wires will be only handling 5 V, any sized wire could be used to carry the gear shifter's signal to the local microcontroller. 22 gauge wire will be used to splice into the OEM wires. 22 gauge wire is capable of handling 7 A, so it is more than capable of handling a digital voltage signal [2]. The wires will be relatively close to the Arduino, so it will not play any noticeable part in slowing the sensing capabilities of the MCU. 
 
 ### BOM
 
