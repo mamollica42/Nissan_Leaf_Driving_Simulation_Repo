@@ -1,21 +1,22 @@
 Brake Pedal Position System
 --------------------------------------
 ### Function of the Subsystem
-The brake pedal position system will take the OEM signal from the brake pedal by splicing into the signal wires and input them to the local microcontroller. 
-The local microcontroller will then calculate the position based the change of the voltage from the OEM Anti-Brake System (ABS) Decelerator sensor.
+This system will obtain the brake pedal posistion and send this signal to a local microcontroller to process its position. The local microcintroller will then send the pedal location to the master microcontroller to implement it to the simulation.  
 
 ### Specifications & Constraints
-- Must use OEM brake pedal 
-- Must not have any exposed or loose wires according to NESC standard
-- Must send voltage in the range that changes with pedal position 
-- Must have wires able to handle 6 V and 1 A 
-- Must have microcontroller able to recieve signal from brake system and accelerator system
-- Shall have an accurate measure if the position
-- Shall send position signal to local microcontroller
+- Must use OEM brake pedal to meet customer expectations.
+- Must send voltage in the range of 0-5V that changes with pedal position to be read by a local microcontroller.
+- Must have wires able to handle 5V and 20mA to meet the expected voltage range of 0-5V and the expected current of 20mA. 
+- Must have microcontroller with at least four analog or four digital in ports to read both the gas pedal sensors and the brake pedal sensors.
+- Shall have an accurate measure of the brake pedal position of at least 1% accuracy to ensure the simulation is an accurate representation of real life.
+- Must comply to IEEE 576-13 section on loose wires and splicing of wires.
+- Must have microcontroller able to be powered by a 12V source to comply with the power systems design to stay at 12V.
+- Must have microcontroller with UART capability to communicate with the master MCU. 
+- Must have microcontroller able to convert analog to digital in at least 100ms to be consider real time. (Shown in master MCU signoff)
 
 ### Wiring Schematic
 
-![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/216156312-18f6ac9b-e457-4395-8ff9-c2c603f8faf1.png)
+![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/217134906-68ba4112-b1f6-4c9f-809d-a28d7ae2ceb4.png)
 
 _Figure 1: The wiring schematic with the desired local MCU and OEM sensors for both pedals being sent to it. 
 
