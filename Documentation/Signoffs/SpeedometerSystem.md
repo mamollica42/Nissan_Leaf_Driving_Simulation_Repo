@@ -3,8 +3,8 @@ SPEEDOMETER SUBSYSTEM
 ### Functions of the Subsystem
 The speedometer subsystem must receive output from the driving simulation and display the speed the user is going. A microcontroller will be used to export the speed data from the simulator and display it on a screen inside the car.
 ### Specifications & Constraints
-- Data must exit the PC running the simulator and be stored on a microcontroller
--	Microcontroller must be able to read speed data from the simulator while it is running
+- Data must exit the PC running the simulator and be stored on a microcontroller using serial communication
+-	Microcontroller must be able to read speed data from the simulator while it is running using serial communication
 -	Shall be powered by the PC running the simulator via USB
 -	Shall display the speed data in an appropriate manner on a screen inside the car
 
