@@ -15,7 +15,7 @@ that is captured.
 
 ### Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/100802413/216846416-a6512e57-5667-48b9-a00d-f6b979101850.png)
+![image](https://user-images.githubusercontent.com/100802413/217384244-7c12dab6-a51e-4238-bbd4-5a036aa208f1.png)
 
 ###### _Figure 1: Arduino Leonardo CAN BUS Board Connection to OBD II Port via DB9 connector_
 
