@@ -7,7 +7,11 @@ The gear shifter subsystem will capture the OEM signal from the gear shifter sen
 -	Must not have any exposed or loose wires according to NESC standard
 -	Shall have the same accuracy as the OEM gear shifter sensor
 -	Shall receive the OEM gear shifter signal on a local microcontroller
--	Local microcontroller must sample above or at the Nyquist rate of the OEM sensor
+-	Must have local microcontroller that can be powered by a 12 V source
+-	Must have local microcontroller that can communicate with the master MCU via UART communication
+-	Must have local microcontroller that samples above or at the Nyquist rate of the OEM sensor
+-	Must have local microcontroller with at least 4 digital I/O pins to read the output signals coming from the OEM shifter signal
+-	Must have wires capable of handling 5 V to read the output signal from the OEM shifter sensor
 
 ### Wiring Schematic
 
@@ -37,7 +41,7 @@ For the signal to be read properly by the local microcontroller, the Nyquist rat
 ###### _Figure 3: Measuring the falling edge of the output signal coming from the gear shifter sensor
 
 ### Microcontroller Selection
-The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. The sampling rate of a digital I/O pin from the Arduino Uno is 8 MHz, so the constraint of the Nyquist rate of 9.64 Hz or greater is met. The microcontroller has at least 4 digital I/O pins, so the 4 pins of the OEM sensor can be read. The max input voltage into a digital I/O port is 5.5 V, so voltage protection will be needed to ensure that this threshold will not be crossed. Since a digital I/O port does not draw or sink more current than it can handle, current protection will not be needed. The board will be powered by the power subsystem.
+The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, 14 digital I/O pins, and can communicate with other Arduinos via UART communication. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. The power subsystem will supply the UNO with 12 V. The master MCU is an Arduino Mega, so the Arduino Uno can communicate with it via UART communication. The sampling rate of a digital I/O pin from the Arduino Uno is 8 MHz, so the constraint of the Nyquist rate of 9.64 Hz or greater is met. The microcontroller has at least 4 digital I/O pins, so the 4 pins of the OEM sensor can be read. The max input voltage into a digital I/O port is 5.5 V, so voltage protection will be needed to ensure that this threshold will not be crossed. Since a digital I/O port does not draw or sink more current than it can handle, current protection will not be needed. 
 
 ![image](https://user-images.githubusercontent.com/117474540/216136883-7d28a09f-101c-4502-a12e-633c129e9a33.png)
 
