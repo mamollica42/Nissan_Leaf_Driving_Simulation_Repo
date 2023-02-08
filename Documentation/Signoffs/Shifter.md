@@ -47,7 +47,7 @@ The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, 14 digital I/O
 
 ###### _Figure 4: Spice Diagram of Protection Circuit
 
-Since the the max input voltage into a digital I/O port is 5.5 V, four 100 Ω resistors and four zener diodes with a breakdown voltage of 5.1 V will be used to protect the the microcontroller in case of a voltage spike. Once the breakdown voltage of the zener diode is reached, it will short circuit to ground until the voltage is below the threshold of 5.1 V. This means that a voltage greater than 5.5 V cannot reach the microcontroller.
+Since the the max input voltage into a digital I/O port is 5.5 V, four 100 Ω resistors and four zener diodes with a breakdown voltage of 5.1 V will be used to protect the the microcontroller in case of a voltage spike. Once the breakdown voltage of the zener diode is reached, it will short circuit to neutral until the voltage is below the threshold of 5.1 V. This means that a voltage greater than 5.5 V cannot reach the microcontroller.
 
 ![image](https://user-images.githubusercontent.com/117474540/215919854-223f294b-a3c7-4141-a173-09ad79c67937.png)
 
