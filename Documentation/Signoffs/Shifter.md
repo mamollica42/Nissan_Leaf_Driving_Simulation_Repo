@@ -5,11 +5,11 @@ The gear shifter subsystem will capture the OEM signal from the gear shifter sen
 ### Specifications & Constraints
 -	Must use OEM gear shifter sensor
 -	Must not have any exposed or loose wires according to NESC standard
--	Shall have the same accuracy as the OEM gear shifter sensor
+-	Shall have 100% accuracy due to the capturing of the output signal of the OEM shifter sensor
 -	Shall receive the OEM gear shifter signal on a local microcontroller
 -	Must have local microcontroller that can be powered by a 12 V source
 -	Must have local microcontroller that can communicate with the master MCU via UART communication
--	Must have local microcontroller that samples above or at the Nyquist rate of the OEM sensor
+-	Must have local microcontroller that samples above or at 9.64 Hz which is the sampling rate of the OEM gear shifter sensor
 -	Must have local microcontroller with at least 4 digital I/O pins to read the output signals coming from the OEM shifter signal
 -	Must have wires capable of handling 5 V to read the output signal from the OEM shifter sensor
 
@@ -31,7 +31,7 @@ For wire splicing to be effective, the signals coming from the wires of the gear
 ## Analysis
 
 ### Testing
-After measuring the voltages and changing the gears in the car, it was determined that system is an active low system. Whenever the gear in the car was changed, the wire corresponding to the gear when from 5 V down to 0 V until you let go of the shifter position. Then it returned back to 5 V. This allowed for the conclusion of the signal being a digital signal [1]. Out of the 12 pins coming from the sensor, it was determined that pins 2, 3, 9, and 11 were able to represent the 4 gears of the car. The local microcontroller would need 4 digital I/O pins to detect the signal from the 4 pins of the sensor. Even though the car could not be put into drive and reverse, the gear shifter would still send an appropriate signal if you moved the shifter accordingly. The car would resort to neutral if you tried to put it in reverse or drive, but the sensor still worked properly. Due to this, wire splicing would be sufficient for sensing what gear the user is selecting.
+After measuring the voltages and changing the gears in the car, it was determined that system is an active low system. This was done by using a DMM to measure the output signals coming from the OEM gear shifter sensor. The red lead was connected to a pin and the black lead was connected to ground. Whenever the gear in the car was changed, the wire corresponding to the gear when from 5 V down to 0 V until you let go of the shifter position. Then it returned back to 5 V. This allowed for the conclusion of the signal being a digital signal [1]. Out of the 12 pins coming from the sensor, it was determined that pins 2, 3, 9, and 11 were able to represent the 4 gears of the car. The local microcontroller would need 4 digital I/O pins to detect the signal from the 4 pins of the sensor. Even though the car could not be put into drive and reverse, the gear shifter would still send an appropriate signal if you moved the shifter accordingly. The car would resort to neutral if you tried to put it in reverse or drive, but the sensor still worked properly. Due to this, wire splicing would be sufficient for sensing what gear the user is selecting.
 
 ### Nyquist
 For the signal to be read properly by the local microcontroller, the Nyquist rate of the OEM shifter sensor needs to be determined to eliminate aliasing in reading the signal. This was done by using an oscilloscope to detect the fastest fall and rise of the signal created by the user coming from the OEM sensor. After measuring this, it was concluded that the normal frequency is 4.82 Hz. The Nyquist rate is double the normal frequency. This makes the Nyquist rate of the OEM shifter sensor 9.64 Hz. This means that the local microcontroller must have a sampling rate of 9.64 Hz or greater to have accurate readings.
