@@ -47,6 +47,7 @@ Similar to the voltage, the current needs to be regulated to prevent the wiring 
 ![image](https://user-images.githubusercontent.com/117474411/217126300-f78afd84-9ca5-42df-b907-6aa4385e1d3c.png)
 
 To confirm the voltages at the Unos and encoder are acceptable, a Spice simulation was used to determine the expected values. The circuit in Figure 2 shows the expected connections for the Unos and encoder with each of the wire resistances placed in series. Two simulations were ran with the input voltage V1 being 11.6 V and 12.4 V to cover the maximum variance of the supplied voltages to the wires. The outputted voltages and currents at the labels were recorded and shown in the table below. The data yields the conclusion that the voltages at the end of the wires will be within the acceptable values for the input of each component. 
+
 Input : 11.6 V 
 
 | Element | Voltage (V) | Current (mA) |
