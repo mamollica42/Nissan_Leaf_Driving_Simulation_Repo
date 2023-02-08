@@ -38,7 +38,7 @@ which means the subsystem can read the CAN messages at a rate of up to nearly 92
 10 Hz minimum [2].
 
 ###### 2.1 Data Storage
-Data capture and storage can be done by using the MCP_CAN library in the Arduino IDE along with an application called CoolTerm. The MCP_CAN library includes the readMsgBuf() function which will read the CAN data from the receive buffer of the MCP2515 CAN transceiver and can then be printed to the terminal using the Serial.println() function so that each message and its corresponding ID will be displayed on a different line [3]. However, to store the data in a non-volatile file type such as CSV (Comma Seperated Values) format, CoolTerm will be used to intercept the data on the serial port that the Arduino is connected to and will be able to save the data in CSV format which can be opened in Excel [4].
+Data capture and storage can be done by using the MCP_CAN library in the Arduino IDE along with an application called [_CoolTerm_](https://freeware.the-meiers.org/). The MCP_CAN library includes the readMsgBuf() function which will read the CAN data from the receive buffer of the MCP2515 CAN transceiver and can then be printed to the terminal using the Serial.println() function so that each message and its corresponding ID will be displayed on a different line [3]. However, to store the data in a non-volatile file type such as CSV (Comma Seperated Values) format, [_CoolTerm_](https://freeware.the-meiers.org/) will be used to intercept the data on the serial port that the Arduino is connected to and will be able to save the data in CSV format which can be opened in Excel [4].
 
 ![image](https://user-images.githubusercontent.com/100802413/216847742-f2e70475-9351-4163-a5e8-c86aebab1934.png)
 
