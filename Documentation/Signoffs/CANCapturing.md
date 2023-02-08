@@ -30,7 +30,7 @@ message to help the readability of the data.
 
 ##### 2. Verfication
 
-The Nissan Leaf CAN Bus uses 11-bit identifier which allows for up to 2048 different messages. Each CAN frame can be up to 108 bits long due to acknowledgements, Cyclic Redundancy Check (CRC), Data bits, Start of Frame bit(s) (SOF), End of Frame bit(s), Control bits, and Remote Transmission Request bits (RTR). Therefore, the PC must be able to store up to 2048 * 108 bits = 221,184 bits = 27,648 bytes = 27.648 Kb.
+The Nissan Leaf CAN Bus uses 11-bit identifier which allows for up to 2048 different messages (2^11 = 2048, which means CAN messages must have IDs that range from 0-2047). Each CAN frame can be up to 108 bits long due to acknowledgements, Cyclic Redundancy Check (CRC), Data bits, Start of Frame bit(s) (SOF), End of Frame bit(s), Control bits, and Remote Transmission Request bits (RTR). Therefore, the PC must be able to store at least 2048 * 108 bits = 221,184 bits = 27,648 bytes = 27.648 Kb to capture at least one of each type of CAN message.
 
 The target is to read the CAN messages at no less than 10 Hz which translates to a message every 0.1 s. The CAN transceiver
 on the arduino is able to read up to 1 Mbps which is 1 million bits per second. Each message of the Nissan Leaf is 108-bits
@@ -38,7 +38,7 @@ which means the subsystem can read the CAN messages at a rate of up to nearly 92
 10 Hz minimum [2].
 
 ###### 2.1 Data Storage
-Data that is captured will print directly to the arduino terminal and can be directly copied into an excel sheet for professional and readable storage. This can be done by using the MCP_CAN library in the Arduino IDE. This library includes the readMsgBuf() function which will read the CAN data from the receive buffer of the MCP2515 CAN transceiver and can then be printed to the terminal using the Serial.println() function so that each message and its corresponding ID will be displayed on a different line [3]. 
+Data capture and storage can be done by using the MCP_CAN library in the Arduino IDE along with an application called CoolTerm. The MCP_CAN library includes the readMsgBuf() function which will read the CAN data from the receive buffer of the MCP2515 CAN transceiver and can then be printed to the terminal using the Serial.println() function so that each message and its corresponding ID will be displayed on a different line [3]. However, to store the data in a non-volatile file type such as CSV (Comma Seperated Values) format, CoolTerm will be used to intercept the data on the serial port that the Arduino is connected to and will be able to save the data in CSV format which can be opened in Excel [4].
 
 ![image](https://user-images.githubusercontent.com/100802413/216847742-f2e70475-9351-4163-a5e8-c86aebab1934.png)
 
@@ -49,15 +49,15 @@ Data that is captured will print directly to the arduino terminal and can be dir
 ![image](https://user-images.githubusercontent.com/100802413/216151029-aff715e4-ca1a-47b0-be1f-a7ce8affa70f.png)
 ![image](https://user-images.githubusercontent.com/100802413/216151328-315d90bf-ea3d-4cc5-bd8f-ad999e69d378.png)
 
-###### _Figure 3: OBDII Pin Diagram w/ Table [4]_
+###### _Figure 3: OBDII Pin Diagram w/ Table [5]_
 
-As seen in the figure above, the OBDII port pins 6 & 14 are connected to the CAN High and CAN Low signals of the Car-CAN as stated in the Nissan Leaf OBDII manual [5]. The output pins of the OBDII port will be connected to a OBDII to DB9 cable.
+As seen in the figure above, the OBDII port pins 6 & 14 are connected to the CAN High and CAN Low signals of the Car-CAN as stated in the Nissan Leaf OBDII manual [6]. The output pins of the OBDII port will be connected to a OBDII to DB9 cable.
 
 ![image](https://user-images.githubusercontent.com/100802413/216152540-af9bf0cb-b73a-4366-83e3-27e6940f5b0a.png)
 
-###### _Figure 4: Pin Diagram for OBDII to DB9 cable [4]_
+###### _Figure 4: Pin Diagram for OBDII to DB9 cable [5]_
 
-The diagram above shows that the CANH & CANL signals from pins 6 & 14 from the OBDII port are connected to pins 7 & 2 of the DB9 port through the cable [6]. The female end of the DB9 connector is soldered to the Arduino and the pins 7 & 2 are directly connected to the CANH & CANL input signals of the MCP2515 CAN transceiver.
+The diagram above shows that the CANH & CANL signals from pins 6 & 14 from the OBDII port are connected to pins 7 & 2 of the DB9 port through the cable [7]. The female end of the DB9 connector is soldered to the Arduino and the pins 7 & 2 are directly connected to the CANH & CANL input signals of the MCP2515 CAN transceiver.
 
 ![image](https://user-images.githubusercontent.com/100802413/216154259-9e7d8f32-eb69-4c52-8bd4-608f9c1e5c79.png)
 
@@ -82,8 +82,10 @@ The CAN capturing subsystem connects to the OBDII port of the Nissan Leaf and th
 
 [3] https://reference.arduino.cc/reference/en/libraries/mcp_can/
 
-[4] https://leaf-obd.readthedocs.io/en/latest/tutorial/elm327.html
+[4] https://freeware.the-meiers.org/
 
-[5] https://leaf-obd.readthedocs.io/en/latest/diagnostic-connector.html#leaf-diagnostic-connector-contact-designation-legend
+[5] https://leaf-obd.readthedocs.io/en/latest/tutorial/elm327.html
 
-[6] https://components101.com/sites/default/files/component_datasheet/OBD2%20Adapter%20Cable%20Datasheet.pdf
+[6] https://leaf-obd.readthedocs.io/en/latest/diagnostic-connector.html#leaf-diagnostic-connector-contact-designation-legend
+
+[7] https://components101.com/sites/default/files/component_datasheet/OBD2%20Adapter%20Cable%20Datasheet.pdf
