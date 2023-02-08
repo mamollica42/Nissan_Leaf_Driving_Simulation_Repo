@@ -11,9 +11,6 @@ The power system is to provide power to all of the components and subsystems wit
 - Must not exceed wire capabilities
 - Must supply required input voltage to the external sensors, external controllers, and 12 V OEM components
 
-
-
-
 ### Schematics
 ###### Wiring Diagram
 
@@ -38,7 +35,7 @@ Due to the uncertainty of not knowing the components in the load, an assumption 
 The diode for the circuit shown in Figure 1 will be a 19TQ015CJ from SMC Diode Solutions [2]. It is designed to have a continuous forward voltage of 360 mV at a maximum continuous current of 19 A. The datasheet provides that the diode can handle a peak current of 120 A for an instance before dissipating, which is three times greater than the maximum current that can be supplied. The maximum instantaneous power provided by the source is 600 Watts, but the power should dissipate quickly due to the source being disconnected. This assumption allows for the diode to be functional and provide the path for energy to flow and not violate KVL and KCL.
 
 ###### 5. Wiring
-The wiring to all of the external components will be 18-gauge wire. This is based around the pre-terminated wire that is sold to be used for the Arduino’s DC jack [3]. The maximum current that is allowed for 18-gauge wire is 2.3 Amps [4]. The internal resistance is approximately 6.385 Ohms per 1000 ft. For the 6 ft of wire, the resistance is 0.03831 Ohms. This means that the maximum voltage across the wire is 0.08811 V or 88.11 mV.  
+The wiring to all of the external components will be 18-gauge wire. This is based around the pre-terminated wire that is sold to be used for the Arduino’s DC jack [3]. The maximum current that is allowed for 18-gauge wire is 2.3 Amps [4]. The current drawn by each external microcontroller or sensor is expected to have a maximum of 70 mA per their respective datasheet. This 70 mA current is within the 2.3 A limit of the 18-gauge wire. The internal resistance of 18-gauge wire is approximately 6.385 Ohms per 1000 ft. For the 6 ft of wire, the resistance is 0.03831 Ohms. This means that the maximum voltage across the wire is 0.08811 V or 88.11 mV.  
 
 ###### 6. Voltages and Fuses
 Per the datasheet for the Arduino Uno, the microcontroller draws no more than 70 mA and can receive voltages ranging from 6 to 20 volts on the DC jack [5]. This means that the microcontrollers can be connected directly to the 12 V system without needing to have the voltage being adjusted. The range of acceptable voltages for the Uno allows for the 12 V signal to have more fluctuation than the voltage variation that would be expected after the voltage drop of the wiring. The rotary encoder used for the steering system states that it can draw up to 70 mA per the data sheet at a range of 10.6 to 24 V. Likewise, the voltage will be within the requirements with the 12 V supply.
