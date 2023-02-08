@@ -65,7 +65,8 @@ Since the wires will be only handling 5 V, any sized wire could be used to carry
 | Arduino Uno                  | $25.00   |
 | Solderable Breadboard        | $6.00    |
 |Diodes                        | $3.00    |
-| Total                        | $50.48   |
+| 100 Ω Resistors              | $1.00    |
+| Total                        | $51.48   |
 
 ### REFERENCES
 [1] https://www.allaboutcircuits.com/textbook/direct-current/chpt-9/current-signal-systems/#:~:text=The%20most%20common%20current%20signal%20standard%20in%20modern,12%20milliamps%20representing%2050%20percent%2C%20and%20so%20on.
