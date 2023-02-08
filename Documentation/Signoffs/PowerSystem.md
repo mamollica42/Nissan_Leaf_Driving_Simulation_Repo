@@ -4,12 +4,12 @@ Power System
 The power system is to provide power to all of the components and subsystems within the design. This includes the original car compenents in its entirety as well as the external subsystems that will be added. This will include replacing the battery with a power converter for continuous supply and implementing safety components to protect the sensors and controllers in the external subsystems. . 
 
 ### Specs & Constraints
-- Must utilize the power supply provided 
-- Must regulate the supplied source voltage to be within 5% of the expected value
+- Must utilize the power supply provided for 12 V supply
+- Must regulate the supplied source voltage to be within 5% of 12 V
 - Must implement a method to disconnect the entire system from the source
 - Shall implement safety components to prevent overcurrent on new devices
 - Must not exceed wire capabilities
-- Must supply required input voltage to each component
+- Must supply required input voltage to the external sensors, external controllers, and 12 V OEM components
 
 
 
@@ -72,14 +72,14 @@ BOM
 
 ### BOM
 
-| Part             | Price   |
-|-----------------:|:--------|
-| TD1-1A-DC-3-R    | $5.08   |
-| 19TQ015CJ        | $1.30   |
-| 10-02493         | $30.04  |
-| 5ST 100-R        | $3.78   |
-| 4628 (fuse holder)| $2.92  |
-| TOTAL            | $43.12  |
+|Item              | Part Number   |Price   |
+|-----------------:|:-------------:|:-------|
+| Master Switch    | TD1-1A-DC-3-R |$5.08   |
+| Flyback Diode    | 19TQ015CJ     |$1.30   |
+| Arduino Wiring   | 10-02493      |$30.04  |
+| 100 mA Fuses     | 5ST 100-R     |$3.78   |
+| Fuse Holder      | 4628          |$2.92   |
+| TOTAL            |               |$43.12  |
 
 ### References
 [1] https://www.digikey.com/en/products/detail/switch-components/TD1-1A-DC-3-R/11492919
