@@ -30,7 +30,7 @@ Description
 
 ![image](https://user-images.githubusercontent.com/101354063/217676523-7f8043a6-731e-4d1f-a5c7-12568f081fe7.png)
 
-### Figure 2: Voltage Divder with Opto-isolation
+##### Figure 2: Voltage Divder with Opto-isolation
 
 ### Usage of OEM componets as the inputs 
 
@@ -38,12 +38,12 @@ Description
 - From the information in Auto Light Wiring diagram, a method to detect the output of the relay can be created. The design shown in Figure 2 is to splice and add a voltage divider to connect to the microcontroller. This process uses the 12 V potential that is sent to the lamp to illuminate the light to trigger a reaction on the microcontroller. 
 
 
-### The detection of the auto light high beams, low beams, and left and right indicators (voltage of no more than 5 volts and a current below 40 milliamps) and Current to the signal must be less than 1 percent of the current to the light
+##### The detection of the auto light high beams, low beams, and left and right indicators (voltage of no more than 5 volts and a current below 40 milliamps) and Current to the signal must be less than 1 percent of the current to the light
 ------
 
 
 ![LVT 817](https://user-images.githubusercontent.com/101354063/206586290-37ae6b0b-b3ca-41a7-96c7-75b4382fc6b4.PNG)
-### Figure 3: From the optoisolator Datasheet
+##### Figure 3: From the optoisolator Datasheet
 <br/>
 
 - The design behind the voltage divider is to reduce the auto light voltage to no more than 5 V and have a current of less than 1% of the current to the light. This constraint on current is to prevent any exceedance in the limits of the original hardware and wire ratings that could cause overload or failure on the car.
@@ -69,12 +69,12 @@ Description
 ### Implement a way to protect the signal from the input voltage varying from 10 V to 15 V
 ----
 ![image](https://user-images.githubusercontent.com/101354063/217674389-7f9200ca-acbb-4a72-8b39-0717c201a001.png)
-### Figure 4: 40 mA Fuse
+##### Figure 4: 40 mA Fuse
 
 -  40 mA fuse will be installed to protect against any extreme voltage spikes outside of the 10 to 15 V range that would cause overcurrents. The LTV-817 optoisolator was chosen based on the threshold voltage of 1.2 V, and the maximum current constraint of 40 mA is less than the limit for the LTV-817 at 50 mA. According to the analysis of the design voltage divider and fuse, the protection of the signal from input voltages varying from 10V to 15V comes from a voltage divider, while the protection of current from a current spikes comes from a 20 mA fuse.
 
 ![image](https://user-images.githubusercontent.com/101354063/217659683-3dc1bfb6-31d2-4884-b90e-631a909418e3.png)
-### Figure 5: Voltage Divder
+##### Figure 5: Voltage Divder
 
 - the design with only a voltage divider has a potential risk due to the chance of a voltage spike reaching the microcontroller and interference from other signals. 
  - ### The analysis of Voltage divider (10 V to 15 V)
