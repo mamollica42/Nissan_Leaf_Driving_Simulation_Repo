@@ -17,15 +17,20 @@ This subsystem will obtain the gas pedals position and send this signal to a loc
 ###### _Figure 1: OEM Wiring With Splice On Output Signals of Gas and Brake pedals_
 
 ### Analysis
-##### Must use OEM gas pedal to meet customer expectations.
+- Must use OEM gas pedal to meet customer expectations.
+
 Customer does not want external pedal installed to car.
-##### Must send voltage at the range 0-5V that changes as the position changes to be read by the local microcontroller.
+- Must send voltage at the range 0-5V that changes as the position changes to be read by the local microcontroller.
+
 The sensor that measures the position will be an analog signal with voltage range 0-5V that can be read by most microcontrollers. In this case a external sensor will not be added since there is a accelerator pedal position sensor(APPS) that sends an analog signal to the engine controller module(ECM) that will be wire spliced to the local microcontroller.
-##### Must have wires able to handle at least 5V and 20mA due to the expected voltage range 0-5V and expected current of 20mA.
+- Must have wires able to handle at least 5V and 20mA due to the expected voltage range 0-5V and expected current of 20mA.
+
 22 AWG wire will be selected for the splicing since it can handle 300V and 7A.
-##### Shall have an accurate measure of the pedal postion of at least 1% accuracy to ensure the simulation is a accurate representation of real life. 
+- Shall have an accurate measure of the pedal postion of at least 1% accuracy to ensure the simulation is a accurate representation of real life.
+ 
 Arduino boards convert the 0-5V analog signal to a digital signal with 1024 bits so 5/1024 means 4.88mV per step.  The smallest range of voltage we tested was 1.883V which has 1.883V/0.00488V to get 376.6 steps for this range of voltage. The accuracy then is 1/376.6 = 0.27%.
-##### Must not have any exposed or loose wire according to IEEE Std 576-13. 
+- Must not have any exposed or loose wire according to IEEE Std 576-13. 
+
 This section of the IEEE standards tell you the safe practices of wire splicing which I will follow when install the Dorman wire splicing clips.
 
 ![Screenshot 2023-01-26 133456](https://user-images.githubusercontent.com/117474294/214932846-6c566b33-5910-436a-a5ec-db32af85b6cc.png)
