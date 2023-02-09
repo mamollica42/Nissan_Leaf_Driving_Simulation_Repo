@@ -72,7 +72,7 @@ Description
 ![image](https://user-images.githubusercontent.com/101354063/217674389-7f9200ca-acbb-4a72-8b39-0717c201a001.png)
 ##### Figure 4: 40 mA Fuse
 
--  40 mA fuse will be installed to protect against any extreme voltage spikes outside of the 10 to 15 V range that would cause overcurrents. The LTV-817 optoisolator was chosen based on the threshold voltage of 1.2 V, and the maximum current constraint of 40 mA is less than the limit for the LTV-817 at 50 mA. According to the analysis of the design voltage divider and fuse, the protection of the signal from input voltages varying from 10V to 15V comes from a voltage divider, while the protection of current from a current spikes comes from a 20 mA fuse.
+-  40 mA fuse will be installed to protect against any extreme voltage spikes outside of the 10 to 15 V range that would cause overcurrents. The LTV-817 optoisolator was chosen based on the threshold voltage of 1.2 V, and the maximum current constraint of 40 mA is less than the limit for the LTV-817 at 50 mA. According to the analysis of the design voltage divider and fuse, the protection of the signal from input voltages varying from 10V to 15V comes from a voltage divider, while the protection of current from a current spikes comes from a 40 mA fuse.
 
 ![image](https://user-images.githubusercontent.com/101354063/217659683-3dc1bfb6-31d2-4884-b90e-631a909418e3.png)
 ##### Figure 5: Voltage Divder
