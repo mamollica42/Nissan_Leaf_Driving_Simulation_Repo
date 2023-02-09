@@ -20,7 +20,7 @@ The Master microcontroller will receive the output of the Nissan Leaf AutoLight 
 ### Auto Light Wiring Diagram
 
 
-Description
+#### Description
 -------
 - The auto light wiring diagram shows the whole wiring for each component in the headlight of the Nissan vehicle. However, the main focus are the headlamp relays shown in Figure 1 and they link to the headlamps. This displays how the low beam and high beam functions operate and make the headlight indicate. The wiring diagram reveals that the battery is attached to the CPU through the relay showing that the relay receives power from the battery, but the current is operated by the CPU. The input from the battery is also connected to one side of the relay switch. This means that the input to the lamp and headlight should be 12 V. Also, Figure 1 shows that their fuse connects to the output of the relay, and the fuse can take up to 10 amps. Overall, the key point is to see the headlamp relay, what is connected, and how it works. 
 
