@@ -26,7 +26,7 @@ _Figure 2. Schematic for the 3.5 Inch TFT Color LCD Screen Plugging into the Ard
 ### C1. Shall be powered by the PC running the simulator via USB 2.0
 An Arduino Uno can be powered by a USB 2.0 coming from the PC running the simulator.
 
-#### C2. Microcontroller must be able to read speed data from the simulator while it is running using serial communication
+### C2. Microcontroller must be able to read speed data from the simulator while it is running using serial communication
 Arduino can directly communicate with the simulator that runs on MATLAB via serial communication with a USB 2.0. For the simulator to send data to the Arduino, serial.write() functions will be inserted into the simulator code to continuously send speed data to the Arduino. For the Arduino to receive and display the speed data, serial.read() functions will be used.
 
 ### C3. Data must exit the PC running the simulator and be stored on a microcontroller using serial communication
