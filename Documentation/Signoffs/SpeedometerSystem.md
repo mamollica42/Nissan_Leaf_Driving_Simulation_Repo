@@ -3,10 +3,10 @@ SPEEDOMETER SUBSYSTEM
 ### Functions of the Subsystem
 The speedometer subsystem must receive output from the driving simulation and display the speed the user is going. A microcontroller will be used to export the speed data from the simulator and display it on a screen inside the car.
 ### Specifications & Constraints
-- Shall be powered by the PC running the simulator via USB
--	Microcontroller must be able to read speed data from the simulator while it is running using serial communication
--	Data must exit the PC running the simulator and be stored on a microcontroller using serial communication
--	Shall display the speed data in an appropriate manner on a screen inside the car
+- C1. Shall be powered by the PC running the simulator via USB 2.0
+-	C2. Microcontroller must be able to read speed data from the simulator while it is running using serial communication
+-	C3. Data must exit the PC running the simulator and be stored on a microcontroller using serial communication
+-	C4. Shall display the speed data in an appropriate manner on a screen inside the car
 
 ### Schematic
 ##### 1. Screen to Microcontroller Connection
@@ -23,16 +23,20 @@ _Figure 2. Schematic for the 3.5 Inch TFT Color LCD Screen Plugging into the Ard
 
 ### Analysis
 
-#### 1. Microcontroller Selection
+### C1. Shall be powered by the PC running the simulator via USB 2.0
+An Arduino Uno can be powered by a USB 2.0 coming from the PC running the simulator.
 
-The Arduino UNO REV3 is clocked at 16 MHz, has 6 analog I/O pins, and 14 digital I/O pins. The board can be powered via battery, USB, or the VDD pin and can operate within a voltage range of 7-12 V. This confirms the constriant of being powered by the PC via USB. Arduino can directly communicate with the simulator that runs on MATLAB via serial communication with a USB 2.0. For the simulator to send data to the Arduino, serial.write() functions will be inserted into the simulator code to continuously send speed data to the Arduino. For the Arduino to receive and display the speed data, serial.read() functions will be used. Once the speed data is obtained, it will be appropriately displayed on a screen inside the car. This would allow for the speed data to be on the Arduino Uno in a programming language other than MATLAB which confirms the constraint of the data exiting the simulator. 
+#### C2. Microcontroller must be able to read speed data from the simulator while it is running using serial communication
+Arduino can directly communicate with the simulator that runs on MATLAB via serial communication with a USB 2.0. For the simulator to send data to the Arduino, serial.write() functions will be inserted into the simulator code to continuously send speed data to the Arduino. For the Arduino to receive and display the speed data, serial.read() functions will be used.
 
-#### 2. LCD Display Selection
+### C3. Data must exit the PC running the simulator and be stored on a microcontroller using serial communication
+Once the serial.read() function is used, the speed data will be collected and used in the C code that displays the speed. This means that the data has exited the PC and is being processed on another device using a programming language other than MATLAB.
 
+### C4. Shall display the speed data in an appropriate manner on a screen inside the car
+#### LCD Display Selection
 The The 3.5 Inch TFT Color LCD Screen has 28 pins and can directly snap onto an Arduino UNO REV3. The 3.5" LCD screen can be programmed to display whatever the user wants and is plenty big enough to display the speed data from the simulation. With a module display area that contains 320x480 pixels, the team can add extra embellishments onto the screen to make the speed data that is displayed feel more appropriate to the car.
 
-#### 2.1 Mounting
-
+#### Mounting
 The recommended max distance of a USB 2.0 cable is 16 feet. The PC running the simulator will be within 16 feet of the car so mounting the LED display in the desired position shall have no effect on transmission speeds. To keep the the immersive feel of the inside of the car, the LCD will be mounted exactly where the current speedometer display is located. The stock display will be removed and be replaced with a new mount that will mimic the current one. The new one will of be able to communicate with MATLAB and pull the speed data from the simulator.
 
 ![image](https://user-images.githubusercontent.com/117474540/215832669-89579faa-cde7-400d-ae63-a6a877984600.png)
