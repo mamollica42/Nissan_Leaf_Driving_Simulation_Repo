@@ -37,7 +37,7 @@ For the signal to be read properly by the local microcontroller, the Nyquist rat
 ###### _Figure 3: Measuring the falling edge of the output signal coming from the gear shifter sensor
 
 ### C1. Must use OEM gear shifter sensor
-The output from the OEM shifter sensor is being captured so sensor is being used.
+The output from the OEM shifter sensor is being captured so the sensor is being used.
 
 ### C2. OEM shifter sensor must send a detectable output signal for the shifter positions drive, park, reverse, and neutral
 After measuring the voltages and changing the gears in the car, it was determined that system is an active low system. This was done by using a DMM to measure the output signals coming from the OEM gear shifter sensor. The red lead was connected to a pin and the black lead was connected to ground. Whenever the gear in the car was changed, the wire corresponding to the gear when from 5 V down to 0 V until you let go of the shifter position. Then it returned back to 5 V. This allowed for the conclusion of the signal being a digital signal [1]. Out of the 12 pins coming from the sensor, it was determined that pins 2, 3, 9, and 11 were able to represent park, neutral, drive, and reverse.
@@ -72,7 +72,7 @@ Since the the max input voltage into a digital I/O port is 5.5 V, four 100 Ω re
 The Arduino Uno has 14 digital I/O pins.
 
 ### C9. Must have wires capable of handling 5 V to read the output signal from the OEM shifter sensor
-Since the wires will be only handling 5 V, any sized wire could be used to carry the gear shifter's signal to the local microcontroller. 22 gauge wire will be used to splice into the OEM wires. 22 gauge wire is capable of handling 7 A, so it is more than capable of handling a digital voltage signal [2]
+Since the wires will be only handling 5 V, any sized wire could be used to carry the gear shifter's signal to the local microcontroller. 22 gauge wire will be used to splice into the OEM wires. 22 gauge wire is capable of handling 7 A, so it is more than capable of handling a digital voltage signal [2].
 
 ### C10. Must comply with IEEE 576-13 section on splicing wires and having loose wires.
 This section of standards deal with the regulations and protocols around wire splicing that will be met when installing the Dorman wire splicing clip that meets regulations.
