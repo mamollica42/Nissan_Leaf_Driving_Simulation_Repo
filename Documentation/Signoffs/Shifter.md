@@ -22,6 +22,7 @@ The gear shifter subsystem will capture the OEM signal from the gear shifter sen
 
 ### Testing 
 For wire splicing to be effective, the signals coming from the wires of the gear shifter sensor would still need to be accurate even with the back half of the car being cut off.  As of now, the car can only go into park and neutral. To see if the car can go into drive and reverse, the OEM shifter sensor was tested was to see if the sensor still could send the appropriate output signal even if the car could not go into the desired gear. For testing, male to female jumper wires, an oscilloscope, and a DMM was used. The DMM was used to the voltage changes coming from the sensor and the oscilloscope was used to find the normal frequency of the voltage changes.
+
 ![image](https://user-images.githubusercontent.com/117474540/214118110-98df866a-9546-4820-9726-7ace77302a40.png)
 
 ###### _Figure 2: Measuring the voltage of the output signals coming from the gear shifter sensor
