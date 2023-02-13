@@ -64,6 +64,9 @@ Input: 12.4 V
 ###### 6. OEM Connection
 The OEM battery terminals will be connected to bolts that will act as posts to the switch. The OEM safety devices will be utilized since they were designed for the OEM components. 
 
+###### 7. Housing
+The components to the power system will be placed inside of a plastic electrical box. The wires will be ran into it and will provide insulation and support to all of the safety compontents. A plastic box was chosen over metal due to the insulation characteristics of plastic.
+
 ### BOM
 
 |Item              | Part Number   |Price   |
