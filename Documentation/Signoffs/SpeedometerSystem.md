@@ -17,7 +17,7 @@ _Figure 1. A photograph of the LCD snapping onto the Arduino Uno [1]
 
 ##### 2. Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/117474540/216127475-511a63b1-875b-450a-8510-a35084af7384.png)
+![image](https://user-images.githubusercontent.com/117474540/218500985-338ea43c-fd82-4689-873e-2978feef5f54.png)
 
 _Figure 2. Schematic for the 3.5 Inch TFT Color LCD Screen Plugging into the Arduino Uno
 
