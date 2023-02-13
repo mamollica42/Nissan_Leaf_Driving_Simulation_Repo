@@ -84,10 +84,9 @@ This section of standards deal with the regulations and protocols around wire sp
 | Dorman 22-18 Splicers 7 Pact | $4.49    |
 | 22 Gauge Wire                | $14.99   |
 | Arduino Uno                  | $25.00   |
-| Solderable Breadboard        | $6.00    |
 |Diodes                        | $3.00    |
 | 100 Ω Resistors              | $1.00    |
-| Total                        | $51.48   |
+| Total                        | $48.48   |
 
 ### REFERENCES
 [1] https://www.allaboutcircuits.com/textbook/direct-current/chpt-9/current-signal-systems/#:~:text=The%20most%20common%20current%20signal%20standard%20in%20modern,12%20milliamps%20representing%2050%20percent%2C%20and%20so%20on.
