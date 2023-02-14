@@ -14,7 +14,7 @@ The power system is to provide power to all of the components and subsystems wit
 ### Schematics
 ###### Wiring Diagram
 
-![image](https://user-images.githubusercontent.com/117474411/218815087-586962ce-bdef-4f5e-9bf1-ce26c803767a.png)
+![image](https://user-images.githubusercontent.com/117474411/218824610-17d01ba9-17e7-400f-a1b1-a72dd9e47a0b.png)
 
 _Figure 1: Power Circuit & Connected Components_---
 
@@ -38,6 +38,7 @@ A fuse panel will be implemented to protect the wiring from short circuits. The 
 To protect the wiring between the power supply and the switch, the internal fuse for the power supply will be the protection. This is designed within the supply and eliminates any issues seen by the terminals.
 
 ![image](https://user-images.githubusercontent.com/117474411/217126300-f78afd84-9ca5-42df-b907-6aa4385e1d3c.png)
+_Figure 2: Spice Circuit with 70 mA loads_
 
 A Spice simulation was used to determine the expected values of the currents and voltages. The circuit in Figure 2 shows the expected connections for the Unos and encoder with each of the wire resistances placed in series. Two simulations were run with the input voltage V1 being 11.6 V and 12.4 V to cover the maximum variance of the supplied voltages to the wires. The data yields the conclusion that the voltages at the end of the wires will be within the acceptable values for the input of the Unos and Encoder. 
 
