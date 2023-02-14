@@ -32,9 +32,13 @@ For wire splicing to be effective, the signals coming from the wires of the gear
 ### Nyquist
 For the signal to be read properly by the local microcontroller, the Nyquist rate of the OEM shifter sensor needs to be determined to eliminate aliasing in reading the signal. This was done by using an oscilloscope to detect the fastest fall and rise of the signal created by the user coming from the OEM sensor. After measuring this, it was concluded that the normal frequency is 4.82 Hz. The Nyquist rate is double the normal frequency. This makes the Nyquist rate of the OEM shifter sensor 9.64 Hz. This means that the local microcontroller must have a sampling rate of 9.64 Hz or greater to have accurate readings.
 
-![image](https://user-images.githubusercontent.com/117474540/218830297-9ca4bbf4-5d19-40c6-a0f8-94c179e45538.png)
+![image](https://user-images.githubusercontent.com/117474540/218851650-a14fbdb5-8101-4e03-aa2f-a897401778ac.png)
 
 ###### _Figure 3: Measuring the falling edge of the OEM shifter signal going from 5 V to 0 V
+
+![image](https://user-images.githubusercontent.com/117474540/218851944-74bd7806-fe4b-400f-8388-0ccf512dee3c.png)
+
+###### _Figure 4: The measured values from the oscilloscope
 
 ### C1. Must use OEM gear shifter sensor
 The output from the OEM shifter sensor is being captured so the sensor is being used.
@@ -59,13 +63,13 @@ A digital port on the Arduino Uno can read up to a 5.5 V digital signal. Since t
 
 ![image](https://user-images.githubusercontent.com/117474540/218148902-82a6589f-edfd-4a09-9c5f-66c7c82917fb.png)
 
-###### _Figure 4: Spice Diagram of Protection Circuit
+###### _Figure 5: Spice Diagram of Protection Circuit
 
 Since the the max input voltage into a digital I/O port is 5.5 V, four 100 Ω resistors and four zener diodes with a breakdown voltage of 5.1 V will be used to protect the the microcontroller in case of a voltage spike. Once the breakdown voltage of the zener diode is reached, it will short circuit to neutral until the voltage is below the threshold of 5.1 V. This means that a voltage greater than 5.5 V cannot reach the microcontroller.
 
 ![image](https://user-images.githubusercontent.com/117474540/215919854-223f294b-a3c7-4141-a173-09ad79c67937.png)
 
-###### _Figure 5: Output Voltage of Circuit with an Input Voltage of 15 V
+###### _Figure 6: Output Voltage of Circuit with an Input Voltage of 15 V
 
 
 ### C8. Must have local microcontroller with at least 4 digital I/O pins to read the output signals coming from the OEM shifter signal
