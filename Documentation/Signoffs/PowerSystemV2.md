@@ -14,7 +14,7 @@ The power system is to provide power to all of the components and subsystems wit
 ### Schematics
 ###### Wiring Diagram
 
-![image](https://user-images.githubusercontent.com/117474411/216791504-003d266e-27d4-4579-a16b-e2574ea041fc.png)
+![image](![image](https://user-images.githubusercontent.com/117474411/218814793-84407008-8245-439c-ba07-4c866bf77303.png))
 
 
 _Figure 1: Power Circuit & Connected Components_---
