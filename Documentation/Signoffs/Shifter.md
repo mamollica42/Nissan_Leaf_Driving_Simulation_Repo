@@ -36,7 +36,7 @@ For the signal to be read properly by the local microcontroller, the Nyquist rat
 
 ###### _Figure 3: Measuring the falling edge of the OEM shifter signal going from 5 V to 0 V
 
-![image](https://user-images.githubusercontent.com/117474540/218851944-74bd7806-fe4b-400f-8388-0ccf512dee3c.png)
+![image](https://user-images.githubusercontent.com/117474540/218853925-beb80ac9-34bd-430e-97db-cd08230294b1.png)
 
 ###### _Figure 4: The measured values from the oscilloscope
 
