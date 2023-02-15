@@ -30,7 +30,7 @@ For wire splicing to be effective, the signals coming from the wires of the gear
 ## Analysis
 
 ### Nyquist
-For the signal to be read properly by the local microcontroller, the Nyquist rate of the OEM shifter sensor needs to be determined to eliminate aliasing in reading the signal. This was done by using an oscilloscope to detect the fastest fall and rise of the signal created by the user coming from the OEM sensor. After measuring this, it was concluded that the normal frequency is 4.82 Hz. The Nyquist rate is double the normal frequency. This makes the Nyquist rate of the OEM shifter sensor 9.64 Hz. This means that the local microcontroller must have a sampling rate of 9.64 Hz or greater to have accurate readings.
+For the signal to be read properly by the local microcontroller, the Nyquist rate of the OEM shifter sensor needs to be determined to eliminate aliasing in reading the signal. This was done by using an oscilloscope to detect the fastest fall and rise of the signal created by the user coming from the OEM sensor. After measuring this, it was concluded that the normal frequency is 4.82 Hz. This value was found by the oscilloscope measurement. The Nyquist rate is double the normal frequency. This makes the Nyquist rate of the OEM shifter sensor 9.64 Hz. This means that the local microcontroller must have a sampling rate of 9.64 Hz or greater to have accurate readings.
 
 ![image](https://user-images.githubusercontent.com/117474540/218851650-a14fbdb5-8101-4e03-aa2f-a897401778ac.png)
 
