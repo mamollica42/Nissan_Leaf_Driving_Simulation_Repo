@@ -28,3 +28,33 @@ Therefore, for this subsytem to meet the first constraint, the time it takes bet
 |9|13:03:10.660|0x1CC00000572|< 1 msec|
 |10|13:03:10.660|0x2457FF8011A33007FF3|< 1 msec|
 
+As seen in Table 1 above, the time between each message is 33 msec or less in all cases, meeting the 10 Hz requirement.
+
+### SC2
+The CAN data is stored in an excel file, which is a well-known and highly professional software tool used to display and analyze data. Below is an example of the storage format in an excel sheet.
+
+![image](https://user-images.githubusercontent.com/100802413/227805812-e94e070b-0b82-4b7a-8e5f-1055efe9329e.png)
+
+_Figure 1: CAN Bus Data Excel Formatting_
+
+This storage method distinguishes the different messages being captured as well as parses the message ID from the rest of the message packet for extra readability.
+
+### SC3
+This subsystem is not connected to any other part of the vehicle and does not use any parts that are shared by any other subsystem exept the PC. This subsystem is connected to a single USB port of the PC and does not inhibit connectivity of the Master MCU to the same PC as this uses a different USB port. Therefore, this subsystem does not interfere with the functionality of any other subsystem.
+
+### SC4
+The CAN Bus Shield and Arduino that make up the subsystem are connected directly to the PC via USB which provides power.
+
+### SC5
+An excel sheet is capable of storing information in up to 65,536 rows, which greatly exceeds the 2048 maximum requirement for storage.
+
+            2048 << 65536
+
+### SC6
+The PC has a 256 GB SSD and currently has 51.8 GB of free space which greatly exceeds the minimum requirement of 28 Kb of storage space.
+
+            51.8 GB >> 28 Kb
+            
+## III. Conclusion
+Because each of the 6 specifications and constraints listed above have been met, the subsystem is confirmed to function as designed.
+
