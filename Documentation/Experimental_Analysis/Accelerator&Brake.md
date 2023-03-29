@@ -1,5 +1,4 @@
- Accelerator & Brake Subsystem
---------------------------
+
 ## Accelerator
 
 ### Specifications & Constraints
