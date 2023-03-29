@@ -18,14 +18,26 @@ Gear Shifter Subsystem Analysis
 ### C1.
 The output from the OEM shifter sensor is being captured so the sensor is being used.
 
-### C2. C6. and C5.
+### C2. C5. and C6.
+The master MCU can sucessfully receive the shifter position signal being sent from the local MCU. The local MCU is successfully detecting the shifter positions for positions Park, Neutral, Reverse, and Drive. Since the local MCU is successfully detecting the position changes, the Nyquist rate is satisfied.
+
+![image](https://user-images.githubusercontent.com/117474540/228677170-6f0c93e7-141d-4cf0-85d4-c3bc76ed39c8.png)
+
+###### _Figure 1: The actual shifter position when compared to what the master MCU is displaying
 
 ### C3. 
-The wires carrying the signal are being wire spliced to a microcontroller.
+The wires carrying the signal are wire spliced to a microcontroller.
 
 ### C4. 
+The Arduino Uno is powered by a 12 V source.
 
 ### C7.
+The signal being sent to the local MCU is a 5 V voltage signal and the MCU is successfully detecting the 5 V to 0 V changes.
+
+![image](https://user-images.githubusercontent.com/117474540/228677698-2cb7eefb-3693-491d-aed9-308915547104.png)
+
+###### _Figure 2:The measured voltage being detected by the local MCU
+
 
 ### C8.
 The Arduino Uno has 14 digital I/O pins.
