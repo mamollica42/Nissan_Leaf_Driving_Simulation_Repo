@@ -1,5 +1,7 @@
- Accelerator Subsystem
+ Accelerator & Brake Subsystem
 --------------------------
+## Accelerator
+
 ### Specifications & Constraints
 - C1. Must use OEM gas pedal to meet customer expectations.
 - C2. Must send voltage at the range 0-5V that changes as the position changes to be read by the local microcontroller.
@@ -7,8 +9,8 @@
 - C4. Shall have an accurate measure of the pedal postion of at least 1% accuracy to ensure the simulation is a accurate representation of real life. 
 - C5. Must not have any exposed or loose wire according to IEEE Std 576-13.  
 
-### Brake Subsystem
------------------------
+## Brake 
+
 ### Specifications & Constraints
 - C1. Must use OEM brake pedal to meet customer expectations.
 - C2. Must send voltage in the range of 0-5V that changes with pedal position to be read by a local microcontroller.
