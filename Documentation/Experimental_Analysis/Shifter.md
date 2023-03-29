@@ -32,18 +32,19 @@ The wires carrying the signal are wire spliced to a microcontroller.
 The Arduino Uno is powered by a 12 V source.
 
 ### C7.
-The signal being sent to the local MCU is a 5 V voltage signal and the MCU is successfully detecting the 5 V to 0 V changes.
+The signal being sent to the local MCU is a 5 V voltage signal and, the MCU is successfully detecting the 5 V to 0 V changes.
 
 ![image](https://user-images.githubusercontent.com/117474540/228677698-2cb7eefb-3693-491d-aed9-308915547104.png)
 
-###### _Figure 2:The measured voltage being detected by the local MCU
-
+###### _Figure 2: The measured voltage being detected by the local MCU
 
 ### C8.
 The Arduino Uno has 14 digital I/O pins.
 
 ### C9.
+The wires being used for splicing are 22 gauge wires. 22 gauge wires can easily handle 5 V. 
 
 ### C10. 
+There are no loose or exposed wires. All spliced wires have heat shirink and electrical tape.
 
 
