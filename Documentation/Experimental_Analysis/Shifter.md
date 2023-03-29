@@ -19,7 +19,7 @@ Gear Shifter Subsystem Analysis
 The output from the OEM shifter sensor is being captured so the sensor is being used.
 
 ### C2. C5. and C6.
-The master MCU can sucessfully receive the shifter position signal being sent from the local MCU. The local MCU is successfully detecting the shifter positions for positions Park, Neutral, Reverse, and Drive. Since the local MCU is successfully detecting the position changes, the Nyquist rate is satisfied.
+The master MCU can sucessfully receive the shifter position signal being sent from the local MCU. This is done via UART communication. The local MCU is successfully detecting the shifter positions for positions Park, Neutral, Reverse, and Drive. Since the local MCU is successfully detecting the position changes, the Nyquist rate is satisfied.
 
 ![image](https://user-images.githubusercontent.com/117474540/228677170-6f0c93e7-141d-4cf0-85d4-c3bc76ed39c8.png)
 
