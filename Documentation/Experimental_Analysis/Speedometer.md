@@ -10,7 +10,7 @@ SPEEDOMETER SUBSYSTEM ANALYSIS
 ### Analysis
 
 ### C1. 
-An Arduino Uno is powered by the PC running the Simulink model
+An Arduino Uno is powered by the PC running the Simulink model.
 
 ### C2. C3. and C4.
 
