@@ -21,13 +21,14 @@
 - B8. Must have microcontroller with UART capability to communicate with the master MCU. 
 - B9. Must have microcontroller able to convert analog to digital in at least 100ms to be consider real time. (Shown in master MCU signoff)
 
-Analysis
+## Analysis
 
-A1. and B1.
+### A1. and B1.
 These are meet by using the cars stock pedals.
 
-A2. and B2.
+### A2. and B2.
 I tested the voltage range of the outputs for both the gas senor 1 and brake sensor 1 with an oscilloscope. The mean of the voltages are as follows:
+
 Gas sensor 1
 Percent pressed | 0% | 50% | 100% 
 ---|---|---|---|
