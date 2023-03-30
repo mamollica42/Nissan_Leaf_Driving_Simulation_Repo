@@ -46,7 +46,7 @@ Figure 1: Each signal input are no more than 5 volt
 Figure 2: each wire current from the headlight to optoisolator
 
 2. ### *The signal input from the autolight must not exceed 5 V* 
-   
+   As shown in figure 1, The input does not go over 5 V because the Arduino is providing power. 
 
 3. ### *Must use OEM componets as the inputs*
    
@@ -63,12 +63,14 @@ Figure 2: each wire current from the headlight to optoisolator
 
 4. ### *Implement a way to protect the signal from the input voltage varying from 10 V to 15 V*
    ![Image](https://user-images.githubusercontent.com/101354063/228734783-8b76cfe9-ef79-45b2-a289-3058b3288f04.jpeg)
-   Figure 5 : wire splice form right indicator
+   Figure 5 :Protection from the input voltage varying from 10 V to 15 V
 
+   The resistor, fuse, and optoisolator prevent the signal from the input voltage varying from 10 V to 15 V. Also, if a current goes over the limit, the fuse will prevent it and protect the ciruit from frying.
 
 
 5. ### *Current to the signal must be less than 1 percent of the current to the light*
    ![Image 2](https://user-images.githubusercontent.com/101354063/228732696-bed67f14-d43d-42f4-9fe9-c381a4eb9571.jpeg)
+
    Figure 6: The current through the light
 
    - current to the light = 4.79 mA
