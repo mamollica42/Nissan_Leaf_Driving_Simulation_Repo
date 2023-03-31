@@ -14,6 +14,7 @@ This specification is met with the power connection being on the provided power 
 
 ![image](https://user-images.githubusercontent.com/117474411/229240812-6b0e1b95-bb54-4b9c-b956-06639d288f57.png)
 _Figure 1. The provided power supply installed inside the car.
+
 #### SC2
 The source voltage measured from the output on the 
 
@@ -30,6 +31,7 @@ The power was cycled 15 times with leaving the power off for 15 seconds and on f
 
 ![image](https://user-images.githubusercontent.com/117474411/229241087-9da85057-5fb0-4527-893f-0c9a378bfdb1.png)
 _Figure 3. 100 mA fuses for the external components.
+
 #### SC5
 
 #### SC6
