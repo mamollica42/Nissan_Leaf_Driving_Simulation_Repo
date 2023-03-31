@@ -45,13 +45,16 @@ These are meet by the wires we selected which are 22 AWG wire which has the rati
 ### A4. and B4.
 To verify this I took photos of the digital outputs read by the microcontroller with the pedals not pressed and fully pressed. 
 
-![IMG_4442 (1)](https://user-images.githubusercontent.com/117474294/228938830-0708ec29-3429-41a0-ab06-62512665705f.jpg)
+![IMG_4442](https://user-images.githubusercontent.com/117474294/228996747-a3c030e0-4b2a-4600-9534-1e564b554080.jpg)
+
 This is the outputs for both pedals not pushed 
 
-![IMG_4443 (1)](https://user-images.githubusercontent.com/117474294/228938881-f9b5b285-221f-45ea-b81a-6cb36bdba210.jpg)
+![IMG_4443](https://user-images.githubusercontent.com/117474294/228996705-0b2346e4-25f1-4cad-ab41-17f2475a7b95.jpg)
+
 This is the outputs for the gas pedal fully pushed
 
-![IMG_4444 (1)](https://user-images.githubusercontent.com/117474294/228938934-282969a8-7b04-40c7-a753-b831ec5093d1.jpg)
+![IMG_4444](https://user-images.githubusercontent.com/117474294/228996659-09ca5c9e-f5ef-4e14-b2f1-18f9ba0b5985.jpg)
+
 This is the outputs for the brake pedal fully pushed
 
 For gas 1, the number of bits measured are 871 - 174 = 697 therefore this sensor has the accuracy of 1/697 x 100% = 0.143%
