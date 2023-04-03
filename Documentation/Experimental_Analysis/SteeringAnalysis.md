@@ -17,7 +17,7 @@ where angle is in degrees, and resolution is 1024 for the 10-bit rotary encoder.
 
     angle = (pos/1024)*360;
     
-However, the programming alone does not provide the exact angle we are trying to measure. The gear system is in place to map the 360 degree rotation to the 1200 degree rotation of the steering wheel. This gear system was originally designed to be an 8:3 gear ratio based on the previously assumed 960 degrees of rotation of the steering wheel. Although, after some testing, the team discovered that the steering wheel has a 1200 degree of rotation, which must be accounted for with a 10:3 gear ratio. So at the time being, the angle is being measured but it is incorrect in all cases as the gear system must be changed. The new gear design should be ready to be installed in the next week or less.
+However, the programming alone does not provide the exact angle we are trying to measure. The gear system is in place to map the 360 degree rotation to the 1200 degree rotation of the steering wheel. This gear system was originally designed to be an 8:3 gear ratio based on the previously assumed 960 degrees of rotation of the steering wheel. Although, after some testing, the team discovered that the steering wheel has a 1200 degree of rotation, which must be accounted for with a 10:3 gear ratio. This experiment was done by rotating the steering wheel from the left boundary to the right boundary and checking the output of the Serial terminal. So at the time being, the angle is being measured but it is incorrect in all cases as the gear system must be changed. The new gear design should be ready to be installed in the next week or less.
 #### SC2
 The Nissan Leaf steering wheel is the input device of the steering subsystem. The rotary encoder measuring the changes in position of the steering wheel is mounted to the steering column of the vehicle so that turning the wheel will rotate the steering column and update the value on the Master MCU.
 #### SC3 -> _Modified to "Angle shall be no less than 1200 degrees from the left boundary to the right boundary (3 and 1/3 rotations)"_
@@ -25,7 +25,7 @@ Currently, this constraint is also not being met due to the incorrect gear ratio
 #### SC4
 The error in the steering angle is another constraint that is not met due to the incorrect gear ratio. That is, the error is much greater than 1 degree in all cases except when the angle is zero. Because our gear ratio accounts for a total rotation of 960 degrees and the steering wheel exhibits 1200 degrees of rotation, every angle measured is off by a factor of 3/4 (960/1200). This issue should be immeadiately resolved with the installation of the new gear system.
 #### SC5
-The absolute encoder was chosen to meet this requirement as one of its fundamental properties is that its position is known regardless of being powered. So, in every reboot of the power to the overall system, the steering angle is displayed at whatever its last position was.
+The absolute encoder was chosen to meet this requirement as one of its fundamental properties is that its position is known regardless of being powered. So, in every reboot of the power to the overall system, the steering angle is displayed at whatever its last position was. The experiment for this constraint was done by rotating the wheel to a random position, then turning the car off and then back on, and comparing the previous value from the current value.
 ##### Table 1
 | |Output when Powered|Output when Power is Recycled|
 |--|---------|----------|
