@@ -66,5 +66,11 @@ For Brake 1, the number of bits measured are 619 - 283 = 336 therefore this sens
 For Brake 2, this sensor does not output anything once the brake pedal was reinstalled to the car. I think it used to measure brake fluid pressure which would explan why the initial testing of it decreased when pressed fully and why it doesn't output signals now that the pedal was reinstalled.
 
 ### A5. and B5.
+These constraints were meet because the wires that were spliced were covered with a heat shrink and then covered with electrical tape.
 
+### B8.
+These constraint no longer applies to this subsystem since there will be no local MCU to send data to the master MCU since the pedal sensors are going directly to the analog read pins on the master MCU for faster data reading and processing. 
+
+### B6., B7., and B9.
+These contraints are meet buy the use of the arduino mega as the MCU. The arduino mega has 16 analog input pins, is powered by 12V, and it is able to read analog pins at a rate of 100 mircoseconds. 
 
