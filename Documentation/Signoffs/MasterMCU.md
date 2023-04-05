@@ -10,10 +10,10 @@ without the MMCU to handle the addtional data processing to the PC could overloa
 of the simulation.
 
 ### Specifications & Constraints
-- Must connect to no less than four local microcontrollers
+- Must connect to no less than one local microcontroller
 - Must provide real-time data transfer of under 100 milliseconds
 - Shall connect to the PC running the simulation
-- Shall have 4 Tx and 4 Rx pins for communication protocols
+- Shall have 1 Tx and 1 Rx pin for communication protocols
 - Shall be powered by the PC
 
 The definition of real-time is subjective and therefore can not be directly defined. In the case of this system, real-time was
@@ -23,9 +23,9 @@ acceptable latency for gaming which lies between 20 and 100 milliseconds [2].
 
 ### Wiring Schematic
 
-![image](https://user-images.githubusercontent.com/100802413/202863978-89cc0d7a-06cd-4679-a6c5-b71eb77ff12f.png)
+![image](https://user-images.githubusercontent.com/100802413/230158337-75b325ef-8011-4a74-9d49-aa5472abac4c.png)
 
-###### _Figure 1: Master & Slave Connections_
+###### _Figure 1: UART Connection_
 
 ### Analysis
 ##### 1. Microcontroller Selection
