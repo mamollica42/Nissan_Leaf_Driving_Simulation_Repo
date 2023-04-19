@@ -11,8 +11,15 @@ This repository currently contains finalized documents for the project, but futu
 
 
 ## Salient Outcomes
-
-Coming Soon...
+- Measure steering angle from -600 to +600 degrees
+- Capture break and accelerator percentage of compression
+- Detect shifter position and auto-light selection
+- Single system power switch with overcurrent protection
+- Collect CAN Bus messages >> 10 Hz
+- Replaced speedometer with aesthetic 3D printed LCD module
+- Use of OEM steering wheel, brake pedal, accelerator pedal, shifter, and auto-light knobs
+- All hardware is concealed from the user
+- Provide all data to PC in less than 100 milliseconds
 
 
 ## Project Demonstration & Images
