@@ -12,6 +12,7 @@ This repository currently contains finalized documents for the project, but futu
 
 ## Salient Outcomes
 - Measure steering angle from -600 to +600 degrees
+  - _Note: After experimentation, the team discovered that the left and right bounds of the steering wheel are NOT equal. That is, the wheel rotates slightly more to the right than it does to the left by approximately 20 degrees._
 - Capture break and accelerator percentage of compression
 - Detect shifter position and auto-light selection
 - Single system power switch with overcurrent protection
