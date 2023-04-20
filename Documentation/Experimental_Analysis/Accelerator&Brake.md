@@ -27,7 +27,7 @@
 These are meet by using the cars stock pedals.
 
 ### A2. and B2.
-I tested the voltage range of the outputs for both the gas senor 1 and brake sensor 1 with an oscilloscope. The mean of the voltages are as follows:
+I tested the voltage range of the outputs for both the gas senor 1 and brake sensor 1 with an oscilloscope. I measured the signals at the analog pins of the master MCU with the oscilloscope 15 times for both systems and averaged the mean of the voltage. The averages of the voltages are as follows:
 
 Gas sensor 1
 Percent pressed | 0% | 50% | 100% 
@@ -74,3 +74,11 @@ These constraint no longer applies to this subsystem since there will be no loca
 ### B6., B7., and B9.
 These contraints are meet buy the use of the arduino mega as the MCU. The arduino mega has 16 analog input pins, is powered by 12V, and it is able to read analog pins at a rate of 100 mircoseconds. 
 
+### Measure of Success
+These are meet by gathering the output signals from the pedals which are the expected values of postion and interperting them in the form of percent pressed. We converted the digital signal to a percent of range of motion with the following code. 
+
+![Screenshot 2023-04-20 170227](https://user-images.githubusercontent.com/117474294/233497490-4778ccf7-c55e-4349-8f71-1ab0cee65665.png)
+This will result in the output signal of the pedal position being represented in percent form to be implemented into a simulator. 
+This is the serial montor of the entire system is shown below which demonstrates that all signals are being measured and interpreted at the same time. 
+
+![image](https://user-images.githubusercontent.com/117474294/233498635-f05ed65b-6c12-497a-8450-fe524aa565e6.png)
