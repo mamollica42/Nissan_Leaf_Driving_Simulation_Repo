@@ -14,7 +14,7 @@ An Arduino Uno is powered by the PC running the Simulink model.
 
 ### C2. C3. and C4.
 
-The speedometer is placed right where the OEM spedometer use to be. The value on the LCD is received from the PC running a Simulink model and is stored on the Arduino. The value is sent using serial communication with a USB 2.0. The speed data is displayed appropriately due to it being displayed the same way as it was with the old speedometer display.
+The speedometer is placed right where the OEM spedometer use to be. The value on the LCD is received from the PC running a Simulink model and is stored on the Arduino. The value is sent using serial communication with a USB 2.0. The speed data is displayed appropriately due to it being displayed the same way as it was with the old speedometer display. The accuracy of the data being sent to the speedometer was checked by using a counter and sending individual numbers.
 
 ![image](https://user-images.githubusercontent.com/117474540/228675279-730bf9e5-0c76-493c-bffe-530309cae70f.png)
 
@@ -23,4 +23,7 @@ The speedometer is placed right where the OEM spedometer use to be. The value on
 ![image](https://user-images.githubusercontent.com/117474540/228675508-213b1afc-ac1e-494f-9b06-23ecefce4c38.png)
 
 ###### _Figure 2: The speedometer in the car when Simulink sends the value 43
+
+### Measures of Success
+Initially, the signals from the car's speed sensors were to be spoofed, so the OEM speedometer display could still be used. The local MCU would recieve the speed from the PC to then be spoofed. Instead, a LCD was used to display the number acquired from the PC. A 3D printed mount for the LCD replaced the OEM speedometer display to keep the same immersive feel that was strived for initially. Since the accuracy and the immersive feel were still reached, the new design is a success.  
 
