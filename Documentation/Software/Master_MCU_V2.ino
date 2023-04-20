@@ -1,6 +1,6 @@
-// Master MCU UART Handling
+// Master MCU w/ UART Handling
 // Capstone Team 8
-// Captures Serial data from up to 4 different MCUs and send its to the main PC
+// Captures UART data from shifter MCU and reads auto-light, steering, and pedal data via GPIO
 
 int pin3 = 3;  
 int pin4 = 4;  
@@ -10,7 +10,7 @@ int pin6 = 6;
 double Gas1;
 double Gas2;
 double Brake1;
-int Brake2;
+double Brake2;
 
 int steering_pins[] = {22, 23, 24, 25, 26, 27, 28, 29, 30, 31};
 bool grey_code[10];
@@ -18,7 +18,7 @@ int binary = 0;
 double pos, angle;
 
 char shifter_data;
-char last_pos = 'P';
+char last_pos = 'P'; // Default shifter position
 
 void setup() {
   Serial.begin(115200);
@@ -56,13 +56,6 @@ void loop() {
         Serial.print(last_pos);
         Serial.println();
   }
-
-  //if (Serial1.available() > 0)
- // {
-   // shifter_data = Serial1.read();
-    //Serial.print("Shifter Info = ");
-    //Serial.print(shifter_data);
-  //}
   
   // Steering Code
   steering();
@@ -155,16 +148,12 @@ void autoLight()
 
 void pedals()
 {
-  Gas1 = analogRead(A0);
   // Calculate the percent of the compression based on the max & min values measured.
+  Gas1 = analogRead(A0);
   Gas1 = (Gas1 - 168) / 799;
-  //Serial.print("Gas 1: ");
-  //Serial.println(Gas1);
 
   Gas2 = analogRead(A1);
   Gas2 = (Gas2 - 84) / 411;
-  //Serial.print("Gas 2: ");
-  //Serial.println(Gas2);
 
   // Print Average of Gas1 & Gas2 for redudancy.
   Serial.print("Accelerator: ");
@@ -172,13 +161,11 @@ void pedals()
 
   Brake1 = analogRead(A2);
   Brake1 = (Brake1 - 285) / 432;
-  Serial.print("Break 1: ");
+  Serial.print("Brake: ");
   Serial.println(Brake1);
 
   // Redundant and not necessary
   Brake2 = analogRead(A3);
-  //Serial.print("Break 2: ");
-  //Serial.println(Brake2);
 }
 
 void steering()
