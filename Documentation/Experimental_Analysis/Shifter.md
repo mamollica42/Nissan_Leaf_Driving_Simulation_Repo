@@ -19,7 +19,7 @@ Gear Shifter Subsystem Analysis
 The output from the OEM shifter sensor is being captured so the sensor is being used.
 
 ### C2. C5. and C6.
-The master MCU can sucessfully receive the shifter position signal being sent from the local MCU. This is done via UART communication. The local MCU is successfully detecting the shifter positions for positions Park, Neutral, Reverse, and Drive. Since the local MCU is successfully detecting the position changes, the Nyquist rate is satisfied.
+The master MCU can sucessfully receive the shifter position signal being sent from the local MCU. This is done via UART communication. The local MCU is successfully detecting the shifter positions for positions Park, Neutral, Reverse, and Drive. Since the local MCU is successfully detecting the position changes, the Nyquist rate is satisfied. As you can see by Figure 1. below, N >> 1.
 
 ![image](https://user-images.githubusercontent.com/117474540/228677170-6f0c93e7-141d-4cf0-85d4-c3bc76ed39c8.png)
 
@@ -32,7 +32,7 @@ The wires carrying the signal are wire spliced to a microcontroller.
 The Arduino Uno is powered by a 12 V source.
 
 ### C7.
-The signal being sent to the local MCU is a 5 V voltage signal and, the MCU is successfully detecting the 5 V to 0 V changes.
+The signal being sent to the local MCU is a 5 V voltage signal and, the MCU is successfully detecting the 5 V to 0 V changes. The voltages were tested several times with a multimeter. As you can see by Figure 2. below, N >> 1.
 
 ![image](https://user-images.githubusercontent.com/117474540/228677698-2cb7eefb-3693-491d-aed9-308915547104.png)
 
@@ -45,6 +45,9 @@ The Arduino Uno has 14 digital I/O pins.
 The wires being used for splicing are 22 gauge wires. 22 gauge wires can easily handle 5 V. 
 
 ### C10. 
-There are no loose or exposed wires. All spliced wires have heat shirink and electrical tape.
+There are no loose or exposed wires. All spliced wires have heat shrink and electrical tape.
+
+### Measures of Success
+In the conceptual design CAN bus and external sensors were intitally going to be used. Wire splicing instead was used to capture the position of the sensor. This alternative way of capturing the position yielded the same intended result. Each position of the shifter can be accurately captured by wire splicing with 100% accuracy. For overvoltage protection, intitially op-amp circuits were going to be used. A zener diode circuit was used instead. This also yielded the same desired result. 
 
 
