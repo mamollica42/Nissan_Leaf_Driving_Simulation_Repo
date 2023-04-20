@@ -28,7 +28,7 @@ Therefore, for this subsytem to meet the first constraint, the time it takes bet
 |9|13:03:10.660|0x1CC00000572|< 1 msec|
 |10|13:03:10.660|0x2457FF8011A33007FF3|< 1 msec|
 
-As seen in Table 1 above, the time between each message is 33 msec or less in all cases, meeting the 10 Hz requirement.
+As seen in Table 1 above, the time between each message is 33 msec or less in all cases, meeting the 10 Hz requirement. This experiment was performed by utilizing the timestamp function on the Arduino IDE and was performed 5 times total. Table 1 is an example data set of the output terminal that includes the time of the serial print function containing the updated CAN message.
 
 ### SC2
 The CAN data is stored in an excel file, which is a well-known and highly professional software tool used to display and analyze data. Below is an example of the storage format in an excel sheet.
@@ -56,5 +56,4 @@ The PC has a 256 GB SSD and currently has 51.8 GB of free space which greatly ex
             51.8 GB >> 28 Kb
             
 ## III. Conclusion
-Because each of the 6 specifications and constraints listed above have been met, the subsystem is confirmed to function as designed.
-
+Because each of the 6 specifications and constraints listed above have been met, the subsystem is confirmed to function as designed. However, this system and its constriaints do not align with the original proposed measures of success. Orginally, the CAN Bus was supposed to be the main source of system information for auto-lights, steering angle, accelerator position, and brake position. This proposal has been reworked and is no longer relevant to the final product. The goal for the CAN Bus subsystem is strictly to capture data within 10 Hz and store it in a professional manner. Additionally, the original measures of success were to be under 25 milliseconds delay for all data transfer. After some research, the real-time requirement was changed to 100 milliseconds or less of delay. So, based on the new constraints, this subsystem is functioning to meet all measures of success and design specifications.
