@@ -17,7 +17,7 @@ This specification is met with the power connection being on the provided power 
 _Figure 1. The provided power supply installed inside the car._
 
 #### SC2
-The source voltage measured from the output on the power supply is shown in Table 1. The experiment involved 10 samples at 1 second intervals. The average of all the trials was 12.296 V. The voltage needed to remain within 5% of the expected value, which was met as it remained within the range of 11.4 V and 12.6 V. 
+This constraint for the detailed design is derived from a measure of success in the project proposal's requirement for input voltage. All measurements for this SC were recorded with a voltmeter. The source voltage measured from the output on the power supply is shown in Table 1. The experiment involved 10 samples at 1 second intervals. The average of all the trials was 12.296 V. The voltage needed to remain within 5% of the expected value, which was met as it remained within the range of 11.4 V and 12.6 V. 
 
 Table 1.
 
