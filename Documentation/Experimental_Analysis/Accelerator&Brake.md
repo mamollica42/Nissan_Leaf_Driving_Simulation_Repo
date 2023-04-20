@@ -78,6 +78,7 @@ These contraints are meet buy the use of the arduino mega as the MCU. The arduin
 These are meet by gathering the output signals from the pedals which are the expected values of postion and interperting them in the form of percent pressed. We converted the digital signal to a percent of range of motion with the following code. 
 
 ![Screenshot 2023-04-20 170227](https://user-images.githubusercontent.com/117474294/233497490-4778ccf7-c55e-4349-8f71-1ab0cee65665.png)
+
 This will result in the output signal of the pedal position being represented in percent form to be implemented into a simulator. 
 This is the serial montor of the entire system is shown below which demonstrates that all signals are being measured and interpreted at the same time. 
 
