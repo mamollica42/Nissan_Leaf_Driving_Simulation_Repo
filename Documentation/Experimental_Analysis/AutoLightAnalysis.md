@@ -1,11 +1,11 @@
 # AutoLight Subsystem Experimental Analysis
 
 ### I. Specification & constraints
-  1.  Must detect the auto light high beams, low beams, and left and right indicators with a voltage of no more than 5 volts and a current below 40 milliamps.
+  1.  Must detect the auto light high beams, low beams, and left and right indicators with a voltage of no more than 5 volts and    a current below 40 milliamps.
    2. Must use OEM componets as the inputs
    3. The signal input from the autolight must not exceed 5 V 
    4. Implement a way to protect the signal from the input voltage varying from 10 V to 15 V
-   5.Current to the signal must be less than 1 percent of the current to the light
+   5. Current to the signal must be less than 1 percent of the current to the light
    6. Prevent interference among signals through isolation methods
 
 ### II. Analysis
@@ -94,7 +94,7 @@ Left indicator       |  Right indicator
 
 The four pictures prove that the Arduino was able to detect the voltage. Furthermore, it indicates that there was no inference from another signal. The readings show that the system is working. The results obtained were consistent when the headlight is a different state. Therefore, the circuit is functioning as intended.
 
-
+The experiment analysis was successful in the measure of success. For this reason, each location where voltage needs to be measured met the constraint. Furthermore, the subsystem produces an output that lets the user know that one of the states of the headlight is active. In addition, using the OEM by wiretap to detect the state met the constraint. The output of the headlight is stored in the microcontroller and displayed as high beam, low beam, left indicator, and right indicator in the terminal. Overall, each constraint and measure of success met the goal of the subsystem. Also, the experiment analysis shows that the subsystem working properly.
 
 
 
