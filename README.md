@@ -24,6 +24,8 @@ This repository currently contains finalized documents for the project, but futu
 
 
 ## Project Demonstration & Images
+Watch our project demonstration [HERE](https://youtu.be/_0IFVq8wqwk)
+
 Power Supply & Control Switch|Steering Gear System|Shifter Subsystem|
 :---------------------------:|:------------------:|:------------------:
 ![image](https://user-images.githubusercontent.com/100802413/231281842-33e38989-c950-4742-b415-772c64c87afe.png)|![image](https://user-images.githubusercontent.com/100802413/231281007-fba1626d-8299-4a3b-aa15-580663068b0e.png)|![image](https://user-images.githubusercontent.com/100802413/231281449-5a6acad0-abc4-46f6-9848-599c58618a26.png)
