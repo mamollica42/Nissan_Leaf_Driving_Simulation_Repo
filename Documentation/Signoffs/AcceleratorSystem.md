@@ -12,7 +12,7 @@ This subsystem will obtain the gas pedals position and send this signal to a loc
 
 ### Wiring Schematic
 
-![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/217087668-75f8f196-f3cc-4efa-ba06-ad668866a8ed.png)
+![Gas and Brake kicad schematic](https://user-images.githubusercontent.com/117474294/234413422-1474cc5b-2cd4-44a8-96b4-a63ab1242ca1.png)
 
 ###### _Figure 1: OEM Wiring With Splice On Output Signals of Gas and Brake pedals_
 
