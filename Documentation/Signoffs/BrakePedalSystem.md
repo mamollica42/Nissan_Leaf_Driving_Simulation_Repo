@@ -16,7 +16,7 @@ This system will obtain the brake pedal posistion and send this signal to a loca
 
 ### Wiring Schematic
 
-![BrakePedalSchematic](https://user-images.githubusercontent.com/117474294/217134906-68ba4112-b1f6-4c9f-809d-a28d7ae2ceb4.png)
+![Gas and Brake kicad schematic](https://user-images.githubusercontent.com/117474294/234413347-71d21f4c-2198-442b-96a2-bb66dcd3167b.png)
 
 _Figure 1: The wiring schematic with the desired local MCU and OEM sensors for both pedals being sent to it. 
 
