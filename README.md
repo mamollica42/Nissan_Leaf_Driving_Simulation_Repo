@@ -67,6 +67,9 @@ Dr. B. Andy Pardue - ME Department
 ### Reports
 - Project Proposal
 - Conceptual Design
+- Individual Technical Presentations
+- Final Presentation
+- Final Bill of Materials (BOM)
 
 ### Documentation
 - 3D Models
