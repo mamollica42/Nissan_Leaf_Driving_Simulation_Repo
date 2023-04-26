@@ -1,11 +1,11 @@
 # Nissan Leaf Driving Simulation
 
-## Executive Summary
+# Executive Summary
 
 The Nissan Leaf Driving Simulation is a long-term goal for the ECE and ME Departments at TNTECH. This project consists of data acquistion and initial hardware setup for the future simulation to be built off of. The hopes of the final product are to accurately replicate the look and feel of driving a Nissan Leaf without the actual motion of the vehicle.
 
 
-## Capabilities
+# Capabilities
 
 This repository currently contains finalized documents for the project. This includes, but is not limited to the following:
 - Electrical Schematics
@@ -18,7 +18,7 @@ This repository currently contains finalized documents for the project. This inc
 - Individual & Final Presentations
 
 
-## Salient Outcomes
+# Salient Outcomes
 - Measure steering angle from -600 to +600 degrees
   - _Note: After experimentation, the team discovered that the left and right bounds of the steering wheel are NOT equal. That is, the wheel rotates slightly more to the right than it does to the left by approximately 20 degrees._
 - Capture break and accelerator percentage of compression
@@ -31,7 +31,7 @@ This repository currently contains finalized documents for the project. This inc
 - Provide all data to PC in less than 100 milliseconds
 
 
-## Project Demonstration & Images
+# Project Demonstration & Images
 Watch our project demonstration [HERE](https://youtu.be/_0IFVq8wqwk)
 
 Power Supply & Control Switch|Steering Gear System|Shifter Subsystem|
@@ -45,9 +45,9 @@ Final Vehicle Interior|
 
 
 
-## About Us
+# About Us
 
-### Team
+## Team
 
 Michael Mollica - CmpE
 
@@ -60,7 +60,7 @@ Brett Harden - EE
 Ethan Powers - EE
 
 
-### Faculty Supervisor
+## Faculty Supervisor
 
 Dr. Nan Chen - ECE Department
 
@@ -71,8 +71,8 @@ Mr. Jesse Roberts -  ECE Department
 Dr. B. Andy Pardue - ME Department
 
 
-## Repo Organization
-### Reports
+# Repo Organization
+## Reports
 - Project Proposal
 - Conceptual Design
 - Individual Technical Presentations
@@ -81,13 +81,13 @@ Dr. B. Andy Pardue - ME Department
 - Project Poster
 - Lessons Learned
 
-### Documentation
+## Documentation
 - 3D Models
 - Electrical Diagrams
 - Images
 - Signoffs
 - Experimentation
 
-### Software
+## Software
 - Documentation -> Software
 - Folder includes all Arduino code used to program the MCUs
