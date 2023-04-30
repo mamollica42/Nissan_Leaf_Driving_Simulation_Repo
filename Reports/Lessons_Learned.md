@@ -25,12 +25,12 @@
 6.
 
 ### Gerardo Mateo
-1.
-2.
-3.
-4.
-5.
-6.
+1.  Overall, as a group, we were able to accomplish the project. At the start of the semester, there were some challenges in understanding the project goal. Eventually, the group understood its goal by working hard and being patient. Furthermore, both technical and organization meet the requirement that the team wanted. However, during the planning of the subsystem, we were able to break down and find the right equipment for each subsystem. Although each sensor worked perfectly, the local MCU did not, so the team decided to reduce the number to one. On the other hand, each of the new modifications to the project helped to improve and complete our project.
+2. The unanticipated problem that occurred in my subsystem was that it needed a pull-down resistor. Because of this, Arduinos were unable to determine the ground state. However, the major unanticipated problem was that simulation was not working since the group needed it to put data into the simulation. However, the group was aware that we were able to extract data from the sensor.
+3. If I were to start over, I would do more research and finish the assignment early. In addition, a better understanding of how the sign-off work early would help reduce stress and time waste.
+4.  Communication with teammates and asking for help when needed are the best practices I picked up. Furthermore, documenting information and commenting on your code makes it easier to understand what you're doing and where you're stopping. Also, giving good detail on what your subsystem does will help you in the future.
+5. The word of wisdom I would give is to do your research early and have a backup plan for each subsystem or whole project. Also, save other information even if you don't need it because it could help you in the future. Also, the major wisdom is communicating with the team and helping each other if needed. However, alway expect the unexpect in each subsystem or project.
+6. What I learn from the project is to communicate with the team and document information in good detail for others to understand what I'm doing. Also, I learned to plan on a wiring diagram and show the connection of the circuit that I'm creating. Overall, I learned how to plan early in the project and how to document each piece of information I gather.
 
 ### Ethan Powers
 1. Overall, I think the project went well. Tapping into the OEM sensors of the car proved to be the most successful way to capture all of the inputs. The main failure for the project was the intention of using 3 local MCUs. The master MCU could only handle UART communication for one local MCU, so this proved to be a major problem. Steering and pedals were changed to send inputs to master MCU, so the problem was fixed. Having everything organized in github made the completion of the project much easier.
