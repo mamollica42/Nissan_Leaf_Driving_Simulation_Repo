@@ -13,18 +13,10 @@ The models posted here are derived from the signoffs. The signoffs include image
 Schematics posted here were drawn in KiCAD from the signoffs, and they represent the wiring for components in the subsystems. Images of the schematics were posted in the signoffs, but this is the downloadable files to view in drawing software. 
 
 
-### PCB files
-
-Coming Soon...
-
-## Datasheet 
-
-Coming Soon...
-
 
 ## Detailed photos of the project
 
-Coming Soon...
+Pictures taken of the implemented hardware and the software output. The picture labels describe the contents of the respective pictures. 
 
 
 
