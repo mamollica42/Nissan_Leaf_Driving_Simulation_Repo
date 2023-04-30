@@ -9,12 +9,12 @@
 6. I have learned to program in Arduino much better than I had early in college. I have also learned a lot more about how serial communication works and its proper use.
 
 ### Brett Harden
-1.
-2.
-3.
-4.
-5.
-6.
+1. The detail design and implementation went well for the group, but the technical proposals were a struggle. The project started off rough since most of us had issues with stating and understanding all components required in the project proposal and conceptual design. Both of these tasks were new learning experiences for everyone since it was different from prior class projects. Once the project progressed to the detail designs and implementation, the team settled in and was able to work well together to complete the tasks. This portion was similar processes to those of prior classes with final projects, and everyone was confident in their abilities. These two phases showed to be a night and day difference for the group's success.
+2. There were several unanticipated issues within most subsystems. The issues that I was responsible for consisted of the steering gears and power installation. I had issues with getting the gears spaced properly since there was not an exact or direct distance that I could measure. In result, I had to go through several iterations of the gear design to find the correct fit. This also included changing the plane in which the gears were printed because there were issues with layers pulling apart.
+3. I would have approached capstone 1 differently. I approached capstone 2 with a mentality of "attack the task before it attacks you" and it made it so much easier. I also would have moved quicker to install the components to ensure that the required wiring was included. This ended up wasting a lot of time that could have been prevented due to finding required ground wires that were needed with the power supply.
+4. Best practices for me include being open to not having to know all details for all components. It makes life much easier when the work is shared and everyone is able to focus on their own work. Communication is key for this process, but it makes most work easier when you only have to focus on a small amount of a large project. 
+5. I would advise to always attack the task at hand. You never want to be the person that everyone is waiting on, and this includes the team waiting for feedback. It is always better to have your stuff done quick to avoid tardiness.
+6. The biggest skill that I learned for our project was AutoCAD. I was responsible for the 3-dimensional drawings for the entire project and had to learn AutoCAD Mechanical to complete them. I spent about 200 hours learning and designing all the components, and this accounts for most of the new skills that I learned. 
 
 ### Chase Colotta
 1.
