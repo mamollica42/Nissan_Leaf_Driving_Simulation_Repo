@@ -4,7 +4,7 @@ Signoffs are the detailed designs for different components. Signoffs include the
 
 ## 3D Models
 
-The models posted here are derived from the signoffs. The signoffs include images of the models, but this folder houses the files that contain the designs to be opened in drawing software. Most files were drawn in AutoCAD.
+The models posted here are derived from the signoffs. The signoffs include images of the models, but this folder houses the files that contain the designs to be opened in drawing software. Most files were drawn in AutoCAD and uploaded as a .stl file. The 'Final **** Assembly' file in each subfolder is all other pieces in the folder combined into the implemented design. 
 
 ## Electrical
 
