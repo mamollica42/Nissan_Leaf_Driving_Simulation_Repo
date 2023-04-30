@@ -39,11 +39,12 @@ The The 3.5 Inch TFT Color LCD Screen has 28 pins and can directly snap onto an 
 #### Mounting
 The recommended max distance of a USB 2.0 cable is 16 feet. The PC running the simulator will be within 16 feet of the speedometer and the master MCU, so mounting the LED display in the desired position shall have no effect on transmission speeds. To keep the the immersive feel of the inside of the car, the LCD will be mounted exactly where the current speedometer display is located. The stock display will be removed and be replaced with a new mount that will mimic the current one. The new one will of be able to communicate with MATLAB and pull the speed data from the simulator.
 
-![image](https://user-images.githubusercontent.com/117474540/215832669-89579faa-cde7-400d-ae63-a6a877984600.png)
+
+![image](https://user-images.githubusercontent.com/117474411/235376267-34a976b1-ab71-4228-a66b-904a151e3529.png)
 
 _Figure 3. The mounting for the Uno in the Car 
 
-![image](https://user-images.githubusercontent.com/117474540/215867130-0e203977-f486-433f-9da6-c88cc64bec3f.png)
+![image](https://user-images.githubusercontent.com/117474411/235376393-29609a96-2b6e-4659-97bb-f4b0278c8061.png)
 
 _Figure 4. The face plate for the mount
 
