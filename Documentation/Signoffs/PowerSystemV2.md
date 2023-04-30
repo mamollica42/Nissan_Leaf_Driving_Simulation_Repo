@@ -14,11 +14,13 @@ The power system is to provide power to all of the components and subsystems wit
 ### Schematics
 ###### Wiring Diagram
 
-![image](https://user-images.githubusercontent.com/117474411/218824610-17d01ba9-17e7-400f-a1b1-a72dd9e47a0b.png)
+![image](https://user-images.githubusercontent.com/117474411/235376118-5cc5717e-3049-4665-88a2-74ae10e6bcc2.png)
 
 _Figure 1: Power Circuit & Connected Components_---
 
 ### Analysis
+*This analysis is for the original design with 3 Ardiono Unos. The design was modified to only one Uno as shown in the schematic and implemented.*
+
 ###### 1. Power Supply
 The power supply to be used supplies 12 Volts and 600 Watts of direct current. The voltage output of the power supply was tested with an oscilloscope and the peak-to-peak voltage was approximately 800 mV with a 12 V DC offset. This output means that the voltage supplied is between 11.6 and 12.4 V. The variance of +/- 0.4 V means that the supplied voltage is approximately 3.33% of the expected value. This verifies that the power supply’s original output meets the 5% constraint.  
 
