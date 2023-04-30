@@ -24,7 +24,8 @@ normal range of a standard front wheel drive vehicle such as the Nissan Leaf.
 ### Schematic
 ##### 1. Model
 
-![image](https://user-images.githubusercontent.com/100802413/203094793-8e89066d-e622-4f77-b923-f02e60bc9ed6.png)
+
+![image](https://user-images.githubusercontent.com/117474411/235375997-d98e2a1e-f8f3-4269-843b-b2696b09b8b1.png)
 
 LEGEND:
 - Black  --> OEM Parts (Steering Column and Mounting Plate)
@@ -36,31 +37,23 @@ LEGEND:
 
 _Figure 1: 3D-Model of Gear and Encoder Connection_
 
-![image](https://user-images.githubusercontent.com/100802413/203189084-4ff750e8-f932-4b92-87c6-e0bdec4e0706.png)
-
-_Figure 2: 2D Model of the Large Gear to be 3D printed_
-
-![image](https://user-images.githubusercontent.com/100802413/203189280-dcae68cb-8ae4-47ec-b419-241335dcf2db.png)
-
-_Figure 3: 2D Model of the Small Gear to be 3D printed_
-
 ![image](https://user-images.githubusercontent.com/100802413/203189609-5dd03eb4-6410-4281-a13b-cac1aa31316c.png)
 
-_Figure 4: 2D Model of the Adapter Plate to be 3D printed_
+_Figure 2: 2D Model of the Adapter Plate to be 3D printed_
 
 ![image](https://user-images.githubusercontent.com/100802413/203190285-c6b2cc0e-e184-4ab3-b42d-a73d2c848b8a.png)
 
-_Figure 5: 2D Model of the Mounting Plate in the Nissan Leaf_
+_Figure 3: 2D Model of the Mounting Plate in the Nissan Leaf_
 
 ![IMG_7204](https://user-images.githubusercontent.com/100802413/203190383-4d88893a-d795-43c9-b0dd-f7bd2a8ef0a3.jpg)
 
-_Figure 6: Highlighted the Mounting Plate from Figure 5 in the Nissan Leaf_
+_Figure 4: Highlighted the Mounting Plate from Figure 3 in the Nissan Leaf_
 
 ##### 2. Wiring Schematic
 
 ![image](https://user-images.githubusercontent.com/100802413/230184531-d6a80eb6-1fd5-4205-9a99-b37d0cf99295.png)
 
-_Figure 7: Encoder Connection to MCU_
+_Figure 5: Encoder Connection to MCU_
 
 
 ### Analysis
@@ -120,7 +113,7 @@ To verify that this ratio would provide accurate mapping of 960 to 360 degrees, 
 
 ![image](https://user-images.githubusercontent.com/100802413/202862273-5f44f45a-ed0a-4e65-bb63-7dd475245d4e.png)
 
-_Figure 8: MATLAB Verfication for all possible Angles_
+_Figure 6: MATLAB Verfication for all possible Angles_
 
 ##### 6. Gear and Mounting Design
 The size constraints for the next closest item in the car are as follows:
