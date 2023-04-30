@@ -17,12 +17,12 @@
 6. The biggest skill that I learned for our project was AutoCAD. I was responsible for the 3-dimensional drawings for the entire project and had to learn AutoCAD Mechanical to complete them. I spent about 200 hours learning and designing all the components, and this accounts for most of the new skills that I learned. 
 
 ### Chase Colotta
-1.
-2.
-3.
-4.
-5.
-6.
+1. The project went very well for this group. We had some trouble understanding the problem and finding an approach at the beginning of capstone. After some clarification we got on the right track and finished the design signoffs on time. The design were good even though we change some systems on implementation like the pedals going straight to the master MCU. We meet all deadlines well and finished what was asked of us for this project. 
+2. A unexpected problem that occurred was that the master MCU was not reading the four UART communcations withouts problems occurring. One problem that happened to my subsystem is that one of my brake pedal sensors that work during testing outside of the car did not work once installed back into the vehicle. 
+3. I would have liked to have it plugged into a simulator to see everything come together. 
+4. The best practices I have learned is to be adaptable like when the local MCU's wasn't talking to the master. I also learned the importance of documenting the process.
+5. Do not think everything will go smoothly. You are going to have to put in the work of designing it and be able to make things work if the designs don't work perfectly. Have a good understanding of the goal and accomplish it however you can. 
+6. I gained the knowledge of completely designing something from the ground up and the documentation needed to record the steps. I have a much better understanding of how to read wiring schematics. 
 
 ### Gerardo Mateo
 1.  Overall, as a group, we were able to accomplish the project. At the start of the semester, there were some challenges in understanding the project goal. Eventually, the group understood its goal by working hard and being patient. Furthermore, both technical and organization meet the requirement that the team wanted. However, during the planning of the subsystem, we were able to break down and find the right equipment for each subsystem. Although each sensor worked perfectly, the local MCU did not, so the team decided to reduce the number to one. On the other hand, each of the new modifications to the project helped to improve and complete our project.
